@@ -94,10 +94,10 @@ Will be listed on the main course website Staff page.
 The following sites will be used heavily during the course:
 
 -   The course website is
-    [jhu-ip.github.io/cs220-f24/](https://jhu-ip.github.io/cs220-f24/).
+    [jhu-ip.github.io/cs220-f25/](https://jhu-ip.github.io/cs220-f25/).
 
 -   Piazza
-    (<a class="external" target="_blank" href="https://piazza.com/jhu/fall2024/601220fa24">https://piazza.com/jhu/fall2024/601220fa24</a>)
+    (<a class="external" target="_blank" href="https://piazza.com/jhu/fall2025/601220fa25">https://piazza.com/jhu/fall2025/601220fa25</a>)
     will serve as our primary communication channel. Access through Canvas, and you can then link any prior accounts to your JHU account.
 
 -   Gradescope (<a class="external" target="_blank" href="https://www.gradescope.com/">https://www.gradescope.com/</a>) will be used
@@ -287,7 +287,7 @@ in early so that if you encounter any last-minute delays, it will not
 hurt you too badly. Additionally, Gradescope will allow multiple
 submission attempts; we will simply grade the last one. So it's a good
 idea to develop your program incrementally, and turn in a
-fully-compiling (if only partially complete) version every day or so.
+fully-compiling (even if only partially complete) version every day or so.
 
 Deadline exceptions can only be made by an instructor (not TAs/CAs), and
 will only be considered in the circumstances outside the control of the
@@ -328,9 +328,9 @@ others. The "fudge grade" is a percentage of your final grade that
 duplicates your best performance from the individual grade categories listed below 
 or the optional code reviews, but not group projects. For example, if you
 successfully complete 2 code reviews, then your fudge grade will
-contribute a full 3 points to your final grade. If you don't have 2
+contribute a full 2 points to your final grade. If you don't have 2
 successful code reviews, but your highest individual grade category is
-90% in written homework, then your fudge grade will contribute 2.7
+90% in written homework, then your fudge grade will contribute 1.8
 points towards your final grade.
 
 **Grading Breakdown**
@@ -492,7 +492,7 @@ You need to be be aware and comply with the deadlines of "add a course", "drop a
 
 **Computer Issues**
 
-Student laptop repair is available in the Technology Store, Levering Hall Sherwood Room (113) Monday-Friday from 9:00am-5:00pm. Please contact 410-516-0448 or <techstore@jhu.edu> for questions. More info at [Information Technology Services & Support](https://studentaffairs.jhu.edu/computing/services-support/).
+Student laptop repair is available in the Technology Store, located within JHU's Campus Store, 33rd & St. Paul St. Please contact 410-516-0448 or <techstore@jhu.edu> for questions. More info at [Information Technology Services & Support](https://studentaffairs.jhu.edu/computing/services-support/).
 
 Additionally, the Center for Student Success and Student Outreach and Support maintain a [Laptop Loaner Program](https://cm.maxient.com/reportingform.php?JohnsHopkinsUniv&layout_id=11), which is open to all KSAS and WSE undergraduate students.
 
