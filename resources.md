@@ -6,6 +6,13 @@ category: resources
 
 This page has links to useful resources for the course.
 
+## Language references
+
+* <a class="external" target="_blank" href="http://cslibrary.stanford.edu/101/EssentialC.pdf">Essential C</a> overview tutorial by Nick Parlante (Stanford)
+* <a class="external" target="_blank" href="https://www.cplusplus.com/reference/">cplusplus.com/reference</a> C/C++ reference website
+* <a class="external" target="_blank" href="https://en.cppreference.com/w/">en.cppreference.com/w</a> C++ reference website
+
+
 ## Code development resources
 
 ### Linux command line
