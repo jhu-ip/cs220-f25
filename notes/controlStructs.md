@@ -12,10 +12,8 @@ could be used instead.
 
 <h4>Decision statements</h4>
 
-<p>Here are generic forms of the decision statements.  Refer back to
-  the <a href="../unit01/gpa.c">gpa.c</a> example in unit01 for some
-  sample uses.
-<pre><code>
+<p>Here are generic forms of the decision statements. 
+<code><pre>
   if (boolean expr) 
     true-statement;  // or { block }
 
@@ -33,13 +31,13 @@ could be used instead.
            stmt4;  // executes stmt3, stmt4 and stmtlast for c3 or c4 matches
   default: stmtlast;   // if no case matches
   }
-</code></pre>
+</pre></code>
 
 <h4>Loops
 </h4>
 
-<p>Here are generic forms of the three loop types in C.  See examples
-  in <a href=warmup1.c>warmup1.c</a> <pre><code>
+<p>Here are generic forms of the three loop types in C.
+  <code><pre>
   while (boolean expr) 
     true-statement;  // or { block }, repeats to while
 
@@ -49,21 +47,21 @@ could be used instead.
 
   for (init; boolean expr; update) 
     true-statement;  // or { block }
-</code></pre>
-<p>is equivalent to<pre><code>
-  init;
+</pre></code>
+<p>is equivalent to<code>
+<pre>  init;
   while (boolean expr) {
     true-statement;
     update;
   }
-</code></pre>
+</pre></code>
 
 
 <h4>Loop invariants</h4>
 
 <p>These are statements that should be true at the start of every
   iteration.  We can use <code>assert</code> statements to check if
-  they are good (true): <pre><code>
+  they are good (true): <code><pre>
   // need #include &lt;assert.h&gt;
   // need #include &lt;math.h&gt;  and compile with -lm option to link math library
 
@@ -74,7 +72,7 @@ could be used instead.
     i++;
     val *= 2;
   } 
-</code></pre>
+</pre></code>
 
 
 </body>

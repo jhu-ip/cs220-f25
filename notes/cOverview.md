@@ -1,11 +1,14 @@
 <html>
 <body>
 
+<h3>C Language Overview</h3>
+
 <h4> Why C?
 </h4>    <ul>
       <li> System level programming!  Operating systems, network protocols, device drivers (printer, keyboard, etc).
       <li> Very fast and efficient memory usage
-      <li>The <em>dark side</em>: obscure code / easy to create security vulnerabilities / shoot yourself in the foot
+      <li>The <em>dark side</em>: obscure code, easy to create
+      security vulnerabilities, easy to shoot yourself in the foot
         <li>The burden is on the programmer to get things right; C won't protect you from yourself.
     </ul>
 
@@ -17,10 +20,9 @@
 <li> Compilers these days are "retargetable", a single compiler can compile to many different machine architectures
 <li>Our official C compiler is <code>gcc</code>.
 </ul>
-<!-- NOTE:  FOCUS ON DIFFERENCES BETWEEN JAVA AND C (and Python?) -->
 
 
-<blockquote>EXERCISE: Read a <a href="http://cslibrary.stanford.edu/101/EssentialC.pdf">C tutorial</a> to start.
+<blockquote>REFERENCE: Skim through <a href="http://cslibrary.stanford.edu/101/EssentialC.pdf">C tutorial</a> to start.
 </blockquote>
 
 <h3>The Programming Process</h3>
@@ -30,31 +32,22 @@
 <li> Create source code with editor (<code>pico</code>, <code>emacs</code>, <code>vi</code>, etc.)
 <li> Compile &amp; run 
     <ul>
-      <li> <code>gcc <em>file</em>.c</code> &#8594; creates <code>a.out</code> file &#8594; run with <code>./a.out</code>
-	<li> <code>gcc -o <em>file</em> <em>file</em>.c</code> &#8594; creates executable <code><em>file</em></code> &#8594; run with <code>./<em>file</em></code>
-
+      <li> <code>gcc <em>file</em>.c</code> creates <code>a.out</code>
+        file; run with <code>./a.out</code> command
+	<li> <code>gcc -o <em>file</em> <em>file</em>.c</code> creates
+	executable <code><em>file</em></code>; run
+	with <code>./<em>file</em></code> command
       </ul>
-      </ul>	
+ </ul>	
 
-<!-- we eliminated this since codingGround wasn't working on JHU --
-  -- wireless
-
-      <blockquote>EXERCISE: Go
-      to <a href="http://www.tutorialspoint.com/compile_c99_online.php">coding
-      ground</a> to write, compile, run a simple program: print the
-      first 11 powers of 2 (from 1 to 1024 inclusive).
-</blockquote>
--->
-
-      <h4>The compilation steps for C
+<h4>The compilation steps for C
 </h4>
 	    <ol>
 	      	<li> Pre-processing: <code>#include</code> files, definitions
-	<li> Compile (program = <code>.c</code>/<code>.h</code> files = source code &#8594; assembly &#8594; machine = object code = <code>.o</code> file)
+	<li> Compile (program = <code>.c</code>/<code>.h</code> files = source code; assembly; machine = object code = <code>.o</code> file)
 	<li> Link w/library routines
 	<li> Load into memory
 	<li> Execute = run in CPU
-
       </ol>
 
 
@@ -66,8 +59,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;long comment */</code>
 	<li> Short comment:&nbsp;&nbsp; <code>// here is my comment</code>
       </ul>
-<blockquote>EXAMPLE:  We will use  <a href="gpa.c">gpa.c</a> as a sample program (intentionally incomplete)
-</blockquote>
 
 
 <h3>C Data Types
@@ -80,9 +71,12 @@
     <li> C is not as strongly typed as Java, e.g. array access out of bounds is not a checked exception (though it will often crash your program anyway; this is usually the cause of a <code>segmentation fault</code>).
 	<li>Exact sizes of each type are platform dependent; <code>int</code> is generally 32-bit except on 16-bit processors.
       </ul>
-<p>
 
-In C, <em>you cannot assume variables are initialized</em> and may they contain junk (what was there before) and produce erratic results!!
+<blockquote>WARNING:
+In C, <em>you cannot assume variables are initialized</em> and may
+  they contain junk (what was there before) and produce erratic
+  results!!
+  </blockquote>
 
 <h4>Booleans 
 </h4>

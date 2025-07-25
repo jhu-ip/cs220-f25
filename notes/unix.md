@@ -5,7 +5,7 @@
 
 <h4>Getting going with Unix
 </h4>    <ul>
-<li> CS Unix Accounts will be passed out - majors and minors should have a personal CS account; temporary class accounts for all others to be distributed</li>
+<li> CS Unix Accounts: majors and minors should have a personal CS account; temporary class accounts for all others to be distributed</li>
  <li> Use PuTTY (Windows) or ssh (Mac Terminal) to connect to CS
  server remotely</li>
 </ul>
@@ -81,7 +81,7 @@ In command mode, here are a few of the things you can do:
 
 <pre>
 File commands - type ":", then the command letter, then hit enter
-:w save (<ul>w</ul>rite) your file
+:w save (write your file)
 :q quit (exit from vim)
 :q! force-quit (discards unsaved changes)
 
@@ -96,7 +96,7 @@ h left a character
 j down a line
 k up a line
 l right a character
-f&lt;char&gt; fird first instance of &lt;char&gt; on this line
+f&lt;char&gt; find first instance of &lt;char&gt; on this line
 0 beginning of line
 $ end of line
 w next beginning of word
