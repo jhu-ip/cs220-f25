@@ -1,23 +1,15 @@
-<html>
-<body>
 
-</ul>
+## Getting going with Unix/Linux
 
-<h4>Getting going with Unix/Linux
-</h4>    <ul>
-<li> CS Unix Accounts: majors and minors should have a personal CS account; temporary class accounts for all others to be distributed</li>
- <li> Use PuTTY (Windows) or ssh (Mac Terminal) to connect to CS
- server remotely</li>
-</ul>
+* CS Unix Accounts: majors and minors should have a personal CS account; temporary class accounts for all others to be distributed
+* Use PuTTY (Windows) or ssh (Mac Terminal) to connect to CS
+ server remotely
 
-
-<h4>Unix terminology:</h4>
-<ul>
-<li>  directory == folder containing files and other directories
-<li>  ~ == home == origin of your files based on your login
-<li>  . == current directory
-<li>  .. == parent directory (up one level)
-</ul>
+## Unix terminology
+*  directory == folder containing files and other directories
+*  ~ == home == origin of your files based on your login
+*  . == current directory
+*  .. == parent directory (up one level)
 
 <p><b>Important: change password with the <code>passwd</code> command!</b></p>
 
@@ -31,7 +23,7 @@
 </ul>
 </p>
 
-<h4>Creating files:</h4>
+## Creating files
 <p>There are several options for creating and editing files:</p>
 <ul>
 <li><code>emacs</code> - powerful editor, use Xming to run in visual mode
@@ -40,7 +32,7 @@
 </p>
 
 
-<h4>Working in Emacs:</h4>
+## Working in Emacs
 <p>Most keyboard shortcuts for commands use either ^ (control key -
 held while typing next character) or esc (escape key - press and
 release before typing next character).  Editing takes place in a
@@ -70,7 +62,7 @@ esc w  copy selection (region from mark to cursor, copied to buffer)
 
 </pre>
 
-<h4>Working in Vim:</h4>
+## Working in Vim
 <p>Vim has two distinct "states," called "insert mode" and "command mode".  In insert mode, vim works much like Windows Notepad, or any other simple text editor; when you press keys, the corresponding letters and symbols are added to the file at the location of the cursor.  Command mode is used for all the more advanced editing features such as cut/copy/paste, or moving the cursor around.
 </p>
 <p>
@@ -116,7 +108,3 @@ p paste (after cursor)
 P paste (before cursor)
 </pre>
 
-
-
-</body>
-</html>
