@@ -18,7 +18,7 @@ Then add, commit, and push both material.csv and material.md.
 You can click on the header for a specific week to expand or collapse
 the materials for that week.
 
-<button type="button" id="week_1_toggle" class="week_control_button">Week 1 (26-Aug to 30-Aug)</button>
+<button type="button" id="week_1_toggle" class="week_control_button">Week 1 (25-Aug to 29-Aug)</button>
 <div id="week_1" class="collapsible">
 <table>
   <thead>
@@ -65,15 +65,15 @@ the materials for that week.
 </table>
 </div>
 
-<button type="button" id="week_2_toggle" class="week_control_button">Week 2 (2-Sep to 6-Sep)</button>
+<button type="button" id="week_2_toggle" class="week_control_button">Week 2 (1-Sep to 5-Sep)</button>
 <div id="week_2" class="collapsible">
 <table>
   <thead>
     <tr>
       <th></th>
-      <th>Labor Day (2-Sep)</th>
-      <th>Day 4 (4-Sep)</th>
-      <th>Day 5 (6-Sep)</th>
+      <th>Labor Day (1-Sep)</th>
+      <th>Day 4 (3-Sep)</th>
+      <th>Day 5 (5-Sep)</th>
     </tr>
   </thead>
   <tbody>
@@ -111,15 +111,15 @@ the materials for that week.
 </table>
 </div>
 
-<button type="button" id="week_3_toggle" class="week_control_button">Week 3 (9-Sep to 13-Sep)</button>
+<button type="button" id="week_3_toggle" class="week_control_button">Week 3 (8-Sep to 12-Sep)</button>
 <div id="week_3" class="collapsible">
 <table>
   <thead>
     <tr>
       <th></th>
-      <th>Day 6 (9-Sep)</th>
-      <th>Day 7 (11-Sep)</th>
-      <th>Day 8 (13-Sep)</th>
+      <th>Day 6 (8-Sep)</th>
+      <th>Day 7 (10-Sep)</th>
+      <th>Day 8 (12-Sep)</th>
       
     </tr>
   </thead>
@@ -164,15 +164,15 @@ the materials for that week.
 </table>
 </div>
 
-<button type="button" id="week_4_toggle" class="week_control_button">Week 4 (16-Sep to 20-Sep)</button>
+<button type="button" id="week_4_toggle" class="week_control_button">Week 4 (15-Sep to 19-Sep)</button>
 <div id="week_4" class="collapsible">
 <table>
   <thead>
     <tr>
       <th></th>
-      <th>Day 9 (16-Sep)</th>
-      <th>Day 10 (18-Sep)</th>
-      <th>Day 11 (20-Sep)</th>
+      <th>Day 9 (15-Sep)</th>
+      <th>Day 10 (17-Sep)</th>
+      <th>Day 11 (19-Sep)</th>
     </tr>
   </thead>
   <tbody>
@@ -210,15 +210,15 @@ the materials for that week.
 </table>
 </div>
 
-<button type="button" id="week_5_toggle" class="week_control_button">Week 5 (23-Sep to 27-Sep)</button>
+<button type="button" id="week_5_toggle" class="week_control_button">Week 5 (22-Sep to 26-Sep)</button>
 <div id="week_5" class="collapsible">
 <table>
   <thead>
     <tr>
       <th></th>
-      <th>Day 12 (23-Sep)</th>
-      <th>Day 13 (25-Sep)</th>
-      <th>Day 14 (27-Sep)</th>
+      <th>Day 12 (22-Sep)</th>
+      <th>Day 13 (24-Sep)</th>
+      <th>Day 14 (26-Sep)</th>
     </tr>
   </thead>
   <tbody>
