@@ -3,7 +3,7 @@
 
 </ul>
 
-<h4>Getting going with Unix
+<h4>Getting going with Unix/Linux
 </h4>    <ul>
 <li> CS Unix Accounts: majors and minors should have a personal CS account; temporary class accounts for all others to be distributed</li>
  <li> Use PuTTY (Windows) or ssh (Mac Terminal) to connect to CS
@@ -34,8 +34,8 @@
 <h4>Creating files:</h4>
 <p>There are several options for creating and editing files:</p>
 <ul>
-<li>emacs - powerful editor, use Xming to run in visual mode
-<li>vi/vim - another popular editor for programmers
+<li><code>emacs</code> - powerful editor, use Xming to run in visual mode
+<li><code>vi</code> and <code>vim</code> - another popular editor for programmers
 </ul>
 </p>
 
