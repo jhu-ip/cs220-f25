@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 ## Getting going with Unix/Linux
 
