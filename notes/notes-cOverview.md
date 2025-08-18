@@ -1,5 +1,8 @@
-<html>
-<body>
+---
+id: notes-cOverview
+layout: default
+title: C Overview
+---
 
 <h3>C Language Overview</h3>
 
@@ -61,8 +64,15 @@
       </ul>
 
 
-<h3>C Data Types
-</h3>
+<h3>Testing</h3>
+
+	<ul>
+<li> Use asserts to check what's going on in your code
+  <li> <code>#include &lt;assert.h&gt;</code>
+  <li> <code>assert(<em>boolean expr</em>)</code>
+</ul>
+
+    <h3>C Data Types</h3>
    <h4>Primitive data types</h4>
       <ul>
 	<li> <code>char</code>,	<code>short</code> (int), <code>int</code> (default), <code>long</code> (int), <code>float</code>, <codeyes>double</code> (-sized float), <code>long double</code> (quadruple-sized float)
@@ -76,7 +86,28 @@
 In C, <em>you cannot assume variables are initialized</em> and may
   they contain junk (what was there before) and produce erratic
   results!!
-  </blockquote>
+</blockquote>
+
+<h4>Integer constants</h4>
+<ul>
+		<li> Decimals (base 10):<br>
+&nbsp;&nbsp;&nbsp;
+<code>int</code>: <code>13</code>, <code>23</code>, <code>-14</code>, etc. <br>
+&nbsp;&nbsp;&nbsp; <code>long</code> (integer): <code>13L</code>, <code>-14l</code>, etc. 
+    <li> Octal (base 8) - precede value with 0<br>
+&nbsp;&nbsp;&nbsp; digits range from 0 to 7<br>
+&nbsp;&nbsp;&nbsp; <code>032</code>
+    <li> Hexadecimal (base 16) - precede value with <code>0x</code><br>
+&nbsp;&nbsp;&nbsp;
+       digits range from 0 to 9 and a-f or A-F<br>
+&nbsp;&nbsp;&nbsp;
+       <code>0x15</code>, <code>0xA</code>
+	<li> Binary (base 2) - precede value with <code>0b</code><br>
+&nbsp;&nbsp;&nbsp;
+ digits are 0 and 1 only<br>
+&nbsp;&nbsp;&nbsp;
+ <code>0b1000</code>, <code>0b01101</code>
+</ul>       
 
 <h4>Booleans 
 </h4>
@@ -94,7 +125,17 @@ In C, <em>you cannot assume variables are initialized</em> and may
 	<li>Note the previous functions have return type <code>int</code> -- this is because return value <code>-1</code> indicates error.
       </ul>
 
-<h4>Operators</h4>
+<h4>Size calculations</h4>
+<ul>
+  <li><code>sizeof</code> operator: returns integer # bytes of object
+  <li> <code>sizeof(<em>anytype</em>)</code>, <code>sizeof <em>varname</em></code>
+</ul>
+<p>
+
+
+      <h3>C Operators</h3>
+      
+<h4>Common Operators</h4>
 	<ul>
 	  <li> Arithmetic: <code>+ - * / %</code>  (no exponentiation operator)
 	<li> Relational: <code>&lt; &gt; &lt;= &gt;= == !=  </code>
@@ -102,32 +143,30 @@ In C, <em>you cannot assume variables are initialized</em> and may
     <li> Assignment: <code>= += -= *= %= ++ --</code>
     <li> Precedence order:  always know where to look this up quickly (e.g. <a href="http://www.csee.umbc.edu/courses/104/fall06/burt/precedenceTable.html">here</a>)
 	<li> Short-circuit (lazy) evaluation of boolean expressions
-	<li> Bitwise logical operators (details later)
-	<li> Bitwise shift operators (details later)
       </ul>			
 
-<h3>Output in C</h3>
+Caution on equality and assignment:
+```c
+if (num = 10)  // evaluates to 10, which is considered to be true (non-zero)
+if (num == 10) // double equals only evalutes to true if num is in fact a 10
+```
+    
+<h4>Bitwise operators</h4>
+<ul>
+  <li>    <code>num1 & num2</code> - bitwise and
+  <li>    <code>num1 | num2</code> - bitwise inclusive or
+  <li>    <code>num1 ^ num2</code> - bitwise exclusive or
+  <li>    <code>~num1</code> - bitwise complement
+  <li>   <code>num &lt;&lt; shiftbits</code> - left shift of num by shiftbits places, pad 0 right
+  <li>    <code>num &gt;&gt; shiftbits </code>- similar right shift, pad is system dependent
+</ul>
 
-<p>
-Prerequisite: <code>#include &lt;stdio.h&gt;</code> in header to access library functions; <a href="http://www.cplusplus.com/reference/cstdio/">Reference for <code>stdio.h</code></a>
-
+<h4>Built-in floating-point math functions
+</h4>   
   <ul>
-   	<li> <code>putchar('d')</code> to output characters
-	<li> <code>puts("some string")</code> to output strings
-	<li> <code>printf("<em>format string</em>", <em>args</em>...)</code> for fancier output
-		<li> formats: <br>
-&nbsp;&nbsp;&nbsp;	<code>%i %d %f %c %s %n %ld %lf</code> for basic types<br>
-&nbsp;&nbsp;&nbsp;			<code>%o</code> octal printing of ints<br>
-&nbsp;&nbsp;&nbsp;			<code>%x</code> hex printing of ints
-		<li> field widths<br>
-&nbsp;&nbsp;&nbsp;
-			<code>%<em>cols</em>.<em>decf</em> </code>- eg. <code>%.2f</code>, <code>%.6f</code><br>
-&nbsp;&nbsp;&nbsp;
-			right justified by default, use <code>%-</code> to left justify <br>
-&nbsp;&nbsp;&nbsp;
-			<code>-</code> and cols works for %d and %s also
-		<li>See Kernighan Appendix B or <a href="http://www.cplusplus.com/reference/cstdio/printf/">this reference</a> for details
-	      </ul>
-
-</body>
-</html>
+    <li> Use <code>#include &lt;math.h&gt;</code>
+    <li> Probably need to compile with <code>gcc -lm</code> option
+    <li> Math library functions generally take <code>double</code> arguments, return <code>double</code> values
+    <li> eg: <code>sqrt(x)</code>, <code>pow(x,y)</code>, <code>exp(x)</code>, <code>log(x)</code>, <code>ceil(x)</code>, <code>floor(x)</code>, <code>sin(x)</code>
+  </ul>
+  

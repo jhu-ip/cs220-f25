@@ -1,5 +1,8 @@
-<html>
-<body>
+---
+id: notes-control
+layout: default
+title: Control Structures
+---
 
 In general control structures in C are very similar to those in Java.
 The <code>for</code> loop is very different than in Python.  Remember
@@ -74,5 +77,3 @@ These are statements that should be true at the start of every
 ```
 
 
-</body>
-</html>
