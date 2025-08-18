@@ -13,7 +13,7 @@ import remarkMath from 'remark-math'
 <div class='content'>
 <ul>
 <li>You are expected to work individually.</li>
-<li><strong>Due: Friday, September 6 by 11pm (Baltimore time).</strong></li>
+<li><strong>Due: Friday, September 5th by 11pm (Baltimore time).</strong></li>
 <li><em>This assignment is worth 20 points.</em></li>
 </ul>
 </div>
@@ -41,7 +41,7 @@ import remarkMath from 'remark-math'
 <div class='admonition caution'>
 <div class='title'>Caution</div>
 <div class='content'>
-<p>You should receive an invitation to the jhu-ip organization and your private repository by <strong>Thursday, August 29</strong>. If you haven't received it, post privately for all instructors on Piazza.</p>
+<p>You should receive an invitation to the jhu-ip organization and your private repository by the end of the first week of classes. If you don't, post privately for all instructors on Piazza.</p>
 </div>
 </div>
 
@@ -51,9 +51,9 @@ The name and behavior of each program is as follows:
 
 file name | desired output
 --------- | --------------
-*gold.c* | Simone Biles wins Gold in Women's All-Round Gymnastics!
-*silver.c* | The Silver in the 10m air pistol mixed team event goes to Yuysuf Dikec and Sevval Ilayda Tarhan.
-*bronze.c* | US Men's Volleyball Team wins the Bronze medal at the Paris 2024 Olympics.
+*gold.c* | Lina Zhang sets a new world record in wheelchair fencing, taking home the Gold!
+*silver.c* | The Silver medal in synchronized swimming goes to Jordan and Samir.
+*bronze.c* | Team Kenya earns Bronze in the mixed 4 by 400m relay, celebrating unity through sport.
 
 At the top of each source file, add two comment lines that provide your anonymous Hopkins ID (the random 6 characters code) and the current date:
 
@@ -68,8 +68,7 @@ Compile and execute each of the three programs and ensure that they give the out
 <div class='title'>Tip</div>
 <div class='content'>
 <p>
-  The "hello, world" program that was the starting point for <a href="../exercise/ex03b.html">Exercise 3-B</a> could be a useful
-starting point for the source files for this homework.
+  The "hello, world" program that was the starting point for <a href="../exercise/ex03b.html">Exercise 3-B</a> could be a useful starting point for the source files for this homework.
 </p>
 </div>
 </div>
