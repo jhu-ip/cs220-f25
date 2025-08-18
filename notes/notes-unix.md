@@ -1,5 +1,7 @@
 ---
+id: notes-unix
 layout: default
+title: Unix Notes
 ---
 
 ## Getting going with Unix/Linux

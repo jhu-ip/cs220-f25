@@ -56,14 +56,16 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td><a href='notes/unix.md'>Unix Notes</a><br><a class='external' target='_blank' href='https://cs.jhu.edu/~joanne/unix.html'>Unix/Linux Tutorial</a><br><a class='external' target='_blank' href='https://cs.jhu.edu/~joanne/unixRC.pdf'>Unix/Linux Reference Card</a></td>
-      <td><a href='notes/cOverview.md'>C Overview Notes</a><br><a class='external' target='_blank' href='https://www.onlinegdb.com/online_c_compiler'>Online C compiler</a></td>
+      <td><a href='notes/notes-unix.html'>Unix Notes</a><br><a class='external' target='_blank' href='https://cs.jhu.edu/~joanne/unix.html'>Unix/Linux Tutorial</a><br><a class='external' target='_blank' href='https://cs.jhu.edu/~joanne/unixRC.pdf'>Unix/Linux Reference Card</a></td>
+      <td><a href='notes/cOverview.html'>C Overview Notes</a><br><a class='external' target='_blank' href='https://www.onlinegdb.com/online_c_compiler'>Online C compiler</a></td>
       <td><a class='external' target='_blank' href='https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf'>Emacs reference card</a><br><a class='external' target='_blank' href='https://www.openvim.com/'>Interactive Vim tutorial</a><br><a class='external' target='_blank' href='https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf'>Git cheatsheet</a><br><a class='external' target='_blank' href='https://jh.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9efa206a-6849-4bab-b630-ae3200303731'>Setting Up VS Code</a>
 	  <br><a href='resources/github-ssh.html'>GitHub Token & SSH key setup</a></td>
     </tr>
   </tbody>
 </table>
 </div>
+
+<!--
 
 <button type="button" id="week_2_toggle" class="week_control_button">Week 2 (1-Sep to 5-Sep)</button>
 <div id="week_2" class="collapsible">
@@ -630,6 +632,7 @@ the materials for that week.
   </tbody>
 </table>
 </div>
+
 <button type="button" id="week_14_toggle" class="week_control_button">Week 14 (2-Dec to 6-Dec)</button>
 <div id="week_14" class="collapsible">
 <table>
@@ -675,6 +678,7 @@ the materials for that week.
   </tbody>
 </table>
 </div>
+    -->
 
 
 <script type="text/javascript">
@@ -706,7 +710,7 @@ the materials for that week.
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    var active_week_id = 'week_13';
+    var active_week_id = 'week_1';
 
     var content_divs = document.getElementsByClassName("collapsible");
     for (i = 0; i < content_divs.length; i++) {
