@@ -43,6 +43,16 @@ At this point you can install Jekyll using the command
 gem install jekyll
 ```
 
+**NOTE:** Aug 2025 on an Apple Arm64, after installing rbenv had to add the following lines to the bottom of `~/.zshrc` file:
+
+```
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+eval "$(rbenv init -)"
+```
+
+Then, had to use other ruby versions than the above. First, switched to ruby version **2.7.8** and attempted install, then had to switch to **3.1.7** when a portion of the installation failed to advance and requested a higher version. The latter ran the jekyll installation command succesfully to completion.
+
 ### Using Jekyll for a local preview of the website
 
 As you make changes to the website, you can preview the site by running the
