@@ -207,6 +207,17 @@ of class will need to demo their solutions to a staff member for attendance cred
 before leaving.* You are strongly encouraged to stay in the session and work on
 homework instead of leaving early.
 
+There will be one midterm exam and a final exam, comprising a
+significant portion of your grade. These will be completed
+individually and on paper, which is why you should complete your
+homework as individually as possible to learn the material. The
+midterm exam will cover the topics of the first half of the class (C
+material) and the final exam will focus on the second half (C++
+material). The exams are designed to assess your knowledge of
+programming in C and C++ as well as your problem solving ability, but
+not your knowledge of specific tools or technologies discussed in
+class.
+
 Students will be expected to complete a variety of computer
 programming assignments, as well as written homework assignments. Two projects
 must be done in pairs or groups as specified; others are to
@@ -227,24 +238,32 @@ from class examples, slides, or the textbook is acceptable and
 expected.  While you are strongly encouraged to seek assistance
 primarily from course staff, some collaboration with others in the
 course and/or AI-assisted tools is permitted. You may discuss homework
-approaches and get help with code snippets, but you must not generate, co-develop 
-or share whole solutions. All collaboration (including
-internet/AI-assistance) must be clearly documented in your submission.
+approaches and get help with code snippets, but you must not generate,
+co-develop or share whole solutions. You are responsible for
+understanding and being able to explain any code in your solutions
+that you did not generate yourself. All collaboration (including
+internet/AI-assistance) must be clearly documented in your submission, using inline comments to delineate wherever non-original code appears. For example,
+```c
+// begin collaboration with chatGPT4
+   [actual non-original code goes here]
+// end collaboration with chatGPT4
+```
+Any code segment resulting from collaboration should be no more than ten lines long. 
 **Ethics violations** will include: failure to cite collaboration,
-copying substantially from others, sharing substantial code with others, and
-downloading/generating full solutions from the internet (including
-chatGPT or similar AI-assisted coding tools).
+copying substantially from others, sharing substantial code with
+others, and downloading/generating full solutions from the internet
+(including chatGPT or similar AI-assisted coding tools).
 
-There will be one midterm exam and a final exam, comprising a
-significant portion of your grade. These will be completed
-individually and on paper, which is why you should complete your
-homework as individually as possible to learn the material. The
-midterm exam will cover the topics of the first half of the class (C
-material) and the final exam will focus on the second half (C++
-material). The exams are designed to assess your knowledge of
-programming in C and C++ as well as your problem solving ability, but
-not your knowledge of specific tools or technologies discussed in
-class.
+*WARNING*
+
+AI tools can help with brainstorming, boilerplate generation, and learning alternative approaches to coding problems. However, responsibility for all submitted code rests solely with the submitting student(s). You must understand every line of code that you submit in assignments, projects, and exams. If you use AI to generate code:
+        <ul>
+          <li>You are expected to review, test, and debug it thoroughly.</li>
+          <li>You must be able to explain how and why your code works.</li>
+          <li>If your code fails or behaves unexpectedly, it is your responsibility to debug and correct it. The course staff is not responsible for fixing bugs and glitches.</li>
+          <li>You must document all sections that you didn't write yourself.</li>
+          <li>Blind or uncritical reliance on AI output is not acceptable and may result in penalty on your grades.</li>
+        </ul>
 
 Homework assignments are expected to take a considerable amount of time;
 start early and budget your time well. On average, it may take 5-10
@@ -282,7 +301,7 @@ accommodate late submissions in several specific ways:
     during the semester on the individual assignments only. However,
     at most 2 late days may be used on any one assignment.
 
--   No late days are allowed for partner-based
+-   No late days are allowed for partner-required
     coding projects (midterm and final).
 
 -   Each delay of up to 24 hours past the 11:00 pm deadline for an
@@ -410,7 +429,7 @@ the *Computer Science Academic Integrity Policy*:
 > and falsification, lying, facilitating academic dishonesty, and unfair
 > competition. Ignorance of these rules is not an excuse.
 > 
-Academic honesty is required in all work you submit to be graded. Except where the instructor specifies group work, you must solve all homework and programming  assignments without the help of others. For example, you must not look at anyone else’s complete solutions (including program code) to your homework problems. This includes AI tools such as, but not limited to, ChatGPT and GitHub Copilot. You may also not seek out solutions from coursework or examinations from previous semesters nor make these solutions available to others. However, you may discuss assignment specifications with others to be sure you understand what is required by the assignment.
+Academic honesty is required in all work you submit to be graded. You must solve all homework and programming  assignments in accordance with the collaboration policies above. For example, you must not look at anyone else’s complete solutions (including program code) to your homework problems. This includes limited use of AI tools such as ChatGPT and GitHub Copilot. You may also not seek out solutions from coursework or examinations from previous semesters nor make these solutions available to others. However, you may discuss assignment specifications with others to be sure you understand what is required by the assignment.
 > 
 > If your instructor permits using fragments of source code from outside
 > sources, such as your textbook or on-line resources, you must properly
