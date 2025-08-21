@@ -54,16 +54,23 @@ show_in_nav: false
 <div class="card_container">
 
 <div class="card">
-  <img alt="TBD" src="{{site.baseurl}}/img/staffpix/TBD.jpg">
+  <img alt="Rachael Pei" src="{{site.baseurl}}/img/staffpix/TBD.jpg">
   <div class="details">
-   <span class="name_and_role">TBD</span><br>
+   <span class="name_and_role">Rachael Pei</span><br>
   </div>
 </div>
 
 <div class="card">
-  <img alt="TBD" src="{{site.baseurl}}/img/staffpix/TBD.jpg">
+  <img alt="Mahmoud Said" src="{{site.baseurl}}/img/staffpix/TBD.jpg">
   <div class="details">
-   <span class="name_and_role">TBD</span><br>
+   <span class="name_and_role">Mahmoud Said</span><br>
+  </div>
+</div>
+
+<div class="card">
+  <img alt="Jinhong Lin" src="{{site.baseurl}}/img/staffpix/TBD.jpg">
+  <div class="details">
+   <span class="name_and_role">Jinhong Lin</span><br>
   </div>
 </div>
 
