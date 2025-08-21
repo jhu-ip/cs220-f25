@@ -4,12 +4,12 @@ layout: default
 title: Day 2 Recap Questions
 reference solutions:
   1. `-std=c99` sets the language standard to ISO C99; `-pedantic` Issue all the warnings demanded by strict ISO C and ISO C++; `-Wall` enables all the warnings about constructions that some users consider questionable; `-Wextra` enables some extra warning flags that are not enabled by -Wall.
-  2. [NEW] Type ./a.out in the terminal. Later we will learn how to give whatever name we want to this executable. 
+  2. [NEW] Type ./a.out in the terminal. Later we will learn how to give whatever name we want to this executable.
   3. Preprocessor brings together all the code that belongs together; process together all directives that start with `#`. Compiler turns human-readable source code into object code. Linker brings together all relevant object code and into a single executable file.
   4. [NEW] It indicates to the system (from which the program was called) that the program completed without error.
-  5. It lets us use the functions defined in the standard IO header file. This is an example of a preprocessor directive.
-  6. They act as placeholders for variables we want to output. Their type should match the type of the variable each corresponds to; e.g. integer (decimal): %d, floating point: %f, unsigned: %u, character: %c, and string: %s
-  7. scanf; &; the number of values successfully read with EOF (or -1) indicating end of input.
+  5. [NEW] It lets us use the functions defined in the standard IO header file. This is an example of a preprocessor directive.
+  6. [NEW] They act as placeholders for variables we want to output. Their type should match the type of the variable each corresponds to; e.g. integer (decimal) %d, floating point %f, unsigned %u, character %c, and string %s
+  7. [NEW] scanf; &; the number of values successfully read with EOF (or -1) indicating end of input.
   8. Undefined behavior is behavior which is not specified in the language definition or (other specification) and can thus vary between implementations. We need to care about it because we want our programs to behave the same regardless of the computer they're running on. We call this property portability.
   9. In a variable declaration, the keyword `const` indicates that,	once received, the value of the variable cannot be changed.
   10. Sizes are **minimum** byte size. Actual size varies by implementation. **char** single character, 1 byte, **int** signed integer, 2 bytes (usually 4 bytes), **unsigned** unsigned intenger, 2 bytes, **long** long signed intenger, 4 bytes, **float** single-precision floating point, unspecified (usually 4 bytes), **double** double-precision floating point, unspecified (usually 8 bytes)
