@@ -113,7 +113,7 @@ The following sites will be used heavily during the course:
 
 Upon successful completion of this course, you should be able to:
 
--   Read, write, trace, test, and debug C and C++ program codes.
+-   Read, write, trace, test, and debug C and C++ program code.
 
 -   Use command-line Unix/Linux tools for file management, creating and
     debugging programs in C/C++.
@@ -193,44 +193,61 @@ in-class exercises, rather than listening to a lecture.
 **Expectations & Grading**
 
 All students are generally expected to actively participate in the
-scheduled sessions of this course by answering and asking questions and
-solving the learning exercises. You are also expected to learn via the
-posted material, assignments, and projects. Our class time will include
-a recap of the new material, discussion on the important concepts,
-review of previous exercises, and live coding exercises. Before each
-session, students are expected to go through the related material posted
-on the course website and/or Piazza, and finish the coding exercises
-from the prior session.
+scheduled sessions of this course by answering and asking questions
+and solving the learning exercises. You are also expected to learn via
+the posted material, assignments, and projects. Our class time will
+include a recap of the new material, discussion on the important
+concepts, review of previous exercises, and live coding
+exercises. Before each session, students are expected to go through
+the related material posted on the course website, and finish the
+coding exercises from the prior session. *Attendance will be taken
+near the end of each class session, based on exercise
+participation. Students who finish the coding exercises before the end
+of class will need to demo their solutions to a staff member for attendance credit 
+before leaving.* You are strongly encouraged to stay in the session and work on
+homework instead of leaving early.
 
 Students will be expected to complete a variety of computer
-programming assignments, as well as written homework assignments. Some
-assignments may be done in pairs or groups as specified; others must
-be completed individually, with assistance as needed from course staff
-only. See the specific assignment page for details of what is
-permitted for a particular assignment. Failure to follow these
+programming assignments, as well as written homework assignments. Two projects
+must be done in pairs or groups as specified; others are to
+be completed and submitted individually, with assistance as needed from course staff. 
+See the specific assignment page for details of what is
+permitted for a particular assignment. Failure to follow 
 guidelines will be a violation of the academic ethics code, and
 reported and penalized accordingly.
+
+**Collaboration, Code Reuse and Citations**
 
 While code reuse is an important feature of modern programming, for
 this course, you will be expected to write most of the code for your
 homework assignments from scratch. You may use language libraries
 (according to assignment specifications), and you may always reuse
-your own code from prior work in the course. Downloading full or
-partial solutions from the internet (including chatGPT or similar
-AI-assisted coding tools), however, is an **ethics violation**. Using
-code from class examples, slides, or the textbook is acceptable, but
-you must cite the source properly in a comment in your code describing
-the original source.
+your own code from prior work in the course. Using and adapting code
+from class examples, slides, or the textbook is acceptable and
+expected.  While you are strongly encouraged to seek assistance
+primarily from course staff, some collaboration with others in the
+course and/or AI-assisted tools is permitted. You may discuss homework
+approaches and get help with code snippets, but you must not generate, co-develop 
+or share whole solutions. All collaboration (including
+internet/AI-assistance) must be clearly documented in your submission.
+**Ethics violations** will include: failure to cite collaboration,
+copying substantially from others, sharing substantial code with others, and
+downloading/generating full solutions from the internet (including
+chatGPT or similar AI-assisted coding tools).
 
-There will be one midterm exam and a final exam. The midterm exam will
-cover the topics of the first half of the class (C material) and the
-final exam will focus on the second half (C++ material). The exams are
-designed to assess your knowledge of programming in C and C++ as well as
-your problem solving ability, but not your knowledge of specific tools
-or technologies discussed in class.
+There will be one midterm exam and a final exam, comprising a
+significant portion of your grade. These will be completed
+individually and on paper, which is why you should complete your
+homework as individually as possible to learn the material. The
+midterm exam will cover the topics of the first half of the class (C
+material) and the final exam will focus on the second half (C++
+material). The exams are designed to assess your knowledge of
+programming in C and C++ as well as your problem solving ability, but
+not your knowledge of specific tools or technologies discussed in
+class.
 
 Homework assignments are expected to take a considerable amount of time;
-start early and budget your time well. On average, it may take 5-15
+start early and budget your time well. On average, it may take 5-10
 hours per week, depending on the assignment and your approach.
 Additionally, try to use incremental development so that even if you run
 out of time, you can still turn in code that implements some of the
@@ -250,7 +267,7 @@ references, and other resources for each topic. Students are expected to
 read these, as well as seek out other resources on their own to further
 their understanding of topics. There is a wealth of programming
 information on the internet; if one explanation doesn't make sense, you
-can probably find another that does.
+can probably find another that does. Course staff can help you understand these resources as well. 
 
 **Homework submission policy**
 
@@ -300,14 +317,13 @@ exceptions will be given for failure to plan ahead or simply having
 **In-class Exercises**
 
 Many of the course topics will be supported by an exercise. Although
-these exercises do not count towards your course grade, they are a very
-important part of your learning, and as such we *strongly* recommend
-that you complete them fully. We will review the solutions to these
-exercises either fully or just the important parts in class sessions. In
-general, we will *not* post solutions to the in-class exercises --- if
-you are having trouble completing an exercise, seek help in office hours,
-or on Piazza. We will have an option for you to submit your solutions on
-gradescope and get autograder feedback on them.
+these exercises do not count towards your course grade, they are a
+very important part of your learning, and as such we *strongly*
+recommend that you complete them fully. We will review solutions to
+the exercises in subsequent class sessions, but we will *not* post
+them. If you are having trouble completing an exercise, seek help in
+office hours, or on Piazza. We will have an option for you to submit
+your solutions on gradescope to get autograder feedback on them.
 
 **Code Reviews (Optional)**
 
@@ -335,22 +351,22 @@ points towards your final grade.
 
 **Grading Breakdown**
 
--   5% - particpation (physical attendance and active participation)
+-   2% - fudge grade (see above)
+
+-   4% - particpation (physical attendance and active participation)
     - <emph>You must attend 85% of the classes to receive full attendance credit (i.e., your attendance/participation percentage will be divided by 0.85 and then capped at 100%.) </emph>
 -   6% - written homework (3 total; due dates vary; will be posted on Canvas)
 
 -   14% - individual coding homework (5 total; point values and due dates vary; will be
     listed on Canvas)
 
--   7% - midterm coding project (in teams of two, due TBD)
+-   30% - midterm exam (in class, Oct. 13)
 
--   30% - midterm exam (in class, TBD)
+-   7% - midterm coding project (in teams of two, due approx. Oct. 22)
 
--   7% - final coding project (in teams, TBD)
+-   7% - final coding project (in teams, due approx. Dec. 5)
 
--   30% - final exam (TBD)
-
--   2% - fudge grade (see above)
+-   30% - final exam (9am, Dec. 18)
 
 All scores and grader commentary on your homework and project
 submissions, as well as exams, will be available via Gradescope. Please
@@ -394,7 +410,7 @@ the *Computer Science Academic Integrity Policy*:
 > and falsification, lying, facilitating academic dishonesty, and unfair
 > competition. Ignorance of these rules is not an excuse.
 > 
-Academic honesty is required in all work you submit to be graded. Except where the instructor specifies group work, you must solve all homework and programming  assignments without the help of others. For example, you must not look at anyone else’s solutions (including program code) to your homework problems. This includes AI tools such as, but not limited to, ChatGPT and GitHub Copilot. You may also not seek out solutions from coursework or examinations from previous semesters nor make these solutions available to others. However, you may discuss assignment specifications (not solutions) with others to be sure you understand what is required by the assignment.
+Academic honesty is required in all work you submit to be graded. Except where the instructor specifies group work, you must solve all homework and programming  assignments without the help of others. For example, you must not look at anyone else’s complete solutions (including program code) to your homework problems. This includes AI tools such as, but not limited to, ChatGPT and GitHub Copilot. You may also not seek out solutions from coursework or examinations from previous semesters nor make these solutions available to others. However, you may discuss assignment specifications with others to be sure you understand what is required by the assignment.
 > 
 > If your instructor permits using fragments of source code from outside
 > sources, such as your textbook or on-line resources, you must properly
