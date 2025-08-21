@@ -3,7 +3,7 @@ layout: default
 title: Day 1 Recap Questions
 reference solutions:
   1. Long-term lazy means spending time now giving our program properties that in the long term will make our program easier to debug and maintain, thus reducing the overall amount of work necessary.
-  2. An interface in which you type commands and receive output in text form. This is in contrast to a graphical user interface (GUI). 
+  2. [NEW] An interface in which you type commands and receive output in text form. This is in contrast to a graphical user interface (GUI). 
   3. Secure shell - If on Windows, download and use Putty. On MacOS or Linux, open a terminal and type the command `ssh <your-username>@gradx.cs.jhu.edu`. You can also use machines **grad1** through **grad24**.
   4. the **mv** (move), **cp** (copy), and **rm** (remove) commands, respectively.
   5. Do all the homework/exercises. Ask questions. Practice!
