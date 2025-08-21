@@ -42,7 +42,7 @@ syllabus as deemed necessary with notice.)*
 Joanne Selinski, Teaching Professor\
 <mailto:joanne@cs.jhu.edu>,\
 <a class="external" target="_blank" href="https://www.cs.jhu.edu/~joanne">https://www.cs.jhu.edu/~joanne</a>,\
-Office hours: TBD \
+Office hours: Mon 4-5p Malone 225, Thu 4-5p on zoom \
 Zoom: <a class="external" target="_blank" href="https://wse.zoom.us/my/jselinski">https://wse.zoom.us/my/jselinski</a>
 
 Ali Darvish, Senior Lecturer\
@@ -54,7 +54,7 @@ Zoom: <a class="external" target="_blank" href="https://wse.zoom.us/my/kpresler"
 Patricio Simari, Senior Lecturer\
 <mailto:psimari@cs.jhu.edu>,\
 <a class="external" target="_blank" href="https://www.cs.jhu.edu/">https://www.cs.jhu.edu/</a>,\
-Office hours: TBD \
+Office hours: Mon & Wed 12-12:50, Malone 240b \
 Zoom: <a class="external" target="_blank" href="https://wse.zoom.us/my/pdsimari">https://wse.zoom.us/my/pdsimari</a>
 
 
