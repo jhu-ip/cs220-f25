@@ -1,7 +1,7 @@
 ---
-id: notes-cOverview
+id: notes-CBasics
 layout: default
-title: C Overview
+title: C Basics
 ---
 
 <h3>C Language Overview</h3>
