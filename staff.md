@@ -29,7 +29,7 @@ show_in_nav: false
     Department of Computer Science<br>
     Email: <a href="mailto:darvish@jhu.edu">darvish@jhu.edu</a><br>
     Web: <a class="external" target="_blank" href="https://www.cs.jhu.edu/~darvish/">https://www.cs.jhu.edu/~darvish/</a><br>
-    Office hours: TBD<br>
+    Office hours: Mon & Wed 1:30-2:30 @ zoom or Malone 205<br>
     Zoom: <a class="external" target="_blank" href="https://wse.zoom.us/s/5158173954">https://wse.zoom.us/s/5158173954</a>
     </div>
   </div>
@@ -54,21 +54,21 @@ show_in_nav: false
 <div class="card_container">
 
 <div class="card">
-  <img alt="Rachael Pei" src="{{site.baseurl}}/img/staffpix/TBD.jpg">
+  <img alt="Rachael Pei" src="{{site.baseurl}}/img/staffpix/rachael.png">
   <div class="details">
    <span class="name_and_role">Rachael Pei</span><br>
   </div>
 </div>
 
 <div class="card">
-  <img alt="Mahmoud Said" src="{{site.baseurl}}/img/staffpix/TBD.jpg">
+  <img alt="Mahmoud Said" src="{{site.baseurl}}/img/staffpix/placeholder.jpg">
   <div class="details">
    <span class="name_and_role">Mahmoud Said</span><br>
   </div>
 </div>
 
 <div class="card">
-  <img alt="Jinhong Lin" src="{{site.baseurl}}/img/staffpix/TBD.jpg">
+  <img alt="Jinhong Lin" src="{{site.baseurl}}/img/staffpix/placeholder.jpg">
   <div class="details">
    <span class="name_and_role">Jinhong Lin</span><br>
   </div>
