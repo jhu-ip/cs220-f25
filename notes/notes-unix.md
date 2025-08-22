@@ -20,21 +20,19 @@ title: Unix Notes
 
 <p>Here are some of the most common unix commands:</p>
 <ul>
-<li><code>ls</code> - list contents of current directory
-<li><code>pwd</code> - print working directory, to see the full path from home to current
-<li><code>cat</code> - (short for concatenate) to view the contents of a file
-<li><code>more</code> - to view a file with forward scrolling control
-<li><code>less</code> - to view a file with two-way scrolling control
+<li><code>ls</code> - list contents of current directory</li>
+<li><code>pwd</code> - print working directory, to see the full path from home to current</li>
+<li><code>cat</code> - (short for concatenate) to view the contents of a file</li>
+<li><code>more</code> - to view a file with forward scrolling control</li>
+<li><code>less</code> - to view a file with two-way scrolling control</li>
 </ul>
-</p>
 
 ## Creating files
 <p>There are several options for creating and editing files:</p>
 <ul>
-<li><code>emacs</code> - powerful editor, use Xming to run in visual mode
-<li><code>vi</code> and <code>vim</code> - another popular editor for programmers
+<li><code>emacs</code> - powerful editor, use Xming to run in visual mode</li>
+<li><code>vi</code> and <code>vim</code> - another popular editor for programmers</li>
 </ul>
-</p>
 
 
 ## Working in Emacs
@@ -64,7 +62,6 @@ esc %  search & replace
 ^@  set mark (to indicate beginning of a selection)
 esc w  copy selection (region from mark to cursor, copied to buffer)
 ^w  cut selection (stored in buffer, use ^-y yank to paste)
-
 </pre>
 
 ## Working in Vim
