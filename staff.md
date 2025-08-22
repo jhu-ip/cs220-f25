@@ -16,7 +16,7 @@ show_in_nav: false
     Department of Computer Science<br>
     Email: <a href="mailto:joanne@cs.jhu.edu">joanne@cs.jhu.edu</a><br>
     Web: <a class="external" target="_blank" href="https://cs.jhu.edu/~joanne/">https://cs.jhu.edu/~joanne/</a><br>
-    Office hours: TBD<br>
+    Office hours: Mon 4-5p Malone 225, Thu 4-5p on zoom<br>
     Zoom: <a class="external" target="_blank" href="https://wse.zoom.us/my/jselinski">https://wse.zoom.us/my/jselinski</a>
     </div>
   </div>
@@ -41,7 +41,7 @@ show_in_nav: false
     <span class="name_and_role">Patricio Simari</span><br>
     Department of Computer Science<br>
     Email: <a href="mailto:psimari@cs.jhu.edu">psimari@cs.jhu.edu</a><br>
-    Office hours: TBD<br>
+    Office hours: Mon & Wed 12-12:50, Malone 240b<br>
     </div>
   </div>
 
