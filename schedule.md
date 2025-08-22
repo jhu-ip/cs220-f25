@@ -10,3 +10,5 @@ and announced on [Piazza](https://piazza.com/class/mdhy1x8l7xh5w3).
 
 Unless mentioned otherwise, assignments and projects are due at 11pm (Baltimore time)
 on the due date.
+
+
