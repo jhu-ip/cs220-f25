@@ -61,14 +61,14 @@ show_in_nav: false
 </div>
 
 <div class="card">
-  <img alt="Mahmoud Said" src="{{site.baseurl}}/img/staffpix/placeholder.jpg">
+  <img alt="Mahmoud Said" src="{{site.baseurl}}/img/staffpix/mahmoud.jpg">
   <div class="details">
    <span class="name_and_role">Mahmoud Said</span><br>
   </div>
 </div>
 
 <div class="card">
-  <img alt="Jinhong Lin" src="{{site.baseurl}}/img/staffpix/placeholder.jpg">
+  <img alt="Jinhong Lin" src="{{site.baseurl}}/img/staffpix/jinhong.jpg">
   <div class="details">
    <span class="name_and_role">Jinhong Lin</span><br>
   </div>
