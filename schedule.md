@@ -10,3 +10,9 @@ and announced on [Piazza](https://piazza.com/class/mdhy1x8l7xh5w3).
 
 Unless mentioned otherwise, assignments and projects are due at 11pm (Baltimore time)
 on the due date. See the syllabus for our late days policy and also the collaboration policy and ethics expectations for this semester. 
+
+
+
+Assignment/Exam | Date
+--------------- | ----
+[Homework 0](assign/hw0.html) | Sep 5th, 11pm
