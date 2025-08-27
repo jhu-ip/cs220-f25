@@ -143,6 +143,49 @@ title: C Basics
 </li>  <li> <code>sizeof(<em>anytype</em>)</code>, <code>sizeof <em>varname</em></code>
 </li> </ul>
 
+
+
+<h3>Type Casting</h3>
+
+<ul>
+      <li>Convert one type of data to another
+</li>      <li>For types int/float/double/char/etc will convert layout format
+     </li> <li>For other types may just re-interpret the bits as the new type
+     </li> <li>Casts in C <em>never</em> fail at runtime (unlike Java)
+     </li><li>[Implicit] Casts in C can do bad things!
+</li>    </ul>
+
+```c
+#include <stdio.h>
+int main() {
+    // example of up-cast for an explicit conversion
+    int i = 45;
+    // turn an int (4-byte) into a double (8-byte)
+    double j = (double) i; // "(double)" here NOT necessary, compiler will convert
+    printf("float %f\n", j);
+
+    // useful up-cast conversion for floating division
+    int n1 = 4, n2 = 16;
+    printf("floating point division result %f\n", (float) n1 / n2); 
+
+    char c = i; // implicit down-cast conversion, 4-byte to 1-byte (drop 3 bytes)
+    printf("character %c\n",c);
+
+    long int l = 23983982;
+    int *ptr = (int *) l; // ptr points to memory location 23983982 - a BAD idea!
+//    i = *ptr; // uncomment and get a core dump
+    
+    // casting between pointers and integers sometimes useful however
+    short int a[] = {1,2};
+    short int *ptr0 = a; // start of array
+    short int *ptr1 = a+1; // 2nd element
+    
+    printf("size of short int is %ld bytes\n",(long int) ptr1 - (long int) ptr0);
+    return 0;
+}
+```
+
+
 <h3>C Operators</h3>
       
 <h4>Common Operators</h4>
