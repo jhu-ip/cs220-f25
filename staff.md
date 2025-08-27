@@ -79,6 +79,11 @@ show_in_nav: false
 
 ## Course Assistants
 
+* Sec 01 Selinski (10-11:15a): Meghana, Joanne, Mayling
+* Sec 02 Darvish (12-1:15p): Bob, Cicely, Wendy
+* Sec 03 Simari (1:30-2:45p): Yuanyi, Mark, Travis
+* Sec 04 Simari (3:00-4:15p): Derrick, Alex, Qingzhe (as needed)
+
 Office Hours Schedule for all TAs/CAs (starting Wednesday 8/27): 
 # [CA Office Hours Schedule](https://docs.google.com/spreadsheets/d/1-jwRZWyezU4seGnq6Xpn6xO5Zevq4hdjmaO9GQAtyJU/edit?usp=sharing)
 

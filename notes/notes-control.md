@@ -64,13 +64,13 @@ These are statements that should be true at the start of every
   iteration.  We can use <code>assert</code> statements to check if
   they are good (true):
 ```c
-  // need #include &lt;assert.h&gt;
-  // need #include &lt;math.h&gt;  and compile with -lm option to link math library
+  // need #include assert.h for assert function
+  // need #include math.h for pow function and compile with -lm option to link math library
 
   int i = 0;
   int val = 1;
   while (i < 15 ) {
-    assert (val == pow(2,i));
+    assert(val == pow(2,i));
     i++;
     val *= 2;
   } 

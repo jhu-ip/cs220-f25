@@ -67,8 +67,6 @@ the materials for that week.
 </table>
 </div>
 
-<!--
-
 <button type="button" id="week_2_toggle" class="week_control_button">Week 2 (1-Sep to 5-Sep)</button>
 <div id="week_2" class="collapsible">
 <table>
@@ -107,13 +105,17 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>NA</td>
+      <td><a href='notes/notes-Cbasics.html'>NOTES: C Basics</a><br />
+<a href='notes/notes-control.html'>NOTES: Control Structures</a> </td>
+      <td><a href='notes/notes-Carrays.html'>NOTES: C Arrays</a><br />
+      <a href='notes/notes-Cstrings.html'>NOTES: C Strings</a></td>
     </tr>
   </tbody>
 </table>
 </div>
+
+<!--
 
 <button type="button" id="week_3_toggle" class="week_control_button">Week 3 (8-Sep to 12-Sep)</button>
 <div id="week_3" class="collapsible">
