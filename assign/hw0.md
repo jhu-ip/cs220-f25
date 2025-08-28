@@ -102,16 +102,36 @@ When you submit, Gradescope conducts a series of automatic tests. These tests do
 </div>
 </div>
 
-Two notes regarding automatic checks for programming assignments:
+### Style Guidelines
+
+You should make sure that your code has good style. You can look
+at the [coding style guidelines
+here](https://jhucsf.github.io/fall2025/resources/style.html) from a
+course you may take later (CSF) that also apply to this course. In brief,
+you should make sure that your submission is well formed, readable,
+consistently styled, and documented as follows:
+
+- it is not overcommented or undercommented (not relevant for this little assignment)
+- there are no ambiguous or meaningless variable names 
+- it has proper/consistent bracket placements and indentation
+- there are no global variables
+- lines are at most 80 characters long
+
+
+### Grading
+
+Two notes regarding automatic checks on Gradescope for programming assignments:
 
 * Passing an automatic check is not itself worth points. (There might be a nominal, low point value like 0.01 associated with a check, but that will not count in the end.) The checks exist to help you and the graders find obvious errors. This will be true for most of the assignments; the actual grades are given manually by the graders, along with feedback comments.
 
 * The automatic checks cover some of the requirements set out in the assignment, but not all. For this assignment, you will notice that the *silver.c* program is checked, but not the other two. In general, *it is up to you to test your own work* and ensure your programs satisfy all stated requirements. Passing all the automatic checks does not necessarily mean you will earn all the points.
 
-### Style & Grading
-We do not have super strict style checks in this course, but
-you should be following best practices for readable code. For this first simple 
-assignment that means good spacing, consistent indentation and bracket
-placements, and lines no longer than 80 characters.
+The 20 points for this assignment will be distributed as follows when we grade:
 
-Some points in our grading scheme will be for style and submission, including correct file names and the remainder will be for functionality. Code that does not compile will receive a 0 grade. 
+* [5] Style & Submission (including correct filenames, zipping, gitlog, and no compiler warnings)
+* [5] Gold program 
+* [5] Silver program
+* [5] Bronze program
+
+Always practice incremental coding and testing, and frequent submissions for best results!
+

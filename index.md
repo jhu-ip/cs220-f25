@@ -46,4 +46,5 @@ well. You must join the Gradescope course page through Canvas.
 
 ## News
 
+* **August 28** — Assignment 0 is posted - see the "Assessments" section of this website.
 * **August 25** — Welcome to Intermediate Programming! Check out Week 1 material under the "Course Material" tab. 

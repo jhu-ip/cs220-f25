@@ -13,6 +13,12 @@ on the due date. See the syllabus for our late days policy and also the collabor
 
 
 
-Assignment/Exam | Date
---------------- | ----
-[Homework 0](assign/hw0.html) | Sep 5th, 11pm
+Assignment/Exam | Posted | [Due] Date
+--------------- | ------ | ----------
+[Homework 0](assign/hw0.html) | 8/29 | Friday Sep 5, 11pm
+Homework 1 | 9/5 | Friday Sep 12, 11pm
+Homework 2 | 9/12 | Friday Sep 19, 11pm
+Homework 3 | 9/19 | Friday Sep 26, 11pm
+Homework 4 | 9/26 | Friday Oct 3, 11pm
+Midterm Project | 10/3 | Wednesday Oct 22, 11pm
+Midterm (C material) | n/a | Monday Oct 13th, in section
