@@ -11,7 +11,7 @@ reference solutions:
   6. Your submission must include your source code .c files and your gitlog.txt bundled in a single zip file. This file should be downloaded to your personal computer from ugrad through secure copy and then submitted through Gradescope.
 ---
 
-1. What is the best text editor to use in the terminal? Name two popular text editors usable in the terminal.
+1. What is the best text editor to use in the terminal? Name two popular choices.
 2. Why do we use version control system like **git**?
 3. Name six common **git** commands?
 4. What is secure copy? How do we invoke it?
