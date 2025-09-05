@@ -82,8 +82,8 @@ To read what arguments if any were on a command line invocation, use the followi
 
 Example: given <code>./a.out one two</code><br />
 <code>argc</code> is 3,
-<code>argv[0] is "./a.out"</code>, <code>argv[1] is "one"</code>,
-and <code>argv[2] is "two"</code>
+<code>argv[0]</code> is "./a.out", <code>argv[1]</code> is "one",
+and <code>argv[2]</code> is "two"
 
 
 <h3>CAUTION: review the below sections after learning pointers</h3>
@@ -116,7 +116,7 @@ often interchangeable but not 100%:
 
 <h4>Arrays of pointers</h4>
 <ul> 
-     <li>Note writing "<code>main(int argc, char *argv[])</code>" is same as "<code>main(int argc, char **argv)"</code> since more generally any function parameter <code>mytype myvar[]</code> is nearly identical to writing <code>mytype * myvar</code>.
+     <li>Note writing <code>main(int argc, char *argv[])</code> is same as <code>main(int argc, char **argv)</code> since more generally any function parameter <code>mytype myvar[]</code> is nearly identical to writing <code>mytype * myvar</code>.
 </li><li> Common use is array of strings
 </li><li> Each string is pointer to a string array, 
   eg: <code>char *suitptr[4] = {"Hearts", "Diamonds", "Clubs", "Spades"}</code>
@@ -124,14 +124,15 @@ often interchangeable but not 100%:
 </li>
 </ul>
 
+<p>
 
 ```c
-#include <stdio.h>
 int main(void) {
   char *suitptr[4] = {"Hearts", "Diamonds", "Clubs", "Spades"};
   char suit[4][20] = {"hearts", "diamonds", "clubs", "spades"};
   printf("%s %s\n", suit[1], suitptr[1]); // they more or less behave the same
   printf("size of suit = %lu size of suitptr = %lu\n",sizeof(suit),sizeof(suitptr)); // sizes differ!
+  return 0;
 }
 ```
 
