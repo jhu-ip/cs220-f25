@@ -42,11 +42,11 @@ We will use 8 as the maximum number of stored locations that the program must ha
 
 There are five options the user may choose from:
 
-* **Option 1: Add a location:** This option allows the user to enter a new location into the set of stored locations. When selected, the user will be prompted to enter a label for the new location, which must be a single capital letter (between 'A' and 'Z'), followed by a latitude, longitude pair. The program must validate this input insuring it can be read and falls within the appropriate ranges. The latitudes and longitudes should be stored as type `double`. Use the `%lf` format specifier to read values of type `double`.
+* **Option 1: Add a location:** This option allows the user to enter a new location into the set of stored locations. When selected, the user will be prompted to enter a label for the new location, which must be a (unique) single capital letter (between 'A' and 'Z'), followed by a latitude, longitude pair. The program must validate this input insuring it can be read, falls within the appropriate ranges, and is not already in use. The latitudes and longitudes should be stored as type `double`. Use the `%lf` format specifier to read values of type `double`.
 
-* **Option 2: Remove a location:** This option allows the user to remove a location from the set of stored locations. When selected, the user will be prompted to enter a label which must match one of the stored ones. 
+* **Option 2: Remove a location:** This option allows the user to remove a location from the set of stored locations. When selected, the user will be prompted to enter a label which must match one of the stored ones. After removal the remaining locations should be in the same relative order they were previously.
 
-* **Option 3: List locations:** This option allows the user to display the set of stored locations, including their labels, latitudes, and longitudes. The labels and their corresponding locations should be displayed one per line using the following format. For example, if the label 'B' is stored representing Baltimore with latitude 39.290400 and longitude -76.612200, the line should be displayed as `B: (39.290400, -76.612200)`.
+* **Option 3: List locations:** This option allows the user to display the entire set of stored locations, including their labels, latitudes, and longitudes. The labels and their corresponding locations should be displayed one per line using the following format. For example, if the label 'B' is stored representing Baltimore with latitude 39.290400 and longitude -76.612200, the line should be displayed as `B: (39.290400, -76.612200)`.
 
 * **Option 4: Compute distance:** This option allows the user to compute the geodesic distance between two stored locations. When selected, the user will be prompted to enter a first and second label, each separately prompted for and validated. The program will then compute the distance between the two locations using the following formula:
 
@@ -54,7 +54,7 @@ There are five options the user may choose from:
 	acos(sin(lat1)*sin(lat2) + cos(lat1)*cos(lat2)*cos(lon1 - lon2))*EARTH_RADIUS_MILES;
 	```
 	
-	where `lat1`, `lon1` and `lat2`, `lon2` correspond to the stored latitude and longitude coordinates of the given locations **converted from degrees to radians** (you must implement this conversion.) The constant `EARTH_RADIUS_MILES` is declared in the starter code for this homework. Your program should `#include <math.h>` to use the trigonometric functions found there. **All calculations should be done using double precision** (i.e. using type `double` instead of `float`.) When displaying the distance result, use the format specifier `%.2lf` to display only two decimal places of the result. 
+	where `lat1`, `lon1` and `lat2`, `lon2` correspond to the stored latitude and longitude coordinates of the given locations **converted from degrees to radians** (you must implement this conversion.) The constant `EARTH_RADIUS_MILES` is declared in the starter code for this homework. Your program should `#include <math.h>` to use the trigonometric functions found there. **All calculations should be done using double precision** (i.e. using type `double` instead of `float`.) When displaying the distance result, use the format specifier `%.2lf` to display only two decimal places of the result. Remember to also compile with the -lm option to use the math library.
 
 * **Option 0: Quit:** This option terminates the command loop and exits the program with exit code 0.
 
@@ -78,7 +78,7 @@ All error messages must end with a line break. You do **not** need to consider a
 
 ### Specifications, Development Requirements, and Hints
 
-In the homework folder of your private repository (the one having the name in the form `YEAR-TERM-student-JHED`), you should create a new subfolder named `homework/hw1`. Copy into that `homework/hw1` subfolder the starter code file `distance.c` provided in the public repository. At the top of the file, add a comment with your six character alphanumeric **Hopkins ID**. (Please do not include your name or JHED so as to allow for blind grading.)
+In the homework folder of your private repository (the one having the name in the form `YEAR-TERM-student-JHED` or `my220repo`), you should create a new subfolder named `homework/hw1`. Copy into that `homework/hw1` subfolder the starter code file `distance.c` provided in the public repository, from folder `homework/hw1`. At the top of the file, add a comment with your six character alphanumeric **Hopkins ID**. (Please do not include your name or JHED so as to allow for blind grading.)
 
 Use three parallel arrays to keep track of labels, latitudes, and longitudes. You'll also need a variable to count how many different locations have been entered so that you know which elements of these arrays are used.
 
