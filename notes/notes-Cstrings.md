@@ -35,30 +35,30 @@ title: C-Strings
 </li>  <li> <code>fgets(s, MAXSIZE, stdin)</code> - use this instead; must allocate memory for s first!
 </li></ul>
 
-<!--
 
 <h4><code>string.h</code> string manipulation functions</h4>
 <ul>
   <li> <code>strlen(const char *str)</code> - length of string
-</li> <li> <code>char *strcpy(char *to, const char *from)</code>
-<ul>
-<li> copy from &#8594; to
-</li><li> return to
+</li> <li> <code>char *strcpy(char *dest, const char *orig)</code>
+</li><ul>
+<li> copy from string <code>orig</code> to string <code>dest</code>
+</li><li> return <code>dest</code>
 </li>	</ul>
-    <li> <code>strncpy(to, from, howmany)</code>
-</li>    <li> <code>char *strcat(char *to, const char *from)</code>
-<ul>    <li> concatenate from to to (to = to + from)
-</li>    <li> return to
-</ul>
+    <li> <code>strncpy(dest, orig, howmany)</code>
+</li>    <li> <code>char *strcat(char *orig, const char *more)</code>
+<ul>    <li> concatenate <code>more</code> to end of <code>orig</code> (orig = orig + more)
+</li>    <li> return <code>orig</code>
+</li></ul>
 </li>  <li> <code>int strcmp(const char *s1, const char *s2)</code>
       <ul>
 	<li> compare <code>s1</code> to <code>s2</code>
 </li>    <li> return <code>0</code> if same, <code>&lt;0</code> if <code>s1 &lt; s2</code>, <code>&gt;0</code> if <code>s1 &gt; s2</code>
 </li></ul>
-</li>  </ul>
+</li></ul>
 
 
 Dynamically allocating space for strings and putting them in an array:
+
 ```c
 #include <stdlib.h>
 #include <stdio.h>
@@ -81,6 +81,6 @@ int main()
     for (int i=0;i&lt;numstrings;i++) printf("%s\n",sarray[i]);
 }
 ```
--->
 
+<p>
 (more coming soon)

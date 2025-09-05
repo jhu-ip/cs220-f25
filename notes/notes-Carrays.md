@@ -10,7 +10,7 @@ title: C Arrays
 </li><li> Use indices to access individual elements; like most languages these days, indices start at <code>0</code>
 </li><li> Declare as <code>type var[CONST_SIZE]</code>, e.g. <code>int temps[3]</code>
 </li>	<li> Can also declare w/initialization list: <code>type var[] = {val1, val2, val3}</code>, e.g. <code>int temps[] = {75, 67, 83}</code> and array will be as long as the list
-     </ul>
+</li> </ul>
 
 <h3>Multiple dimension arrays</h3>
 <ul>
@@ -19,7 +19,7 @@ title: C Arrays
 </li><li> Initialize by nesting lists: <code>int testr[2][3] = { {4, 3, 2}, {6, 8, 33} };</code>
 </li><li> Does initialization one row at a time
 </li><li><code>myarray[i]</code> refers to a one dimensional array of the base type (row i); <code>myarray[size1][size2]</code> can be used as an array of arrays
-  </ul>
+</li>  </ul>
 
 Example
 
@@ -40,16 +40,16 @@ Example
 
 
 <h3>Arrays and Functions</h3> 
-<ul>
- <li> use <code>[]</code> to indicate an array variable in function definition
-        and in function prototype, e.g.
+
+Use <code>[]</code> to indicate an array variable in function definition and in function prototype, e.g.
 
 ```c
       void doArray (int [], int); /* prototype version */
       void doArray (int myarray[], int size) /* on function itself */
 ```
 
-</li><li> Pass whole array to function with just name, no subscript: aray contents are passed by REFERENCE 
+<ul>
+<li> Pass whole array to function with just name, no subscript: aray contents are passed by REFERENCE 
 </li><li>Element values may be changed permanently within the function
 </li><li> Doesn't create new storage location (ie, doesn't copy array)
 </li><li> Array name is really address of first element (more later on this)
@@ -60,14 +60,14 @@ Example
       <li>eg: <code>void passarray(int a[][3][4])</code>  receives a 3 dimensional array
      </li> <li>Sizes needed because arrays are stored sequentially - need dimensions to locate items
      </li> <li>Another example of low-level nature of C data structures.
-</ul>
+</li></ul>
 
 <li>Can use const in parameter list to make array unmodifiable:
 
 `void doArray (const int ma[])`
 
 results in compile error if any attempt to assign or read new value into an array element
-</ul>
+</li></ul>
 
 
 <h3>Command line options</h3>
@@ -101,6 +101,7 @@ Welcome to C's Wacky World
 </li>  <li><code>&a[3]</code> is a synonym for <code>a + 3</code>
 </li></ul>
 
+<p>
 "<code>int *ptr</code>" and "<code>int a[10]</code>" variables are
 often interchangeable but not 100%:
 <ul>
@@ -270,5 +271,5 @@ int main()
 
 -->
 
-
+<p>
 (more coming soon)
