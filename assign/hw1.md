@@ -332,15 +332,15 @@ various ways it might be malformed.</p>
 </div>
 </div>
 
-### Testing
+### Starter File and Testing
 
 It is your responsibility to test a variety of valid input situations as well as invalid inputs. Make sure to test that every possible error condition detailed in the specifications is handled as specified. Think critically as an adversary for other problems or edge cases that your program might encounter, and test that they are handled appropriately.
 
-For this first real assignment we are providing a sample input file and matching output file that you can use to check whether your prompts and outputs are programmed exactly as expected. This is the type of testing (not the exact tests) that our autograder will usually perform in hidden tests. In order to access the samples you will need to download them from our public course repo using commands similar to those in exercise 3b, assuming you have successfully cloned that repository. If not, complete exercises 3a and 3b and ask for help in office hours or class if needed.
+For this first real assignment, we are providing a starter file `distance.c` and sample input files with matching output files that you can use to check whether your prompts and outputs are programmed exactly as expected. This is the type of testing that our autograder will usually perform in public and hidden tests. In order to access the samples you will need to download them from our public course repo using commands similar to those in exercise 3b, assuming you have successfully cloned that repository. If not, complete exercises 3a and 3b and ask for help in office hours or class if needed.
 
 First, log into the ugrad system and navigate into your clone of the `cs220-xxx-public` repo (where `xxx` represents the current semester.) Do a `git pull` to get the latest files we have provided. Then, using the unix command `cp` (copy) along with customized file paths based on your file directory set-up, you'll want to copy from `cs220-xxx-public/homework/hw1/` to the directory where you are coding your solution to this assignment. 
 
-When you're ready to test your output locally, compile and run on the input file using input redirection, saving the [`stdout`] output to file `my_output_xx.txt` (where `xx` refers to the particular number of file you're testing.) For example, to check with the first sample input, run the command:
+When you're ready to test your output locally, compile and run on the input file using input redirection, saving the `stdout` output to file `my_output_xx.txt` (where `xx` refers to the particular number of file you're testing.) For example, to check with the first sample input, run the command:
 
 ```
 $ ./distance < sample_input_01.txt > my_output_01.txt
