@@ -62,8 +62,7 @@ Use <code>[]</code> to indicate an array variable in function definition and in 
      </li> <li>Another example of low-level nature of C data structures.
 </li></ul>
 
-<li>Can use <code>const</code> in parameter list to make array unmodifiable: <code>void doArray (const int ma[])</code> results in compile error if any attempt to assign or read new value into an array element
-</li></ul>
+Can use <code>const</code> in parameter list to make array unmodifiable: <code>void doArray (const int ma[])</code> results in compile error if any attempt to assign or read new value into an array element
 
 
 <h3>Command line options</h3>

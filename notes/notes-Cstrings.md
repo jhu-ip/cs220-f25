@@ -4,7 +4,7 @@ layout: default
 title: C-Strings
 ---
 
-<h4>Strings</h4>
+<h3>Strings</h3>
 
 <ul>
 	<li> Strings are nothing but an array of characters - there is no primitive <code>string</code> type in C.
