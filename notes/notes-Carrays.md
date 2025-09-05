@@ -55,7 +55,9 @@ Use <code>[]</code> to indicate an array variable in function definition and in 
 </li><li> Array name is really address of first element (more later on this)
 </li><li> Array names are passed by VALUE (copied, changes won't reach caller)
 </li>	<li> Individual array elements passed to functions are handled like any variable of that base type
-</li><li> If declaring a multi-dimensional array as function argument, need sizes of subcripts for all dimensions but 1st
+</li></ul>
+
+If declaring a multi-dimensional array as function argument, need sizes of subcripts for all dimensions but 1st
     <ul>
       <li>eg: <code>void passarray(int a[][3][4])</code>  receives a 3 dimensional array
      </li> <li>Sizes needed because arrays are stored sequentially - need dimensions to locate items
@@ -124,13 +126,13 @@ often interchangeable but not 100%:
 
 
 ```c
-  #include <stdio.h>
-  int main(void) {
-    char *suitptr[4] = {"Hearts", "Diamonds", "Clubs", "Spades"};
-    char suit[4][20] = {"hearts", "diamonds", "clubs", "spades"};
-    printf("%s %s\n", suit[1], suitptr[1]); // they more or less behave the same
-    printf("size of suit = %lu size of suitptr = %lu\n",sizeof(suit),sizeof(suitptr)); // sizes differ!
-  }
+#include <stdio.h>
+int main(void) {
+  char *suitptr[4] = {"Hearts", "Diamonds", "Clubs", "Spades"};
+  char suit[4][20] = {"hearts", "diamonds", "clubs", "spades"};
+  printf("%s %s\n", suit[1], suitptr[1]); // they more or less behave the same
+  printf("size of suit = %lu size of suitptr = %lu\n",sizeof(suit),sizeof(suitptr)); // sizes differ!
+}
 ```
 
 
