@@ -338,12 +338,9 @@ It is your responsibility to test a variety of valid input situations as well as
 
 For this first real assignment we are providing a sample input file and matching output file that you can use to check whether your prompts and outputs are programmed exactly as expected. This is the type of testing (not the exact tests) that our autograder will usually perform in hidden tests. In order to access the samples you will need to download them from our public course repo using commands similar to those in exercise 3b, assuming you have successfully cloned that repository. If not, complete exercises 3a and 3b and ask for help in office hours or class if needed.
 
-First, log into the ugrad system and navigate into your clone of the `cs220-xxx-public` repo (where `xxx` represents the current semester.) Do a `git pull` to get the latest files we have provided.
+First, log into the ugrad system and navigate into your clone of the `cs220-xxx-public` repo (where `xxx` represents the current semester.) Do a `git pull` to get the latest files we have provided. Then, using the unix command `cp` (copy) along with customized file paths based on your file directory set-up, you'll want to copy from `cs220-xxx-public/homework/hw1/` to the directory where you are coding your solution to this assignment. 
 
-Second, using the unix command `cp` (copy) along with customized file paths based on your file directory set-up, you'll want to copy from `cs220-xxx-public/homework/hw1/sampleIn.txt` to the directory where you are coding your solution to this assignment. Similarly, copy from `cs220-xxx-public/homework/hw1/sampleOut.txt` to the same place.
-
-Next, compile and run on the input file using input redirection, and saving the
-[`stdout`] output to file `myOut.txt` as follows. You will see that the `stdout` output is redirected to the text file instead of being displayed on the screen.
+When you're ready to test your output locally, compile and run on the input file using input redirection, saving the [`stdout`] output to file `my_output_xx.txt` (where `xx` refers to the particular number of file you're testing.) For example, to check with the first sample input, run the command:
 
 ```
 $ ./distance < sample_input_01.txt > my_output_01.txt
@@ -374,6 +371,8 @@ consistently styled, and documented as follows:
 - it has proper/consistent bracket placements and indentation
 - there are no global variables
 - lines are at most 80 characters long
+
+For this homework, since declaring functions has not yet been covered in class,  you are not required to write your own helper functions; i.e. you can have your entire program under the main function. However, if you would like to declare your own functions you are permitted (and encouraged) to do so.
 
 ### Submission
 
