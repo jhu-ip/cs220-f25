@@ -7,56 +7,21 @@ title: C Arrays
 <h3>Basic Usage</h3>
 <ul>
       <li> Hold multiple values all of the same base type
-</li>	<li> Declare as <code>type var[CONST_SIZE]</code>, e.g. <code>int temps[3]</code>
-</li>	<li> Can also declare w/initialization list: <code>type var[] = {val1, val2, val3}</code>, e.g. <code>int temps[] = {75, 67, 83}</code>
-</li>	<li> Like most languages thes days, indices start at <code>0</code>
-</li>	<li> Arrays are passed by <em>reference</em> to functions - the whole array is not copied.
-
-     </li> </ul>
-
-<h3>Arrays and Functions</h3> 
-<ul>
-  <li> use <code>[]</code> to indicate an array variable in function definition
-        and in function prototype
-</li>  <li>      eg.
-```c
-      void doArray (int [], int); /* prototype version */
-      void doArray (int myarray[], int size) /* on function itself */
-```      
-</li><li> Pass whole array with just name, no subscript
-</li></ul>
-<p>
-Array contents are passed by REFERENCE 
-<ul><li>Element values may change
-</li><li> Doesn't create new storage locations (ie, doesn't copy array)
-</li><li> Array name is really address of first element (more later on this)
-</li><li> Array names are passed by VALUE (copied, changes won't reach caller)
-</li><li> Pass an individual array element just like any other variable (by value)
-</li></ul>
-
-Can use const in parameter list to make array unmodifiable:
-
-`void doArray (const int ma[])`
-
-results in compile error if any attempt to assign or read new value into an array element
-
+</li><li> Use indices to access individual elements; like most languages these days, indices start at <code>0</code>
+</li><li> Declare as <code>type var[CONST_SIZE]</code>, e.g. <code>int temps[3]</code>
+</li>	<li> Can also declare w/initialization list: <code>type var[] = {val1, val2, val3}</code>, e.g. <code>int temps[] = {75, 67, 83}</code> and array will be as long as the list
+     </ul>
 
 <h3>Multiple dimension arrays</h3>
 <ul>
   <li>Two or more dimensions; the size of each must be specified
-</li><li> Declare as <code>myarray[size1][size2]</code>, access as <code>myarray[i][j]</code>
+</li><li> Declare as <code>myarray[size1][size2]</code>, access individual element with <code>myarray[i][j]</code>
 </li><li> Initialize by nesting lists: <code>int testr[2][3] = { {4, 3, 2}, {6, 8, 33} };</code>
-</li><li> Does initialization a row at a time
-</li><li><code>myarray[i]</code> is OK, returns an array: <code>myarray[size1][size2]</code> is an array of arrays
-</li><li> If declaring as function argument, need sizes of subcripts for all dimensions but 1st
-    <ul>
-      <li>eg: <code>void passarray(int a[][3][4])</code>  receives a 3 dimensional array
-     </li> <li>Sizes needed because arrays are stored sequentially - need dimensions to locate items
-     </li> <li>Another example of low-level nature of C data structures.
-</li>    </ul>
+</li><li> Does initialization one row at a time
+</li><li><code>myarray[i]</code> refers to a one dimensional array of the base type (row i); <code>myarray[size1][size2]</code> can be used as an array of arrays
+  </ul>
 
-<!--
-</li><li>Example
+Example
 
 ```c
   #include <stdio.h>
@@ -71,8 +36,39 @@ results in compile error if any attempt to assign or read new value into an arra
     return 0;
   }
 ```
--->
-</li></ul>
+
+
+
+<h3>Arrays and Functions</h3> 
+<ul>
+ <li> use <code>[]</code> to indicate an array variable in function definition
+        and in function prototype, e.g.
+
+```c
+      void doArray (int [], int); /* prototype version */
+      void doArray (int myarray[], int size) /* on function itself */
+```
+
+</li><li> Pass whole array to function with just name, no subscript: aray contents are passed by REFERENCE 
+</li><li>Element values may be changed permanently within the function
+</li><li> Doesn't create new storage location (ie, doesn't copy array)
+</li><li> Array name is really address of first element (more later on this)
+</li><li> Array names are passed by VALUE (copied, changes won't reach caller)
+</li>	<li> Individual array elements passed to functions are handled like any variable of that base type
+</li><li> If declaring a multi-dimensional array as function argument, need sizes of subcripts for all dimensions but 1st
+    <ul>
+      <li>eg: <code>void passarray(int a[][3][4])</code>  receives a 3 dimensional array
+     </li> <li>Sizes needed because arrays are stored sequentially - need dimensions to locate items
+     </li> <li>Another example of low-level nature of C data structures.
+</ul>
+
+<li>Can use const in parameter list to make array unmodifiable:
+
+`void doArray (const int ma[])`
+
+results in compile error if any attempt to assign or read new value into an array element
+</ul>
+
 
 <h3>Command line options</h3>
 
@@ -88,9 +84,9 @@ To read what arguments if any were on a command line invocation, use the followi
 </ul>
 
 Example: given <code>./a.out one two</code><br />
-<code>argc</code> is 3 and the <code>argv</code> values are
-<code>argv[0]=="./a.out"</code>, <code>argv[1]=="one"</code>,
-<code>argv[2]=="two"</code>
+<code>argc</code> is 3,
+<code>argv[0] is "./a.out"</code>, <code>argv[1] is "one"</code>,
+and <code>argv[2] is "two"</code>
 
 
 <h3>CAUTION: review the below sections after learning pointers</h3>
