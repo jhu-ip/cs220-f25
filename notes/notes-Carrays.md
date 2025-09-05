@@ -132,6 +132,7 @@ int main(void) {
   char suit[4][20] = {"hearts", "diamonds", "clubs", "spades"};
   printf("%s %s\n", suit[1], suitptr[1]); // they more or less behave the same
   printf("size of suit = %lu size of suitptr = %lu\n",sizeof(suit),sizeof(suitptr)); // sizes differ!
+  return 0;
 }
 ```
 
