@@ -54,7 +54,7 @@ There are five options the user may choose from:
 	acos(sin(lat1)*sin(lat2) + cos(lat1)*cos(lat2)*cos(lon1 - lon2))*EARTH_RADIUS_MILES;
 	```
 	
-	where `lat1`, `lon1` and `lat2`, `lon2` correspond to the stored latitude and longitude coordinates of the given locations **converted from degrees to radians** (you must implement this conversion.) The constant `EARTH_RADIUS_MILES` is declared in the starter code for this homework. Your program should `#include <math.h>` to use the trigonometric functions found there. **All calculations should be done using double precision** (i.e. using type `double` instead of `float`.) When displaying the distance result, use the format specifier `%.2lf` to display only two decimal places of the result. Remember to also compile with the -lm option to use the math library.
+	where `lat1`, `lon1` and `lat2`, `lon2` correspond to the stored latitude and longitude coordinates of the given locations **converted from degrees to radians** (you must implement this conversion.) The constant `EARTH_RADIUS_MILES` is declared in the starter code for this homework. Your program should `#include <math.h>` to use the trigonometric functions found there. **All calculations should be done using double precision** (i.e. using type `double` instead of `float`.) When displaying the distance result, use the format specifier `%.2lf` to display only two decimal places of the result. Remember to also compile with the `-lm` option to use the math library.
 
 * **Option 0: Quit:** This option terminates the command loop and exits the program with exit code 0.
 
