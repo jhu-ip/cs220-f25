@@ -62,11 +62,7 @@ Use <code>[]</code> to indicate an array variable in function definition and in 
      </li> <li>Another example of low-level nature of C data structures.
 </li></ul>
 
-<li>Can use const in parameter list to make array unmodifiable:
-
-`void doArray (const int ma[])`
-
-results in compile error if any attempt to assign or read new value into an array element
+<li>Can use <code>const</code> in parameter list to make array unmodifiable: <code>void doArray (const int ma[])</code> results in compile error if any attempt to assign or read new value into an array element
 </li></ul>
 
 
@@ -102,7 +98,7 @@ Welcome to C's Wacky World
 </li></ul>
 
 <p>
-"<code>int *ptr</code>" and "<code>int a[10]</code>" variables are
+<code>int *ptr</code> and <code>int a[10]</code> variables are
 often interchangeable but not 100%:
 <ul>
   <li><code>a = ptr</code> will be a compile error since size
@@ -127,7 +123,7 @@ often interchangeable but not 100%:
 </li>
 </ul>
 
-<!--
+
 ```c
   #include <stdio.h>
   int main(void) {
@@ -137,7 +133,7 @@ often interchangeable but not 100%:
     printf("size of suit = %lu size of suitptr = %lu\n",sizeof(suit),sizeof(suitptr)); // sizes differ!
   }
 ```
--->
+
 
 <!--
 

@@ -36,7 +36,7 @@ title: C-Strings
 </li></ul>
 
 
-<h4><code>string.h</code> string manipulation functions</h4>
+<h4>Common <code>string.h</code> string manipulation functions</h4>
 <ul>
   <li> <code>strlen(const char *str)</code> - length of string
 </li> <li> <code>char *strcpy(char *dest, const char *orig)</code>
@@ -44,7 +44,7 @@ title: C-Strings
 <li> copy from string <code>orig</code> to string <code>dest</code>
 </li><li> return <code>dest</code>
 </li>	</ul>
-    <li> <code>strncpy(dest, orig, howmany)</code>
+    <li> <code>strncpy(dest, orig, howmany)</code> only copies <code>howmany</code> characters
 </li>    <li> <code>char *strcat(char *orig, const char *more)</code>
 <ul>    <li> concatenate <code>more</code> to end of <code>orig</code> (orig = orig + more)
 </li>    <li> return <code>orig</code>
