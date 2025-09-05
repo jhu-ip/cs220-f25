@@ -127,7 +127,6 @@ often interchangeable but not 100%:
 <p>
 
 ```c
-#include <stdio.h>
 int main(void) {
   char *suitptr[4] = {"Hearts", "Diamonds", "Clubs", "Spades"};
   char suit[4][20] = {"hearts", "diamonds", "clubs", "spades"};
