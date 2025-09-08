@@ -1,5 +1,5 @@
 ---
-id:notes-Cfunctions
+id: notes-Cfunctions
 layout: default
 title: C Functions
 ---
@@ -12,7 +12,7 @@ Prototypes are function headers without bodies (similar to method declarations i
 
 <ul>
   <li>format is <code><em>return_type fun_name(arg_type_1, arg_type_2, etc)</em>;</code><br>
- example: <code>int randInt(int, int)</code> (notice no variable <em>names</em> needed)
+ example is <code>int randInt(int, int)</code> (notice no variable <em>names</em> needed)
 </li><li>Put prototypes after <code>#include</code>s, before <code>main</code>
 </li><li>(or put them in a seperate file; this is discussed below)
 </li></ul>
