@@ -20,6 +20,8 @@ This page has links to useful resources for the course.
 * <a href='notes/notes-control.html'>Control Structures</a>
 * <a href='notes/notes-Carray.html'>C Arrays</a> (pointer material to be added)
 * <a href='notes/notes-Cstrings.html'>C Strings</a> (pointer material to be added)
+* <a href='notes/notes-Cfunctions.html'>C Functions</a> (including make)
+
 
 ## Code development resources
 

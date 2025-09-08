@@ -73,10 +73,11 @@ title: C Basics
 
 <h3>Testing</h3>
 
+Assertions are particularly useful in functions to check the validity of parameter values. When an assertion fails, the program will stop running. If it passes (results in true), then the program keeps going.
+
 <ul>
-<li> Use asserts to check what's going on in your code</li>
   <li> <code>#include &lt;assert.h&gt;</code></li>
-  <li> <code>assert(<em>boolean expr</em>)</code></li>
+  <li> <code>assert(<em>boolean expr</em>);</code></li>
 </ul>
 
 <h3>C Data Types</h3>
@@ -220,7 +221,7 @@ if (num == 10) // double equals only evalutes to true if num is in fact a 10
 
   <ul>
     <li> Use <code>#include &lt;math.h&gt;</code>
-</li><li> Probably need to compile with <code>gcc -lm</code> option
+</li><li>Need to compile with <code>gcc -lm</code> option
 </li>    <li> Math library functions generally take <code>double</code> arguments, return <code>double</code> values
 </li>    <li> eg: <code>sqrt(x)</code>, <code>pow(x,y)</code>, <code>exp(x)</code>, <code>log(x)</code>, <code>ceil(x)</code>, <code>floor(x)</code>, <code>sin(x)</code>
 </li>  </ul>

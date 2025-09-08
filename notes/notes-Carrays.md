@@ -120,11 +120,11 @@ often interchangeable but not 100%:
 </li><li> Common use is array of strings
 </li><li> Each string is pointer to a string array, 
   eg: <code>char *suitptr[4] = {"Hearts", "Diamonds", "Clubs", "Spades"}</code>
-</li><li>Note that this is not the same as a 2d array which is laid out sequentially
+</li><li>Note that this is not the same as a 2d array which is laid out sequentially in memory
 </li>
 </ul>
 
-<p>
+<!-- can't get format to work!
 
 ```c
 int main(void) {
@@ -135,7 +135,7 @@ int main(void) {
   return 0;
 }
 ```
-
+-->
 
 <!--
 
