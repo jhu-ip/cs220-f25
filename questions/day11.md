@@ -8,15 +8,17 @@ reference solutions:
   3. In short, it happens when we forget to free the memory that we have allocated.
   4. malloc only allocates memory with the given bytes. calloc allocates memory as malloc and initializes it to zero. realloc is used for resizing the memory. Note that the resizing can change the memory begin address. So if you have multiple pointers pointing to the same memory, you need to use caution when using realloc. You need to update all those pointers after realloc.
   5. We use valgrind to check for memory leak problem and invalid read/write problem.
-  6. can't return local statically allocated array from function.
+  6. [NEW] Compile with the `-g` flag to include debug info. Invoke using `valgrind --leak-check=full --show-leak-kinds=all` 
+  7. Can't return local statically allocated array from function.
 ---
 
 1.	What is the difference between stack and heap memory?
-2.  What is dynamic memory allocation in C?
-3.  What is the memory leak problem?
-4.  What is the difference between *malloc*, *realloc*, and *calloc*?
-5.  What do we use valgrind to check for?
-6.  Consider the `exclaim` function below. Do you see any problems with this function?
+2. What is dynamic memory allocation in C?
+3. What is the memory leak problem?
+4. What is the difference between *malloc*, *realloc*, and *calloc*?
+5. What do we use valgrind to check for?
+6. How should we compile our code to be able to run it with valgrind? How do we invoke valgrind from the commandline?
+7. Consider the `exclaim` function below. Do you see any problems with this function?
 
 ```c
 // Return a C character string containing n exclamation points.
