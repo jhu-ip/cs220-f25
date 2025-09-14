@@ -5,10 +5,10 @@ title: Day 9 Recap Questions
 reference solutions:
   1. use two sets of brackets with sizes `int ra[ROWS][COLS];` include the number of columns in the function declaration/definintion `int ra[][COLS]`
   2. [NEW] A passed array decays to a pointer. Since components are stored sequentially in memory in row major order, Sizes (except for first dimension) are required to linearize the array index.
-  2. can use nested lists of values `{{1, 2, 3}, {4, 5, 6}}` or just a single list that will assign in row order `{1, 2, 3, 4, 5, 6}`
-  3. compile with -g for using gdb
-  4. `break main` to set breakpoint and `backtrace` to check call stack
-  5. `display`
+  3. can use nested lists of values `{{1, 2, 3}, {4, 5, 6}}` or just a single list that will assign in row order `{1, 2, 3, 4, 5, 6}`
+  4. compile with -g for using gdb
+  5. `break main` to set breakpoint and `backtrace` to check call stack
+  6. `display`
 ---
 
 1.	How do you declare a multi-dimensional array and pass it to a function?
