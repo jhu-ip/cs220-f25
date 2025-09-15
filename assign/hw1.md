@@ -62,7 +62,7 @@ There are five options the user may choose from:
 
 In the following, the error code constants refer to those declared in the starter code provided. The program should handle errors as follows.
 
-* If the program fails to parse an option (e.g. because the user enters a letter instead of a number) the program should print "Error: Unable to read option." and return with error code `ERROR_BAD_OPTION`. If the program succesfully reads a number but it does not correspond to a valid option, the program should simply print "Invalid option" and re-display the menu prompt. 
+* If the program fails to parse an option (e.g. because the user enters a letter instead of a number) the program should print "Error: Unable to read option." and return with error code `ERROR_BAD_OPTION`. If the program succesfully reads a number but it does not correspond to a valid option, the program should simply print "Invalid option." and re-display the menu prompt. 
 
 * If the user attempts to enter more than the `MAX_LOCATIONS` number of locations, the program should print "Error: Max location count exceeded." and return with error code `ERROR_LOCATION_COUNT_EXCEEDED`.
 
