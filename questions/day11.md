@@ -9,7 +9,7 @@ reference solutions:
   4. malloc only allocates memory with the given bytes. calloc allocates memory as malloc and initializes it to zero. realloc is used for resizing the memory. Note that the resizing can change the memory begin address. So if you have multiple pointers pointing to the same memory, you need to use caution when using realloc. You need to update all those pointers after realloc.
   5. We use valgrind to check for memory leak problem and invalid read/write problem.
   6. [NEW] Compile with the `-g` flag to include debug info. Invoke using `valgrind --leak-check=full --show-leak-kinds=all` 
-  7. Can't return local statically allocated array from function.
+  7. Can't return local statically allocated array from function; also should declare `i` outside the loop and then set s[i] = '\0' instead of s[n]
 ---
 
 1.	What is the difference between stack and heap memory?
