@@ -56,7 +56,7 @@ In the class public git repository, the folder `cs220-f25-public/homework/hw3/` 
 
 This program will find the valid word (based on a provided word list) in a 2D grid of characters that has the highest total point value, based on Scrabble letter points (https://en.wikipedia.org/wiki/Scrabble_letter_distributions). In order to do this, your program will accept two command-line arguments: the name of a text file containing the character grid and the name of a text file containing words that will be considered valid. 
 
-The program only needs to search for words that are contained in one row, in the forward only direction. In this respect the problem is much simpler than a traditional word search in which words may appear in multiple directions and dimensions. However, you have the additional twist of needing to find the highest point word in the grid, without knowing in advance what words the grid contains. Instead your program will need to efficiently search for each possible substring of each row to see if it appears in the word list. If it does, compute the total point value and save this as the best so far if it is higher than any previous words. (In the case of multiple words with the same highest value, the first one found should be the result, where the searching begins from the top row, left-most character.)
+The program only needs to search for words that are contained in one row, in the forward only direction. In this respect the problem is much simpler than a traditional word search in which words may appear in multiple directions and dimensions. However, you have the additional twist of needing to find the highest point word in the grid, without knowing in advance what words the grid contains. Instead your program will need to efficiently search for each possible substring of each row to see if it appears in the word list. If it does, compute the total point value and save this as the best so far if it is higher than any previous words. Ties: in the case of multiple words with the same highest value, the first one found should be the result, where the searching begins from the top row, left-most character.
 
 We have specific requirements detailed below regarding the structure of your solution code (see Implementation Requirements), test code that must be submitted (see Testing) and use of a makefile (see Makefile). Please read through the entire homework description (including Hints) before you begin. 
 
@@ -72,7 +72,7 @@ If either or both cannot be opened for reading, the program should print "Error:
 
 A proper grid file contains an initial line with two integers indicating the number of rows (N) and columns (M) in the grid. This is followed by N lines of M lower case alphabet letters each. Note that N and M can be different values but are always less than or equal to 20 (MAX_GRID). You can assume there are no spaces between the letters in a row. Anything below the character grid in the input file can be ignored.
 
-There are only 2 types of invalid grids that your program must detect and report. [NOTE that many other error conditions may exist, but you are not required to handle them.] In either of the following cases, your program should print "Error: malformed grid file" to `stdout`, advance to the next line, and exit with return value `3`:
+There are only 2 types of invalid grids that your program must detect and report. [Note that many other error conditions may exist, but you are not required to handle them.] In either of the following cases, your program should print "Error: malformed grid file" to `stdout`, advance to the next line, and exit with return value `3`:
 
 * if the number of rows and columns cannot be read from the first line
 * if any expected letters are missing
@@ -82,7 +82,6 @@ Valid words should be read only once from the second text file and stored in you
 <div class='admonition info'>
 <div class='title'>Note</div>
 <div class='content'>
-<br />
 You may assume the contents of the input grid file and the input word list are in lower case!
 </div>
 </div>
@@ -95,9 +94,11 @@ Number the rows and columns shown in the output starting with 0.
 
 If multiple copies of a valid word are present in the grid, the program must report each of them. Also note that some words found may be substrings of longer words on that line, for example:
 
-`--- found word: par with 5 pts ending at 0,2`
-`--- found word: parse with 7 pts ending at 0,4`
-`--- found word: par with 5 pts ending at 2,3`
+```c
+--- found word: par with 5 pts ending at 0,2
+--- found word: parse with 7 pts ending at 0,4
+--- found word: par with 5 pts ending at 2,3
+```
 
 Found words should be reported in order of occurrence of the first letter in the search word, when the grid is read row-by-row from left to right, starting with row 0.
 
@@ -131,7 +132,6 @@ Here is an algorithm that you can follow:
 add something here
 ```
 
-
 ### Examples
 
 Here is a list of provided input files, resulting sample runs (terminal output) and created output files. We will also test your solution with other files to cover situations not included in these examples. **It is really important that you study these to understand program operation and also that you follow the output formats exactly as they appear.**
@@ -145,21 +145,21 @@ Here is a list of provided input files, resulting sample runs (terminal output) 
 We have also included sample runs for two error conditions. In these cases an output file may or may not be created. Make sure you understand which conditions they test, since you also must create some distinct error condition checks yourself (see Testing section). 
 
 | Grid File | Word File | Sample Run |
-| ----------- | ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 | small_words.txt | small_grid.txt | run_words_grid.txt | 
 | small_grid.txt | large_words.txt | run_small_large.txt |
 
 ### Implementation Requirements
 
 * You must use the constants `#define`d in the provided header file.
-* You must not use any global (or extern) variables.
+* You must not use any global (or `extern`) variables.
 * Your solution must be split into the three starter files we provide. Specifically: you must implement the functions declared in provided header file `word_funcs.h`, coding their definitions in file `word_funcs.c`. You are strongly encouraged to add other files to these word_funcs files to further modularize your solution. Your main function must reside in a file named `main.c`. Remember to `#include "word_funcs.h"` in your `*.c` files.
 
 
 * Minimally, you must supply functions with exactly the following declarations, all of which are provided for you in scaffolding file `word_funcs.h`:
 
 ```c
-
+[do we really need to reiterate them here?]
 
 ```
 
@@ -172,7 +172,7 @@ You are expected to fully test your solution, not only with our provided example
 In addition, you must write and submit a C file named `test_word_funcs.c` that will contain a tester main function and `#include word_funcs.h`. This file must have a helper test function to test the `points` function and another helper test function for the `find_word` function. The job of each helper function is to call the corresponding function in `word_funcs.c` multiple times to test at least three different situations that each of them will need to handle. Use `assert` statements in each tester function to make sure the functions return expected results. Include comments in your code to describe the situations being tested. The main function in `test_word_funcs.c` should call each helper test function, and if all the tests pass, output "Passed word function tests!!" on `stdout`, advancing to the next line. 
 
 ### Makefile
-You must submit a working `Makefile` that has a target called **`hw3`** which will be the executable program that is run to test your main program solution. You must also include a target called **`test`** that can be used to execute your test code in `test_word_funcs.c`. Create intermediary targets for `main.o` and `word_funcs.o`. Also include a `clean` rule to remove *.o files and the executables `hw3` and `test`. 
+You must submit a working `Makefile` that has a target called **`hw3`** which will be the executable program that is run to test your main program solution. You must also include a target called **`test`** that can be used to execute your test code in `test_word_funcs.c`. Create intermediary targets for necessary object files `*.o`. Also include a `clean` rule to remove `*.o` files and the executables `hw3` and `test`. 
 
 To be considered fully functional, your Makefile should correctly build the executables with the appropriate flags when (and only when) one of the relevant source files has changed. The Makefile must be named `Makefile` (spelling and case are important).
 
@@ -192,6 +192,7 @@ Your Gradescope submission should contain at least the following files:
 * word_funcs.c
 * test_word_funcs.c
 * Makefile
+* README
 * gitlog.txt
 * any data files created by you that your tester functions require
 ```
@@ -203,6 +204,7 @@ Here are some further hints and tips:
 <div class='admonition tip'>
 <div class='content'>
 <ul>
+<li>add more helpful coding hints here</li>
 <li>Make use of gdb to help debug your program.</li>
 <li>Write your function tester functions early, rather than waiting until the last minute. Their purpose is to help you catch bugs in the functions early on, so the bugs don't cause problems when used by main. Using this approach as intended will help you track down bugs more easily.</li>
 <li>If in testing your program's output, you want to determine whether two files are identical (e.g. when one file contains your program's actual output and the other contains the expected output) you can use the unix `diff` function. 
@@ -236,7 +238,7 @@ Create a *.zip* file named *hw3.zip* which contains all the requested files ment
 <div class='content'>
 <ul>
 <li>You may re-submit any number of times prior to the deadline; only your latest submission will be graded.</li>
-<li>Review the course syllabus for late submission policies (grace period and late days). You will want to save your late days for the future assignments as they will be more involved.</li>
+<li>Review the course syllabus and Piazza for late submission policies.</li>
 </ul>
 </div>
 </div>
@@ -246,7 +248,7 @@ Create a *.zip* file named *hw3.zip* which contains all the requested files ment
 <div class='title'>Code Styling - Style Matters!</div>
 <div class='content'>
 <br/>
-You should also make sure that your code has good style. You can look at the [coding style guidelines here](https:https://jhucsf.github.io/fall2024/resources/style.html) from a course you will take later that also applies to this course. In brief, you should make sure that your submission is well formed:
+You should also make sure that your code has good style. You can look at the [coding style guidelines here](https:https://jhucsf.github.io/fall2025/resources/style.html) from a course you will take later that also applies to this course. In brief, you should make sure that your submission is well formed:
 <ul>
 <li>it is not overcommented or undercommented</li>
 <li>there are no ambiguous variable names </li>
@@ -261,3 +263,16 @@ Two notes regarding automatic checks for programming assignments:
 *	Passing an automatic check is not itself worth points. (There might be a nominal, low point value like 0.01 associated with a check, but that will not count in the end.) The checks exist to help you and the graders find obvious errors. This will be true for most of the assignments; the actual grades are given manually by the graders, along with comments.
 *	The automatic checks cover some of the requirements set out in the assignment, but not all. There will be hidden tests that test edge cases. In general, it is up to you to test your own work and ensure your programs satisfy all stated requirements. Passing all the automatic checks does not necessarily mean you will earn all the points. Also remember that the course staff can *not* reveal the tests or their outcomes to you. 
 
+### Grading
+
+The 60 points for this assignment will be applied as follows:
+
+* submission, including gitlog
+* Makefile
+* testing
+* error handling
+* file input
+* output found word results to stdout
+* output best results to file
+* output grid with capitalized best word to file
+* style, including appropriate use of functions (modularization)
