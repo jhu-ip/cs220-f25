@@ -42,4 +42,4 @@ int main() {
   return 0;
 }
 ```
-7. Explain what `srand` and `rand` functions do exactly.
+7.Explain what `srand` and `rand` functions do exactly.

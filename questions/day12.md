@@ -13,12 +13,6 @@ reference solutions:
 ---
 
 1. What output is printed by the "Example code" below?
-2. Assume that `arr` is an array of 5 `int` elements. Is the code `int *p = arr + 5;` legal?
-3. Assume that `arr` is an array of 5 `int` elements. Is the code `int *p = arr + 5; printf("%d\n", *p);` legal?
-4. What output is printed by the "Example code 2" below?
-5. Suppose we have variables `int ra1[10] = { 1, 2, 3};`, `int * ra2 = ra1;` and `int fun(int *ra);` declarations. Will `fun(ra1);` compile? Will `fun(ra2);` compile? What if we change the function declaration to `int fun(const int ra[]);`? 
-
-
 ```c
 // Example code
 int arr[] = { 94, 69, 35, 72, 9 };
@@ -36,6 +30,10 @@ int c = (p < q);
 int d = (q < p);
 printf("%d %d\n", c, d);
 ```
+2. Assume that `arr` is an array of 5 `int` elements. Is the code `int *p = arr + 5;` legal?
+3. Assume that `arr` is an array of 5 `int` elements. Is the code `int *p = arr + 5; printf("%d\n", *p);` legal?
+4. What output is printed by the "Example code 2" below?
+5. Suppose we have variables `int ra1[10] = { 1, 2, 3};`, `int * ra2 = ra1;` and `int fun(int *ra);` declarations. Will `fun(ra1);` compile? Will `fun(ra2);` compile? What if we change the function declaration to `int fun(const int ra[]);`? 
 
 ```c
 // Example code 2
@@ -57,13 +55,15 @@ int main(void) {
   return 0;
 }
 ```
-6. What is the difference, if any, between `const int * p` and `int * const p`?
-7. What size of a 2D array the following defines on the heap? Write the code to free memory to prevent memory leakages.
+
+6.What is the difference, if any, between `const int * p` and `int * const p`?
+
+7.What size of a 2D array the following defines on the heap? Write the code to free memory to prevent memory leakages.
 
 ```c
 int **a = malloc(sizeof(int*) * 10);
 
-for (int i = 0; i < num_rows; i++) {
+for (int i = 0; i < 10; i++) {
    a[i] = malloc(sizeof(int) * 5);
 }
 ```
