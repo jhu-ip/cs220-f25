@@ -12,7 +12,7 @@ reference solutions:
 ---
 
 1.	How do we read/write binary files in C?
-2. Write the necessary syntaxes to open a binary file named `img.dat` and write all the values of an int array named `ray1` of size 1000 into the file. Next, read all those values into a separate array named `ray2`. Assume `ray1` and `ray2` are properly defined and initialized.
+2. Write the necessary syntaxes to open a binary file named `img.dat` and write all the values of an int array named `ray1` of size `1000` into the file. Next, read all those values into a separate array named `ray2`. Assume `ray1` and `ray2` are properly defined and initialized.
 3.	What character represents the bitwise XOR operation? How does it differ from the OR operation?
 4.	What happens if you apply the bitwise operation on an integer value? (extra: what if we apply to floats)
 5.	What is the result of `(15 >> 2) || 7`?
