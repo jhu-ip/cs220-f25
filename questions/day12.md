@@ -56,9 +56,9 @@ int main(void) {
 }
 ```
 
-6.What is the difference, if any, between `const int * p` and `int * const p`?
+6\. What is the difference, if any, between `const int * p` and `int * const p`?
 
-7.What size of a 2D array the following defines on the heap? Write the code to free memory to prevent memory leakages.
+7\. What size of a 2D array the following defines on the heap? Write the code to free memory to prevent memory leakages.
 
 ```c
 int **a = malloc(sizeof(int*) * 10);
