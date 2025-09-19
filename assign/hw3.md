@@ -37,8 +37,8 @@ title: Homework 3
 <div class='title'>Individual Assignment</div>
 <div class='content'> <br/>
 This is an individual
-assignment. This means you must NOT show your working code to another
-student, and should discuss with each other only the assignment
+assignment. This means you must not show your working code to another
+student, but may discuss with each other the assignment
 requirements and expectations. We strongly recommend utilizing office
 hours for help! You may collaborate with others and/or AI systems on
 *small* snippets of code, not your entire assignment. Remember to
@@ -126,10 +126,30 @@ int find_best(char crnt_grid[][MAX_GRID], int cols, char word[], int r, int c,
               char list[][MAX_LENGTH], int size);
 ```
 
-Here is an algorithm that you can follow:
+The `crnt_grid` parameter can be updated with capitalized letters for the best word found at this position. The `cols` parameter indicates how many actual columns are used in this character grid. The `word` parameter should be used to (recursively) build the longest found word. Note that you will need to undo updates to `crnt_grid` and `word` when you hit some dead ends during the recursive search. The indices of the current position are indicated by `r` and `c` (row and column, respectively). The `list` contains the list of valid words to use and `size` is how many words it holds.
+
+The function should return the total point value of the word that ends at position [r,c]. This is somewhat counter-intuitive because when it is called from main, the current position [r,c] is the start of the search. In that case, the `word` should be the empty string. However, as the recursion proceeds, the `word` is the longest word found to the left of the current position. In each iteration, the goal is to add the current character to the word if that is still a valid word. Then try to recursively build further by searching one position to the right in the array if you are not at the end of a row.
+
+Here is an algorithm that you can follow. 
 
 ```plain
-add something here
+  // try adding current letter to word                                                 
+
+  // if the resulting word is valid, calculate points & print                          
+
+  // if c is not the last column (implicit base case), try to extend:
+     // recurse using cell to the right                                                
+     // if result is better                                                            
+        // capitalize the current letter                                               
+        // return these better points
+     // otherwise (extend fails) reset extend attempt:
+       // remove next character from word                                              
+       // uncapitalize next character from grid                                        
+
+  // if valid new word ends at r, c:
+    // capitalize current character in grid                                            
+    // return points                                                                   
+  // otherwise undo word inclusion of current character & return 0   
 ```
 
 ### Examples
@@ -155,21 +175,16 @@ We have also included sample runs for two error conditions. In these cases an ou
 * You must not use any global (or `extern`) variables.
 * Your solution must be split into the three starter files we provide. Specifically: you must implement the functions declared in provided header file `word_funcs.h`, coding their definitions in file `word_funcs.c`. You are strongly encouraged to add other files to these word_funcs files to further modularize your solution. Your main function must reside in a file named `main.c`. Remember to `#include "word_funcs.h"` in your `*.c` files.
 
+* Minimally, you must supply functions with exactly the declarations provided for you in scaffolding file `word_funcs.h`.
+* You must also declare and define a function to do a binary seach for a word in a list.
 
-* Minimally, you must supply functions with exactly the following declarations, all of which are provided for you in scaffolding file `word_funcs.h`:
-
-```c
-[do we really need to reiterate them here?]
-
-```
-
-* In addition to the source files mentioned above, you are required to submit a testing main function, a working make file, and git log as described below.
+* In addition to the source files mentioned above, you are required to submit additional test situations in a README file, a test program, a working make file, and git log as described below.
 
 ### Testing
 
 You are expected to fully test your solution, not only with our provided examples, but also with other examples you create to check its operation in specific cases. For this assignment you must include a README file (plain text, but without any file extension) that describes two error conditions not included in our examples and how you would test to see if your solution handles them correctly.
 
-In addition, you must write and submit a C file named `test_word_funcs.c` that will contain a tester main function and `#include word_funcs.h`. This file must have a helper test function to test the `points` function and another helper test function for the `find_word` function. The job of each helper function is to call the corresponding function in `word_funcs.c` multiple times to test at least three different situations that each of them will need to handle. Use `assert` statements in each tester function to make sure the functions return expected results. Include comments in your code to describe the situations being tested. The main function in `test_word_funcs.c` should call each helper test function, and if all the tests pass, output "Passed word function tests!!" on `stdout`, advancing to the next line. 
+In addition, you must write and submit a C file named `test_word_funcs.c` that will contain a tester `main` function and `#include word_funcs.h`. This file must have a helper test function to test the declared `points` function and another helper test function for the `find_word` function you must add. The job of each helper function is to call the corresponding function in `word_funcs.c` multiple times to test at least three different situations that each of them will need to handle. Use `assert` statements in each tester function to make sure the functions return expected results. Include comments in your code to describe the situations being tested. The main function in `test_word_funcs.c` should call each helper test function, and if all the tests pass, output "Passed word function tests!!" on `stdout`, advancing to the next line. 
 
 ### Makefile
 You must submit a working `Makefile` that has a target called **`hw3`** which will be the executable program that is run to test your main program solution. You must also include a target called **`test`** that can be used to execute your test code in `test_word_funcs.c`. Create intermediary targets for necessary object files `*.o`. Also include a `clean` rule to remove `*.o` files and the executables `hw3` and `test`. 
@@ -190,25 +205,27 @@ Here are some further hints and tips:
 <div class='admonition tip'>
 <div class='content'>
 <ul>
-<li>add more helpful coding hints here</li>
+<li>Review the in-class exercise from day 7 for hints on writing a recursive binary search when you create and implement a `find_word` function. 
+</li>
 <li>Make use of gdb to help debug your program.</li>
 <li>Write your function tester functions early, rather than waiting until the last minute. Their purpose is to help you catch bugs in the functions early on, so the bugs don't cause problems when used by main. Using this approach as intended will help you track down bugs more easily.</li>
-<li>If in testing your program's output, you want to determine whether two files are identical (e.g. when one file contains your program's actual output and the other contains the expected output) you can use the unix `diff` function. 
+<li>If in testing your program's output, you want to determine whether two files are identical (e.g. when one file contains your program's actual output and the other contains the expected output) you can use the unix `diff` function: `diff file1 file2` will display symbols, line and character numbers along with the differing characters. Remember you can use the manual pages to get more information on unix commands (`man diff`).  
 </li>
-<li>In addition to writing tests for individual helper functions that are included in your submission, you'll need to create and utilize "end-to-end" tests for your complete word search as well. By "end-to-end" testing, we simply mean running the entire program and checking if it behaves as desired on a number of different inputs. Your end-to-end tests do not need to be handed in.</li>
+<li>In addition to writing tests for individual helper functions that are included in your submission, you should always create and utilize "end-to-end" tests for your complete word search as well. By "end-to-end" testing, we simply mean running the entire program and checking if it behaves as desired on a number of different inputs. Your end-to-end tests do not need to be handed in.</li>
 </ul>
 </div>
 </div>
 
 ### Grading
 
-The 60 points for this assignment will be applied as follows:
+The 60 points for this assignment will be applied as follows (tbd):
 
 * submission, including gitlog
 * Makefile
 * testing
 * error handling
 * file input
+* function implementations
 * output found word results to stdout
 * output best results to file
 * output grid with capitalized best word to file
@@ -222,8 +239,8 @@ Your Gradescope submission should contain at least the following files:
 * word_funcs.h
 * word_funcs.c
 * test_word_funcs.c
-* Makefile
 * README
+* Makefile
 * gitlog.txt
 * any data files created by you that your tester functions require
 ```
@@ -236,13 +253,9 @@ Create a *.zip* file named *hw3.zip* which contains all the requested files ment
 </div>
 </div>
 
-<div class='admonition tip'>
-<div class='title'>No-compile policy</div>
-<div class='content'>
-<br/>Remember that if your final submitted code does not compile, you will earn a zero score for the assignment.
-</div>
-</div>
-
+Two notes regarding automatic checks for programming assignments:
+*	Passing an automatic check is not itself worth points. (There might be a nominal, low point value like 0.01 associated with a check, but that will not count in the end.) The checks exist to help you and the graders find obvious errors. This will be true for most of the assignments; the actual grades are given manually by the graders, along with comments.
+*	The automatic checks cover some of the requirements set out in the assignment, but not all. There will be hidden tests that test edge cases. In general, it is up to you to test your own work and ensure your programs satisfy all stated requirements. Passing all the automatic checks does not necessarily mean you will earn all the points. Also remember that the course staff can *not* reveal the tests or their outcomes to you. 
 
 <div class='admonition tip'>
 <div class='title'>Tips and Hints</div>
@@ -254,23 +267,26 @@ Create a *.zip* file named *hw3.zip* which contains all the requested files ment
 </div>
 </div>
 
+<div class='admonition caution'>
+<div class='title'>No-compile policy</div>
+<div class='content'>
+<br/>Remember that if your final submitted code does not compile, you will earn a zero score for the assignment.
+</div>
+</div>
+
 
 <div class='admonition tip'>
 <div class='title'>Code Styling - Style Matters!</div>
 <div class='content'>
 <br/>
-You should also make sure that your code has good style. You can look at the [coding style guidelines here](https:https://jhucsf.github.io/fall2025/resources/style.html) from a course you will take later that also applies to this course. In brief, you should make sure that your submission is well formed:
+You should always make sure that your code has good style. You can look at the [coding style guidelines here](https://jhucsf.github.io/fall2025/resources/style.html) from a course you will take later that also applies to this course. In brief, you should make sure that your submission is well formed:
 <ul>
 <li>it is not overcommented or undercommented</li>
 <li>there are no ambiguous variable names </li>
 <li>there is proper/consistent bracket placements and indentation</li>
 <li>there are no global variables</li>
-<li>line and functions are a reasonable length</li>
+<li>lines and functions are a reasonable length</li>
 </ul>
 </div>
 </div>
-
-Two notes regarding automatic checks for programming assignments:
-*	Passing an automatic check is not itself worth points. (There might be a nominal, low point value like 0.01 associated with a check, but that will not count in the end.) The checks exist to help you and the graders find obvious errors. This will be true for most of the assignments; the actual grades are given manually by the graders, along with comments.
-*	The automatic checks cover some of the requirements set out in the assignment, but not all. There will be hidden tests that test edge cases. In general, it is up to you to test your own work and ensure your programs satisfy all stated requirements. Passing all the automatic checks does not necessarily mean you will earn all the points. Also remember that the course staff can *not* reveal the tests or their outcomes to you. 
 
