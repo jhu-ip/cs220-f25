@@ -183,20 +183,6 @@ You are expected to use git to backup your progress on this project. Include in 
 git log > gitlog.txt
 ```
 
-### Submission Checklist
-Your Gradescope submission should contain at least the following files:
-
-```plain
-* main.c
-* word_funcs.h
-* word_funcs.c
-* test_word_funcs.c
-* Makefile
-* README
-* gitlog.txt
-* any data files created by you that your tester functions require
-```
-
 ### Hints and Tips
 
 Here are some further hints and tips:
@@ -214,8 +200,33 @@ Here are some further hints and tips:
 </div>
 </div>
 
+### Grading
 
-### Submission
+The 60 points for this assignment will be applied as follows:
+
+* submission, including gitlog
+* Makefile
+* testing
+* error handling
+* file input
+* output found word results to stdout
+* output best results to file
+* output grid with capitalized best word to file
+* style, including appropriate use of functions (modularization)
+
+### Submission 
+Your Gradescope submission should contain at least the following files:
+
+```plain
+* main.c
+* word_funcs.h
+* word_funcs.c
+* test_word_funcs.c
+* Makefile
+* README
+* gitlog.txt
+* any data files created by you that your tester functions require
+```
 Create a *.zip* file named *hw3.zip* which contains all the requested files mentioned above. (Do not zip your entire hw3 folder - only the files.) Copy the *hw3.zip* file to your local machine and submit it as Homework 3 on Gradescope. 
 
 <div class='admonition caution'>
@@ -263,16 +274,3 @@ Two notes regarding automatic checks for programming assignments:
 *	Passing an automatic check is not itself worth points. (There might be a nominal, low point value like 0.01 associated with a check, but that will not count in the end.) The checks exist to help you and the graders find obvious errors. This will be true for most of the assignments; the actual grades are given manually by the graders, along with comments.
 *	The automatic checks cover some of the requirements set out in the assignment, but not all. There will be hidden tests that test edge cases. In general, it is up to you to test your own work and ensure your programs satisfy all stated requirements. Passing all the automatic checks does not necessarily mean you will earn all the points. Also remember that the course staff can *not* reveal the tests or their outcomes to you. 
 
-### Grading
-
-The 60 points for this assignment will be applied as follows:
-
-* submission, including gitlog
-* Makefile
-* testing
-* error handling
-* file input
-* output found word results to stdout
-* output best results to file
-* output grid with capitalized best word to file
-* style, including appropriate use of functions (modularization)
