@@ -8,6 +8,8 @@ reference solutions:
   3.  it will result in invalid read memory access because the address in *p doesn't necessarily belong to the program
   4.  result=274  (adds 42+67+89+76)
   5.  Yes in all cases. The const in the altered function declaration applies to the values in the array, and we can make things more restrictive.
+  6. [NEW] "const int *p" is a pointer to a constant int where the int being pointed to is read-only through p. "int * const p", on the other hand though, declares a constant pointer to a (non-const) int where the pointer itself cannot change after initialization.
+  7. [NEW] 10 * 5. `for (int i = 0; i < num_rows; i++) { free(a[i]); }` and `free(a)` in that order!
 ---
 
 1. What output is printed by the "Example code" below?
@@ -53,5 +55,15 @@ int main(void) {
   int result = sum(data + 3, 4);
   printf("result=%d\n", result);
   return 0;
+}
+```
+6. What is the difference, if any, between `const int * p` and `int * const p`?
+7. What size of a 2D array the following defines on the heap? Write the code to free memory to prevent memory leakages.
+
+```c
+int **a = malloc(sizeof(int*) * 10);
+
+for (int i = 0; i < num_rows; i++) {
+   a[i] = malloc(sizeof(int) * 5);
 }
 ```
