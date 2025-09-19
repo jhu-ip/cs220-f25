@@ -18,7 +18,7 @@ Assignment/Exam | Posted | [Due] Date
 [Homework 0](assign/hw0.html) | 8/29 | Friday Sep 5, 11pm
 [Homework 1](assign/hw1.html) | 9/5 | Friday Sep 12, 11pm
 [Homework 2](https://www.gradescope.com/courses/1070771/assignments/6675631/) | 9/12 | Friday Sep 19, 11pm
-Homework 3 | 9/19 | Friday Sep 26, 11pm
+[Homework 3](assign/hw3.html) | 9/19 | Friday Sep 26, 11pm
 Homework 4 | 9/26 | Friday Oct 3, 11pm
 Midterm Project | 10/3 | Wednesday Oct 22, 11pm
 Midterm (C material) | n/a | Monday Oct 13th, in section
