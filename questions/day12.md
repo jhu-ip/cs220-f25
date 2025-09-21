@@ -38,8 +38,6 @@ reference solutions:
 
 4. What output is printed by the "Example code 2" below?
 
-5. Suppose we have variables `int ra1[10] = { 1, 2, 3};`, `int * ra2 = ra1;` and `int fun(int *ra);` declarations. Will `fun(ra1);` compile? Will `fun(ra2);` compile? What if we change the function declaration to `int fun(const int ra[]);`? 
-
 	```c
 	// Example code 2
 	
@@ -60,6 +58,8 @@ reference solutions:
 	  return 0;
 	}
 	```
+
+5. Suppose we have variables `int ra1[10] = { 1, 2, 3};`, `int * ra2 = ra1;` and `int fun(int *ra);` declarations. Will `fun(ra1);` compile? Will `fun(ra2);` compile? What if we change the function declaration to `int fun(const int ra[]);`? 
 
 6. What is the difference, if any, between `const int * p` and `int * const p`?
 
