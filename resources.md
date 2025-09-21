@@ -18,9 +18,11 @@ This page has links to useful resources for the course.
 * <a href='notes/notes-Cbasics.html'>C Basics</a> includes data types and operators
 * <a href='notes/notes-C-IO.html'>C Input/Output</a> includes file operations
 * <a href='notes/notes-control.html'>Control Structures</a>
-* <a href='notes/notes-Carray.html'>C Arrays</a> (pointer material to be added)
+* <a href='notes/notes-Carrays.html'>C Arrays</a> (pointer material to be added)
 * <a href='notes/notes-Cstrings.html'>C Strings</a> (pointer material to be added)
 * <a href='notes/notes-Cfunctions.html'>C Functions</a> (including make)
+* <a href='notes/notes-storage.html'>Storage Classes</a> (including gdb)
+* <a href='notes/notes-pointers.html'>Pointers & Dynamic Memory Allocation</a> (including valgrind)
 
 
 ## Code development resources
