@@ -9,7 +9,7 @@ reference solutions:
   4. Lifetime is the lifespan of a variable in the memory. Scope is where the variable can be accessed.
   5. When an inner scope variable and an outer scope variable have the same name. The inner one hides the outer one. [May need to clarify what file scope, function scope, and block scope are]
   6. 0; 3; 5; 2; [global variable is initialized, demonstrated to use extern get access to the global]
-  7. [NEW] `rand` generates a pseudo-random integer in the range 0 ≤ rand() ≤ RAND_MAX, where AND_MAX is a constant defined in <stdlib.h> commonly 32767. srand(unsigned int seed) sets the starting point (seed) for the pseudo-random number generator used by rand. If you don't call srand, the seed defaults to 1.
+  7. [NEW] `rand` generates a pseudo-random integer in the range 0 <= rand() <= `RAND_MAX`, where `RAND_MAX` is a constant defined in `<stdlib.h>`, commonly 32767. `srand(unsigned int seed)` sets the starting point (seed) for the pseudo-random number generator used by rand. If you don't call srand, the seed defaults to 1.
 ---
 
 1. What is *struct* in C?
@@ -19,27 +19,27 @@ reference solutions:
 5. What is variable shadowing (i.e. hiding)?
 6.  What is the output of the below program?
 
-```c
-#include <stdio.h>
-int foo;
-void bar() {
-  int foo = 3;
-  {
-    extern int foo;
-    printf("%d; ", foo);
-    foo = 2;
-  }
-  printf("%d; ", foo);
-}
-void baz() { printf("%d; ", foo); }
-int main() {
-  {
-    int foo = 5;
-    bar();
-    printf("%d; ", foo);
-  }
-  baz();
-  return 0;
-}
-```
-7\. Explain what `srand` and `rand` functions do exactly.
+	```c
+	#include <stdio.h>
+	int foo;
+	void bar() {
+	  int foo = 3;
+	  {
+	    extern int foo;
+	    printf("%d; ", foo);
+	    foo = 2;
+	  }
+	  printf("%d; ", foo);
+	}
+	void baz() { printf("%d; ", foo); }
+	int main() {
+	  {
+	    int foo = 5;
+	    bar();
+	    printf("%d; ", foo);
+	  }
+	  baz();
+	  return 0;
+	}
+	```
+7. Explain what `srand` and `rand` functions do exactly.
