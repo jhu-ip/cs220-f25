@@ -207,8 +207,8 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td><a class='external' target='_blank' href='https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf'>GDB Cheat Sheet</a></td>
-      <td><a class='external' target='_blank' href='https://www.youtube.com/watch?v=5VnDaHBi8dM'>Binky the Pointer (Video)</a></td>
+      <td><a class='external' target='_blank' href='https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf'>GDB Cheat Sheet</a><br /> <a href='notes/notes-storage.html'>NOTES: Storage classes</a> (including gdb)</td>
+      <td><a class='external' target='_blank' href='https://www.youtube.com/watch?v=5VnDaHBi8dM'>Binky the Pointer (Video)</a><br /> <a href='notes/notes-pointers.html'>NOTES: Pointers & Dynamic Memory Allocation</a> (including valgrind)</td>
       <td><code>valgrind --leak-check=full --show-leak-kinds=all</code></td>
     </tr>
   </tbody>
@@ -252,8 +252,9 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td></td>
-      <td></td>
+      <td><a href='notes/notes-pointers.html'>NOTES: Pointers & Dynamic Memory Allocation</a> (including valgrind)</td>
+      <td><a href='notes/notes-storage.html'>NOTES: Storage Classes</a><br />
+      <a href='notes/notes-Cfunctions.html'>NOTES: Functions</a> (including rand())</td>
       <td></td>
     </tr>
   </tbody>
