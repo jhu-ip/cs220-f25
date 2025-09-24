@@ -115,17 +115,17 @@ often interchangeable but not 100%:
 
 
 <h4>Arrays of pointers</h4>
+
 <ul> 
-     <li>Note writing <code>main(int argc, char *argv[])</code> is same as <code>main(int argc, char **argv)</code> since more generally any function parameter <code>mytype myvar[]</code> is nearly identical to writing <code>mytype * myvar</code>.
-</li><li> Common use is array of strings
-</li><li> Each string is pointer to a string array, 
+<li>Note writing <code>main(int argc, char *argv[])</code> is same as <code>main(int argc, char **argv)</code> since more generally any function parameter <code>mytype myvar[]</code> is nearly identical to writing <code>mytype * myvar</code>.
+</li> <li> Common use is array of strings
+</li> <li> Each string is pointer to a string array, 
   eg: <code>char *suitptr[4] = {"Hearts", "Diamonds", "Clubs", "Spades"}</code>
-</li><li>Note that this is not the same as a 2d array which is laid out sequentially in memory
+</li> <li>Note that this is not the same as a 2d array which is laid out sequentially in memory
 </li>
 </ul>
 
-<!-- can't get format to work!
-
+<!-- formatting not working
 ```c
 int main(void) {
   char *suitptr[4] = {"Hearts", "Diamonds", "Clubs", "Spades"};
@@ -137,137 +137,4 @@ int main(void) {
 ```
 -->
 
-<!--
-
-<h3>Dynamic memory allocation</h3>
-
-Real Programs need dynamic memory
-	<ul>
-	  <li>Arrays we have used up to now must have fixed size from when program launched
-</li>	  <li>Want to let program grow unboundedly (up to available memory on the computer)
-</li>	  <li>Solution: dynamic memory allocation
-      </ul>
-	      
-<ul>
-  <li>C takes a low-level view of dynamic memory: allocate blocks and free blocks of memory<br>
--- compare to Java/Python/etc where you just say <code>new</code> or invoke class constructor to allocate space for new objects, and a garbage collector frees for you
-  <li>Dynamic memory is allocated on a <em>heap</em> (which is a huge dynamically growable array)
-  <li>Data persists until it is explicitly <code>free</code>d
-  <li>Can return <code>char*</code> from functions, unlike <code>char[]</code>
-
-</ul>
-<p>
-<p>
-
-<code>void *<a href="http://www.cplusplus.com/reference/cstdlib/calloc/">calloc</a> (size_t <em>numels</em>, size_t <em>sizeofel</em>)</code><br>
-&nbsp;&nbsp;&nbsp;&nbsp;e.g. <code>int * arr = calloc (10,sizeof(int)); // arr[0] .. arr[9] are fresh 0'd array elements after this statement
-</code>
-<ul>    <li> Makes array of <code>numels</code> with each element having size <code>sizeofel</code>; initialize all to 0's
-    <li> <code>calloc</code> returns a pointer to this new memory block
-    <li> Return type is <code>void *</code> and by C type promotion rules its OK to assign <code>void *</code> to any type of pointer
-    <li>If <code>NULL</code> (empty pointer) is returned, no space was allocated
-    <li><strong>Alert</strong>: its very easy to <code>calloc</code> too little or too much space if you pass in incorrect sizes
-    <li>Aside: <code>size_t</code> is C's data type for sizes of things (the result type of <code>sizeof</code>)<br>
--- it should be an <code>int</code> that can hold up to the size of the machine's memory, so it will be an unsigned 32 or 64-bit <code>int</code> depending on your machine.
-    <li>Aside 2: in older C style the result of calloc etc would need to be <em>typecast</em>; this is no longer needed or recommended.
-</ul>
-<p>
-
-Here is a little example:
-<pre>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-
-int main()
-{
-    int n;
-    scanf("%d",&n);
-    int * arr = calloc (n,sizeof(int));
-    for (int i = 1;i&lt;n;i++) printf("%d ",arr[i]);
-}
-</pre>
-<p>
-
-<code>void *<a href="http://www.cplusplus.com/reference/cstdlib/malloc/">malloc</a> (size_t <em>size</em>)</code><br>
-&nbsp;&nbsp;&nbsp;&nbsp;e.g. <code>char * str = malloc(sizeof(char) * 10); // can copy a 9-character string into fresh str now
-</code>
-<ul>    <li> Creates memory block of given total <code><em>size</em></code>
-    <li> Returns pointer to start of memory
-</ul>
-<p>
-
-<code>void *<a href="http://www.cplusplus.com/reference/cstdlib/realloc/">realloc</a> (void *<em>ptr</em>, size_t <em>size</em>)</code>
-<ul>    <li>Copies memory pointed to by <code><em>ptr</em></code> to new place with new <code><em>size</em></code>
-<li>Returns a pointer to this new copy; frees memory pointed to by <code><em>ptr</em></code>
-    <li> <code><em>ptr</em></code> should be a previously *<code>alloc</code>'d value
-    <li> <code><em>size</em></code> is as in <em>malloc</em>, for calloc-style use a size (<code><em>numels</em> * <em>sizeel</em></code>)
-    <li> If new size is bigger, new space uninitialized
-</ul>
-<p>For all of the *<code>alloc</code>  above, if (re-)allocation fails returns null
-<pre>    char * memory = malloc(400000);
-    if (!memory)  // remember null == 0, 0 is false
-       printf("Failed to allocate the amount of memory you requested\n");</pre>
-
-<h4>Deallocating memory</h4><p>
-
-<code>void <a href="http://www.cplusplus.com/reference/cstdlib/malloc/">free</a>(void *<code><em>ptr</em></code>)</code>
-<ul>
-  <li> deallocates the memory at address <code><em>ptr</em></code>
-    <li> <code><em>ptr</em></code> must be a previously *alloc'd return value
-    <li> <code><em>ptr</em></code> is no longer pointing to valid storage after <code>free</code>
-    <li>A primary source of errors in C code is either <code>free</code>ing memory you are still using, or not <code>free</code>ing memory you are finished with, and using up all your computer memory eventually (a <em>leak</em>).<br>
--- not a problem in Java/Python/etc since they have a garbage collector
-</ul>
-
-
-A few usage examples:
-
-  Use of <code>calloc</code> within a function (note return type on function):
-```c
-#include &lt;stdlib.h&gt;
-#include &lt;stdio.h&gt;
-
-float * dynarray (int size)
-{ float *farray;
-    farray = calloc(size, sizeof(float));
-    return farray;
-}
-
-int main()
-{ float * fdynarray;
-    fdynarray = dynarray(50);
-    fdynarray[3] = 23.4;
-    *(fdynarray+3) = 23.4;
-}
-```
-
-Using <code>realloc</code> to double the size of an array:
-```c
-#include &lt;stdlib.h&gt;
-#include &lt;stdio.h&gt;
-int main()
-{
-    int size = 10, *array;
-    array = calloc(size, sizeof(int)); // or, "malloc(size*sizeof(int))"
-
-    for(int j = 0; j&lt;10; j++) array[j] = 2*j + 1;
-
-    for(int j = 0; j&lt;10; j++) printf("array[%d]=%d\n",j,array[j]);
-    printf("array is now located at %p\n",array);
-
-    int * temp = realloc(array, size*2*sizeof(int));
-
-    if (temp)     // not NULL so good to go
-        array = temp;  // array has the above data plus its now size 20
-    else { printf("not enough memory\n"); return 1; }
-    
-    printf("array is now located at %p - it moved!\n",array);
-    array[19]=99; // have 10 extra locations now!
-    for(int j = 0; j&lt;20; j++) printf("array[%d]=%d\n",j,array[j]);
-
-}
-```
-
--->
-
-<p>
-(more coming soon)
+See also the <a href='notes-pointers.html'>Pointers & Dynamic Memory Allocation</a> notes resource.

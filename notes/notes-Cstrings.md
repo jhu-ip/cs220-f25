@@ -64,23 +64,26 @@ Dynamically allocating space for strings and putting them in an array:
 #include <stdio.h>
 #include <string.h>
 
-int numstrings = 0;
-
-void addstring(char **stringarray, char *newstring)
+void addstring(char **stringarray, char *newstring, int * numptr)
 {   printf("allocating %lu bytes for %s\n",strlen(newstring)+1,newstring);
-    stringarray[numstrings] = malloc(strlen(newstring)+1);
-    strcpy(stringarray[numstrings++],newstring);
+    stringarray[*numptr] = malloc(strlen(newstring)+1);
+    strcpy(stringarray[(*numptr)++],newstring);
 }
 
 int main()
 {
+    int numstrings = 0;
     char *sarray[100];
-    addstring(sarray,"hi");
-    addstring(sarray,"ho");
-    addstring(sarray,"wee");
-    for (int i=0;i&lt;numstrings;i++) printf("%s\n",sarray[i]);
+
+    addstring(sarray, "hi", &numstrings);
+    addstring(sarray, "ho", &numstrings);
+    addstring(sarray, "wee", &numstrings);
+    for (int i=0; i < numstrings; i++) {
+       printf("%s\n",sarray[i]);
+       // must also free the strings to prevent memory leaks
+       free(sarray[i]);
+    }
 }
 ```
 
-<p>
-(more coming soon)
+See also the <a href='notes-pointers.html'>Pointers & Dynamic Memory Allocation</a> notes resource.

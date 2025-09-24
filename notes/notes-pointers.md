@@ -6,7 +6,7 @@ title: Pointers & Dynamic Memory Allocation
 
 Pointers in C and C++ give us direct access to memory locations. One of the most common usages is to provide a pass by reference mechanism for function parameters. They are also used with dynamic memory allocation which enables creating memory spaces as needed during program execution. Freeing the memory explicitly when done using it is also the programmer's job in these languages.
 
-Also see the Arrays and Strings notes for material related to pointers and those structures.
+Also see the <a href='notes-Carrays.html'>Arrays</a> and <a href='notes-Cstrings.html'>Strings</a> notes for material related to pointers and those structures.
 
 <h3>Pointers</h3>
 
@@ -14,22 +14,21 @@ These are variables that hold memory addresses, providing indirect access to the
 
 <ul>
 	  <li> Declaration: <code><em>sometype</em> *<em>ptrvarname</em></code>, e.g. <code>int *toi</code> or <code>char *args[]</code>
-</li>	  <li> <code><em>ptrvarname</em></code> is a variable that contains a memory <em>address</em>, a number which refers to that raw memory location
-</li>	  <li> That memory address in turn should contain a value of type <code><em>sometype</em></code>
-</li>	  <li> <code>NULL</code> means "points at nothing" (<code>#include &lt;stdlib.h&gt;</code> to get <code>NULL</code> defined; its in fact <code>0</code>).
-</li>	</ul>
+</li>  <li> <code><em>ptrvarname</em></code> is a variable that contains a memory <em>address</em>, a number which refers to that raw memory location
+</li>  <li> That memory address in turn should contain a value of type <code><em>sometype</em></code>
+</li>  <li> <code>NULL</code> means "points at nothing" (<code>#include &lt;stdlib.h&gt;</code> to get <code>NULL</code> defined; it is in fact <code>0</code>).
+</li></ul>
 
 <h4>Operators for pointers</h4>
-	<ul>
-    <li> <code>&</code>: address-of operator - returns address of whatever followss<br>
-<pre>
-int a, *toa;
+
+We use two operators in conjunction with pointers. The <code>&</code> operator when applied to a variable returns that variable. This enables us the access the address of a variable in order to store it in a pointer variable. The <code>*</code> operator is called the dereferencing operator; it returns value being pointed to, that stored in the memory location held by the pointer variable. The following code snippet demonstrates these basic operations. Both operators have unary operator precedence, but one tier below <code>()</code> and <code>[]</code> operations.
+
+```c
+int a, *toa;  // a is a plain int, toa is a pointer to (memory address of) an int
 toa = &a; // toa contains the memory address of a -- its a "pointer to a"
-</pre>
-</li>    <li> <code>*</code>: indirection or dereferencing operator - returns value being pointed to
-	<pre>printf("%d",*toa)  // dereference above toa to get the underlying int and print it out</pre>
-</li>    <li>both have unary operator precedence (one less than <code>()</code> and <code>[]</code>)
-</li></ul>
+printf("%d",*toa)  // dereference above toa to get the underlying int and print it out
+```
+
 
 <h4>Pointers and parameter passing</h4>
 <ul>
@@ -37,12 +36,12 @@ toa = &a; // toa contains the memory address of a -- its a "pointer to a"
 </li>    <li> Pass variable address to pass a pointer (reference) to the variable
 	- must use * as part of function prototype and definition parameter
 </li>    <li> use *var within function to get or change value being referenced
-</ul>
+</li></ul>
 
 Swap example using pointers to pass by reference:
 
 ```c
-void swap(int *a, int *b) 
+void swap(int * a, int * b) 
 // a and b are pointers to integers: addresses of memory locations containing ints
 {
 	int temp = *a; // dereference a (follow the pointer) to get to underlying integer
@@ -63,7 +62,8 @@ int main()
 <ul>
   <li><code>+</code>, <code>-</code>, <code>+=</code>, <code>-=</code> for other pointers or integers
 </li>    <li> Most often used on pointers that are arrays
-</li>    <li> Doesn't always add the actual number, it adds that number times how many bytes each element takes up
+</li>    <li> Doesn't add the actual number, it adds that number times <code
+>sizeof</code> the base type
 </li>    <li>e.g. for variable <code>int * p</code>, code "<code>p+1</code>" will in fact generate <code>p+4</code>  <br>
 -- 4 bytes ahead will sit the next 32-bit <code>int</code>.
 </li>    <li> <code>ptr1 = ptr2</code> assignment works for <code>ptr1/2</code> of same type
@@ -93,7 +93,7 @@ Real Programs need dynamic memory. Arrays we have used up to now must have fixed
 
 <h4>Memory Allocation functions</h4>
 
-<code>void *<a href="http://www.cplusplus.com/reference/cstdlib/calloc/">calloc</a> (size_t <em>numels</em>, size_t <em>sizeofel</em>)</code><br>
+<code>void * <a href="http://www.cplusplus.com/reference/cstdlib/calloc/">calloc</a> (size_t <em>numels</em>, size_t <em>sizeofel</em>)</code><br>
 &nbsp;&nbsp;&nbsp;&nbsp;e.g. <code>int * arr = calloc (10,sizeof(int)); // arr[0] .. arr[9] are fresh 0'd array elements after this statement
 </code>
 
@@ -107,7 +107,7 @@ Real Programs need dynamic memory. Arrays we have used up to now must have fixed
     </li><li>Aside 2: in older C style the result of calloc etc would need to be <em>typecast</em>; this is no longer needed or recommended.
 </li></ul>
 
-<code>void *<a href="http://www.cplusplus.com/reference/cstdlib/malloc/">malloc</a> (size_t <em>size</em>)</code><br>
+<code>void * <a href="http://www.cplusplus.com/reference/cstdlib/malloc/">malloc</a> (size_t <em>size</em>)</code><br>
 &nbsp;&nbsp;&nbsp;&nbsp;e.g. <code>char * str = malloc(sizeof(char) * 10); // can copy a 9-character string into fresh str now
 </code>
 <ul>    <li> Creates memory block of given total <code><em>size</em></code>
@@ -115,7 +115,7 @@ Real Programs need dynamic memory. Arrays we have used up to now must have fixed
 </li></ul>
 
 
-<code>void *<a href="http://www.cplusplus.com/reference/cstdlib/realloc/">realloc</a> (void *<em>ptr</em>, size_t <em>size</em>)</code>
+<code>void * <a href="http://www.cplusplus.com/reference/cstdlib/realloc/">realloc</a> (void *<em>ptr</em>, size_t <em>size</em>)</code>
 <ul
 >    <li>Copies memory pointed to by <code><em>ptr</em></code> to new place with new <code><em>size</em></code>
 </li><li>Returns a pointer to this new copy; frees memory pointed to by <code><em>ptr</em></code>
@@ -124,7 +124,7 @@ Real Programs need dynamic memory. Arrays we have used up to now must have fixed
 </li>    <li> If new size is bigger, new space uninitialized
 </li></ul>
 
-For all of the *<code>alloc</code>  above, if (re-)allocation fails the function returns null. We should explicitly check for this:
+For all of the *<code>alloc</code> functions above, if allocation fails the function returns null. We should explicitly check for this:
 
 ```c
 char * memory = malloc(400000);
@@ -139,8 +139,7 @@ if (!memory)  // remember null == 0, 0 is false
   <li> deallocates the memory at address <code><em>ptr</em></code>
 </li>    <li> <code><em>ptr</em></code> must be a previously *alloc'd return value
 </li>    <li> <code><em>ptr</em></code> is no longer pointing to valid storage after <code>free</code>
-</li>    <li>A primary source of errors in C code is either <code>free</code>ing memory you are still using, or not <code>free</code>ing memory you are finished with, and using up all your computer memory eventually (a <em>leak</em>).<br>
--- not a problem in Java/Python/etc since they have a garbage collector
+</li>    <li>A primary source of errors in C code is either <code>free</code>ing memory you are still using, or not <code>free</code>ing memory you are finished with, and using up all your computer memory eventually (a <em>leak</em>) -- not a problem in Java/Python/etc since they have a garbage collector
 </li></ul>
 
 <h3>Valgrind</h3>
@@ -148,12 +147,13 @@ if (!memory)  // remember null == 0, 0 is false
 <ul>
 <li> <code>valgrind</code> checks for memory leaks: <code>malloc</code>'d (or <code>calloc</code>'d or <code>realloc</code>'d) storage that is not <code>free</code>'d
 </li><li> Also finds invalid memory reads and writes (ie, accessing past end of array)
-</li><li> It reports "still reachable" when you forgot to call <code>free</code> but you still can.
-<li><li> A report of "definitely lost" means you cannot call <code>free</code> because the pointer needed to be deallocated in a helper function, it can't be done in main.
-</li>     <li> imagine if the Chrome browser called <code>func()</code> 1000 times a second: it would eat up all your memory and then crash
-</li>     <li>Your submitted programs <em>must not have memory leaks</em>!
-</li>  <li>See the <a href="http://valgrind.org/docs/manual/quick-start.html">Valgrind.org quickstart guide</a> for more information.
-</li></ul>
+</li><li> It reports "still reachable" when you forgot to call <code>free</code> but you could have
+</li><li> A report of "definitely lost" means you cannot call <code>free</code> because the pointer needed to be deallocated in a helper function, it can't be done in main.
+</li> <li> imagine if the Chrome browser called <code>func()</code> 1000 times a second: it would eat up all your memory and then crash
+</li> <li>Your submitted programs <em>must not have memory leaks</em>!
+</li> <li>See the <a href="http://valgrind.org/docs/manual/quick-start.html">Valgrind.org quickstart guide</a> for more information.
+</li>
+</ul>
 
 
 <h3>Dynamic Memory Allocation in C++</h3>
