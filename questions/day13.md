@@ -4,7 +4,7 @@ layout: default
 title: Day 13 Recap Questions
 reference solutions:
   1. A user defined data type, which is a collection of related variables, called fields.
-  2. Passed by value - each field is copied. Note that if the field is a pointer. The address is copied.
+  2. Passed by value - each field is copied. Note that if the field is a pointer the address is copied.
   3. It is the total byte sizes of all fields in a struct + padding. Typically C compiler pad the struct to align with 4-bytes.
   4. Lifetime is the lifespan of a variable in the memory. Scope is where the variable can be accessed.
   5. When an inner scope variable and an outer scope variable have the same name. The inner one hides the outer one. [May need to clarify what file scope, function scope, and block scope are]
