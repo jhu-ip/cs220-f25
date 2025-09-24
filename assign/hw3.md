@@ -224,12 +224,12 @@ The 60 points for this assignment will be applied as follows (tbd):
 * Makefile [5]
 * testing [5]
 * error handling [5]
-* file input [8]
+* file input [6]
 * function implementations [18]
 * output found word results to stdout [5]
 * output best results to file [2]
 * output grid with capitalized best word to file [5]
-* style, including appropriate use of functions (modularization) [3]
+* style, including appropriate use of functions (modularization) [5]
 
 ### Submission 
 Your Gradescope submission should contain at least the following files:
