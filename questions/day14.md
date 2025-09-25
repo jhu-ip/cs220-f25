@@ -3,7 +3,7 @@ id: day14_questions
 layout: default
 title: Day 14 Recap Questions
 reference solutions:
-  1. Open the file with "b" attribute and use fread/fwrite instead of fscanf/fprintf.
+  1. Open the file with "rb"/"wb" attributes and use fread/fwrite instead of fscanf/fprintf.
   2. [NEW] `FILE *fp = fopen("img.dat", "wb"); if (fp == NULL) { perror("Error opening file for writing");  return 1; } fwrite(ray1, sizeof(int), 1000, fp); fclose(fp);` to do the writing and `fp = fopen("img.dat", "rb"); if (fp == NULL) { perror("Error opening file for reading"); return 1; } fread(ray2, sizeof(int), 1000, fp); fclose(fp);` to do the reading.
   3. ^, which is mutually exclusive. i.e. only true if and only if one of the two is true, but not both.
   4. it will perform the operation bit by bit. (extra - You cannot. They are not defined for floats. A compilation error will occur.)
