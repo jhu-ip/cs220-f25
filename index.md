@@ -46,6 +46,7 @@ well. You must join the Gradescope course page through Canvas.
 
 ## News
 
+* **September 26** — [Homework 4](https://www.gradescope.com/courses/1070771/assignments/6785567/) is posted.
 * **September 19** — [Homework 3](assign/hw3.html) is posted.
 * **September 12** — [Homework 2](https://www.gradescope.com/courses/1070771/assignments/6675631/) is posted.
 * **September 5** — [Homework 1](https://www.gradescope.com/courses/1070771/assignments/6675620/) is posted.
