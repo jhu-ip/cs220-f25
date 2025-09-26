@@ -1,7 +1,7 @@
 ---
 layout: default
-id: day17_questions
-title: Day 17 Recap Questions
+id: day18_questions
+title: Day 18 Recap Questions
 reference solutions:
   1. We first create the new node with the new data and set its next pointer to what the HEAD is pointing to. Then, we update the HEAD pointer to point to the new node.
   2. Doubly linked list is a bi-directional linked list. We can add another pointer field called previous and use it to point to the previous node. The first node's previous pointer would be NULL.
