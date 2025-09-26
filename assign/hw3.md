@@ -77,7 +77,7 @@ There are only 2 types of invalid grids that your program must detect and report
 * if the number of rows and columns cannot be read from the first line
 * if any expected letters are missing
 
-Valid words should be read only once from the second text file and stored in your program. Words must be all lower case with at most 15 letters and no spaces. Each line of the file contains a unique word in alphabetical order. You can assume there are at most 500000 words in the file. The program should continue reading words until it reaches the end of the file. Although many different types of errors may occur when collecting this input, your program only needs to detect whether any word is longer than 15 characters. In this case, your program should print "Error: malformed word file" to `stdout`, advance to the next line, and exit with return value `4`. [Hint: read into a very large string and then copy to your list if valid.]
+Valid words should be read only once from the second text file and stored in your program. Words must be all lower case with at most 15 letters and no spaces. Each line of the file contains a unique word in alphabetical order. You can assume there are at most 500000 words in the file. The program should continue reading words until it reaches the end of the file. Although many different types of errors may occur when collecting this input, your program only needs to detect whether any word is longer than 15 characters. In this case, your program should print "Error: malformed words file" to `stdout`, advance to the next line, and exit with return value `4`. [Hint: read into a very large string and then copy to your list if valid.]
 
 <div class='admonition info'>
 <div class='title'>Note</div>
