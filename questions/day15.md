@@ -18,12 +18,14 @@ reference solutions:
 4. What is type promotion?
 5. What is type casting?
 6. What is the output of the code segment below?
-7. Given the variables below, write an expression to store the value of half of `n` plus ten times `x` truncated to a whole number into variable `long result;`. You can only use the literal values `2` and `10` in your solution.
 
-```c
-int n = 32065;
-float x = 24.79;
-printf("int n = %d but (char) n = %c\n", n, (char) n);
-printf("float x = %f but (long) x = %ld\n", x, (long) x);
-```
+	```c
+	int n = 32065;
+	float x = 24.79;
+	printf("int n = %d but (char) n = %c\n", n, (char) n);
+	printf("float x = %f but (long) x = %ld\n", x, (long) x);
+	```
+7. Given the variables above, write an expression to store the value of half of `n` plus ten times `x` truncated to a whole number into variable `long result;`. You can only use the literal values `2` and `10` in your solution.
+
+
 
