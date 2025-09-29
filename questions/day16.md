@@ -22,15 +22,16 @@ reference solutions:
 type struct node_ {
      int data;
      struct node_ * next;
-} INode;
+} IntNode;
 
-INode * head = NULL;
-INode * n;
+IntNode * head = NULL;
+IntNode * n;
 int val;
 
 while (scanf("%d", &val) == 1) {
-   n = (INode *) malloc(sizeof(INode));
+   n = (IntNode *) malloc(sizeof(IntNode));
    n->data = val;
    n->next = head;
    head = n;
 }
+```
