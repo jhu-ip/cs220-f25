@@ -19,7 +19,7 @@ reference solutions:
 6. What is the result of running this code on the input values `1 3 5 7 9`? Draw a picture representing memory. 
 
 ```c
-type struct node_ {
+typedef struct node_ {
      int data;
      struct node_ * next;
 } IntNode;
