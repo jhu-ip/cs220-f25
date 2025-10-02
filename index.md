@@ -45,7 +45,7 @@ there. Regrade requests can be made and are processed on Gradescope as
 well. You must join the Gradescope course page through Canvas.
 
 ## News
-
+* **October 3** — [Midterm project](assign/midterm.html) is posted.
 * **September 26** — [Homework 4](https://www.gradescope.com/courses/1070771/assignments/6785567/) is posted.
 * **September 19** — [Homework 3](assign/hw3.html) is posted.
 * **September 12** — [Homework 2](https://www.gradescope.com/courses/1070771/assignments/6675631/) is posted.
