@@ -339,7 +339,7 @@ When implementing this operation, you will need to generate random numbers. Use 
 
 The blur operation is more complex than some of the previous operations, because you need to consider more than one pixel at a time. At the simplest level, a blur works by taking each pixel, and setting its value to some kind of average of all the pixels in a small neighborhood around it. The simplest blur possible would just set each pixel to the average of itself and the pixels adjacent to itself (computed for each color channel separately). However, this kind of blur isn't as pretty as we might like. What we will do for this assignment is similar, but more clever.
 
-For the kind of blurring effect that a program like Photoshop would give you, you will need to weight the importance of neighboring pixels according to a Gaussian distribution. This is referred to as a "Gaussian blur" ([Wikipedia](https://en.wikipedia.org/wiki/Gaussian_blur)), and this is what you will implement for this assignment.
+For the kind of blurring effect that a program like Photoshop would give you, you will need to weight the importance of neighboring pixels according to a Gaussian distribution. This is referred to as a "Gaussian blur" (see [Wikipedia's entry on Gaussian Blur](https://en.wikipedia.org/wiki/Gaussian_blur)), and this is what you will implement for this assignment.
 
 First, you need to create an `NxN` matrix that holds the values of a 2D (symmetric) Gaussian distribution with a given variance (we assume 0-mean). `N` should be big enough to be at least _10*sigma_ positions wide (to span approximately _5*sigma_ positions in each direction), and `N` should always be an odd number (so there's an equal number of rows/columns on either side of the center. If `dx` and `dy` store the two coordinates as offsets from the center (i.e. delta-from-mean), then the Gaussian value can be calculated as (written as code):
 
@@ -375,15 +375,15 @@ If sigma was `1.0`, we would get an 11x11 matrix:
 0.000000  0.000000  0.000000  0.000000  0.000000  0.000001  0.000000  0.000000  0.000000  0.000000  0.000000
 ```
 
-Basically, the sigma parameter lets you control how strong the blur effect is; the larger your sigma, the more blurry your image will become.
+Basically, the sigma parameter lets you control how large the blur effect is; the larger your sigma, the more blurry your image will become.
 
-Once you have this Gaussian "filter" matrix, you'll need to "convolve" it with your image. That's fancy math terminology that basically means you loop over the pixels of your input image, and for each pixel, you place your filter on your image centered at that pixel, and then for each element of the filter, multiply it by the pixel value underneath that element. Then, you set the value for the pixel of the output image to be the normalized sum of those values. Basically, this is a fancy way of describing a weighted average; the values in the matrix are the weights that get applied to the corresponding pixels of the input image. To normalize, you just sum up the values in the filter matrix, and divide the sum of the weighted pixel values by it; that ensures that you're not brightening or darkening the image when you blur it.
+Once you have this Gaussian "filter" matrix, you'll need to "convolve" it with your image. That's fancy math terminology that basically means you loop over the pixels of your input image, and for each pixel, you place your filter on your image centered at that pixel, and then for each element of the filter, multiply it by the pixel value underneath that element. Then, you set the value for the pixel of the output image to be the normalized sum of those values. Basically, this is a way of describing a weighted average; the values in the matrix are the weights that get applied to the corresponding pixels of the input image. To normalize, you just sum up the values in the filter matrix, and divide the sum of the weighted pixel values by it; that ensures that you're not brightening or darkening the image when you blur it.
 
 You will also need to be careful near the edges of the image, since the parts of filter may extend past the border of the image. In your calculations, just skip the filter positions that hang off the edge. (This is why the normalization is important even if the values in your matrix sum to 1).
 
 You will blur all three color channels in this fashion.
 
-You will likely want to implement this in several functions. For instance, you may want a function that generates a Gaussian matrix of a given size and variance, a function to find the filter response for one pixel of the input image, and finally a function that calls the first function, then loops over the pixels of the input image and calls the second function for each pixel in order to generate the output image.
+You will likely want to implement this by decomposing it across several functions. For instance, you may want a function that generates a Gaussian matrix of a given size and variance, a function to find the filter response for one pixel of the input image, and finally a function that calls the first function, then loops over the pixels of the input image and calls the second function for each pixel in order to generate the output image.
 
 If you apply the blur transform with different sigma values to the ```kitten.ppm``` image, the result should look like the images shown below. (Note that blur may be a bit slow, and the larger a radius you use, the slower it will be.)
 
