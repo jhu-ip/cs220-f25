@@ -404,7 +404,7 @@ If you apply the blur transform with different sigma values to the ```kitten.ppm
 |The blurred kitten image sigma 5|
 
 ## Error Reporting
-The approach your program will take for error reporting is to have your `main()` method return a `0` value indicating success or a positive value indicating failure. Which positive value your program should return is indicated in the table below. If more than one error condition occurs, your program should return the error code listed earliest in the table below.
+The approach your program will take for error reporting is to have your `main()` method return a `0` value indicating success or a positive value indicating failure. Which positive value your program should return is indicated in the table below. If more than one error condition occurs, your program should return the error code listed earliest in the table.
 
 In addition to returning the specified value, your program should also output an informative error message to `stderr`. (The text of the error messages will not be specified; we'll leave the exact wording up to you.)
 
@@ -423,9 +423,9 @@ In addition to returning the specified value, your program should also output an
 ## Development Plan
 This project is (much!) bigger than any of the homeworks you've completed so far, and having a teammate to help means that you can both benefit from your teammate's expertise, but also need to plan more carefully.  Thus, as part of this project, you are expected to create a **development plan** to keep track of tasks that need to be completed.  We suggest the following process:
 
-* Start by brainstorming the tasks that are required to complete the project successfully.  The sections above detail the image operations that your project is required to support, and below is a suggestion of how you could break these down into individual files.  These operations and files are a good task list a good starting point -- but, they may need to be broken down into smaller tasks.  Make sure you consider testing as well!  You do **not** want to turn in a project that has not been tested!
+* Start by brainstorming the tasks that are required to complete the project successfully.  The sections above detail the image operations that your project is required to support, and below is a suggestion of how you could break these down into individual files.  These operations and files are a good starting point -- but, they may need to be broken down into smaller tasks.  Make sure you consider testing as well!  You do **not** want to turn in a project that has not been tested!
 
-* Consider the relative difficulty of tasks.  Some of the image operations are expected to be considerably easier than others.  How much easier?  That's up for you and your partner to discuss.  Header files are likely to be relatively small tasks, particularly in comparison to the actual implementation.  We are not expecting you to come up with exact estimates here (for instance, 35 minutes to implement `ppm_io.h`, or 130 minutes to implement a transformation operation).  Instead, try to identify (approximate) relative difficulties.  Do you think that one transformation is twice as difficult as another?  Four times as difficult?  Ultimately, the answer that you come up with is not so important as the _process_ of discussing with your teammate _why_ you think what you do (so long as the answer is not totally insane -- if you consider one task to be 20 times as difficult as another, you should have a very good reason!)
+* Consider the relative difficulty of tasks.  Some of the image operations are expected to be considerably easier than others.  How much easier?  That's up for you and your partner to discuss.  Header files are likely to be relatively small tasks, particularly in comparison to the actual implementation.  We are not expecting you to come up with exact estimates here (for instance, 35 minutes to implement `ppm_io.h`, or 130 minutes to implement a transformation operation).  Instead, try to identify (approximate) relative difficulties.  Do you think that one transformation is twice as difficult as another?  Four times as difficult?  Ultimately, the answer that you come up with is not so important as the _process_ of discussing with your teammate _why_ you think what you do (so long as the answer is within reason -- if you consider one task to be 20 times as difficult as another, you should have a very good reason!)
 
 * Estimate _task dependencies_.  What tasks depend on each other?  For each task that you complete, what new tasks can now be completed?  For example, the `read_ppm` function is probably necesary to complete pretty much all of the other functions, since you'll want to read an image before you can modify it.  Hence, we provide this function to you.  It's also probably pretty important to be able to write an image back out, so that you can run `img_cmp` to compare the image your program produced with the image expected.  Do you think that any of the other functions you're supposed to implement depend on each other?  If so, how?
 
@@ -448,7 +448,7 @@ The content of the development plan is largely in your hands. You are required t
 We recommend that you break your code into several files, and have as little code as possible in main(). Here is a suggested (but not required) breakdown of features into files:
 
 - `Makefile` -  you **must** include a `Makefile` that can build your program; it's how the graders will compile your submission. You are required to build a target whose name is `project`.
-- `project.c` - the main program. The `main()` function should be extremely simple; it might literally call a single function, then return 0. A `project.c` with a mostly empty `main()` and a `print_usage` helper function is provided in the starter code.
+- `project.c` - the main program. The `main()` function should be kept simple, delegating most tasks to other functions. A `project.c` with a mostly empty `main()` and a `print_usage` helper function is provided in the starter code.
 - `ppm_io.c` - contains implementations of functions for reading, creating, etc. images (using the PPM format). In the starter code, reading PPM files is provided for you. You must implement the missing functions `write_ppm`, `make_image`, and `free_image`. You may add other general-purpose image processing functions to this file.
 - `ppm_io.h` - the header file for PPM I/O stuff (struct and function declarations).
 - `image_manip.c` - where you will implement all image processing operations.
@@ -464,16 +464,16 @@ We recommend that you break your code into several files, and have as little cod
 <div class='admonition tip'>
 <div class='title'>Good Practices</div>
 <div class='content'>
-<p>Aim to write small, clean helper functions for better readability and easier testing, as well as greater reusability. Then, make a plan for what order you will implement the modules in. You will also want to test your modules; it's a good idea to use test-driven design, which means that you will design tests for your functions before you actually start trying to write the functions themselves.</p>
+<p>Aim to write small, clean helper functions for better readability and easier testing, as well as greater reusability. Then, make a plan for what order you will implement the functions in. You will also want to test your functions; it's a good idea to use test-driven design, which means that you will design tests for your functions before you actually start trying to write the functions themselves.</p>
 </div>
 </div>
 
-For each module, it's important to think about precisely what it should do, and also how you can test it to be sure it's doing what you want. There are lots of ways of testing your code; for this project, a lot of your tests will likely involve the visual inspection of output images to see if they look the way they're supposed to. Still, having an idea of how you'll test each piece before you start writing it (and then testing/fixing it before you move on to the next one) will make your life a lot easier.
+For each function, it's important to think about precisely what it should do, and also how you can test it to be sure it's doing what you want. There are lots of ways of testing your code; for this project, a lot of your tests will likely involve the visual inspection of output images to see if they look the way they're supposed to. Still, having an idea of how you'll test each piece before you start writing it (and then testing/fixing it before you move on to the next one) will make your life a lot easier.
 
 <div class='admonition success'>
 <div class='title'>Comparing Images</div>
 <div class='content'>
-<p>Some results images are provided in the starter code under `results` folder. If you like, you can use the `img_cmp` program to compare your results with them.</p>
+<p>Some results images are provided in the starter code under `results` folder. You can use the `img_cmp` program to compare your results with them.</p>
 </div>
 </div>
 
@@ -481,7 +481,7 @@ For each module, it's important to think about precisely what it should do, and 
 
 ### Development Plan
 
-Submit your development plan in a plain text file called README (no .txt or other extension) to Gradescope before the October 10th deadline. As noted above, you can use Markdown formatting to make this look nice. Remember to include all team member full names and JHED IDs in your submission. 
+Submit your development plan in a plain text file called README.md to Gradescope before the October 10th deadline. As noted above, you can use Markdown formatting to make this look nice. Remember to include all team member full names and JHED IDs in your submission. 
 
 ### Midterm Project Partner Evaluation Form
 
@@ -521,6 +521,6 @@ The 150 project points will be divided as follows during grading:
 <div class='admonition danger'>
 <div class='title'>Grading Notes</div>
 <div class='content'>
-Remember that programs which do not compile (with standard compiler flags on the ugrad machines) will not receive credit.  Additionally, points will be deducted for any compiler warnings. Points will also be deducted for any warnings, errors, or memory leaks reported by valgrind. All executables should be buildable using a `Makefile` with `project` as the main target, and should build and run cleanly.
+Remember that programs which do not compile (with standard compiler flags on the ugrad machines) will not receive credit.  Additionally, points will be deducted for any compiler warnings. Points will also be deducted for any warnings, errors, or memory leaks reported by valgrind. All executables should be buildable using a `Makefile` with `project` as the main target, and should build and run cleanly. Late days are not allowed for this submission.
 </div>
 </div>
