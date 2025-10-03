@@ -305,7 +305,7 @@ Rotating an image counter-clockwise is relatively straightforward. First you sho
 
 ### Pointilism
 
-Pointilism is a painting technique that uses distinct colored dots. You can read about it on [Wikipedia's entry on Pointilism](https://en.wikipedia.org/wiki/Pointillism). In this part, we would like to apply a pointilism-like effect to an input image. In order to accomplish this, we randomly select a small set (3%) of the pixels in the input image and apply the effect to them. To do so, imagine that each randomly selected pixel is at the center of a circle with a random radius of between 1 and 5. Now, applying the pointilism effect comes down to coloring all the pixels that reside in that circle with the same color as the color of the randomly selected pixel which is at the center of the circle. This gives the input image a cool "painting-like" look by creating a set of small filled circles (i.e., dots) across the image, where each dot is uniformly colored with the color of the randomly selected pixel which is located at the center of that dot. Note that if a randomly selected pixel is near or at a boundary, then you do not need to apply the effect to the parts that may extend past the borders of the image.
+Pointilism is a painting technique that uses distinct colored dots. You can read about it on [Wikipedia's entry on Pointilism](https://en.wikipedia.org/wiki/Pointillism). In this part, we would like to apply a pointilism-like effect to an input image. In order to accomplish this, we randomly select a small set (3%) of the pixels in the input image and apply the effect to them. To do so, imagine that each randomly selected pixel is at the center of a circle with a random radius between 1 and 5 (inclusive). Now, applying the pointilism effect comes down to coloring all the pixels that reside in that circle with the same color as the color of the randomly selected pixel which is at the center of the circle. This gives the input image a cool "painting-like" look by creating a set of small filled circles (i.e., dots) across the image, where each dot is uniformly colored with the color of the randomly selected pixel which is located at the center of that dot. Note that if a randomly selected pixel is near or at a boundary, then you do not need to apply the effect to the parts that may extend past the borders of the image.
 
 For example, if we do:
 
@@ -323,7 +323,7 @@ the following will result:
 <div class='admonition note'>
 <div class='title'>Note 1</div>
 <div class='content'>
-Make sure to apply the effect on only 3% of the total pixels of the input image. For instance, if the input image dimensions are 800x600, then you should apply the effect to only 14400 randomly selected pixels. Also, for each randomly selected pixel, use a random radius between 1 and 5 (i.e, 1 ≤ radius ≤ 5) when creating the filled colored dot.
+Make sure to apply the effect on only 3% of the total pixels of the input image. For instance, if the input image dimensions are 800x600, then you should apply the effect to only 14400 randomly selected pixels. Also, for each randomly selected pixel, use a radius chosen uniformly at random between 1 and 5 (i.e, 1 ≤ radius ≤ 5) when creating the filled colored dot.
 </div>
 </div>
 
