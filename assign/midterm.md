@@ -207,7 +207,7 @@ The scaffolding (i.e. starter code) folder for this project (available in the pu
 <div class='admonition info'>
 <div class='title'>Note</div>
 <div class='content'>
-<p>Note that the results displaying on this page are png versions. You should use the provided PPM ones for comparison.</p>
+<p>Note that the results displaying on this page are png versions. You should use the provided PPM files in the results folder of the starter code for comparison.</p>
 </div>
 </div>
 
@@ -216,7 +216,7 @@ We encourage you to store the provided PPM images and all created images in a su
 <div class='admonition tip'>
 <div class='title'>Tip</div>
 <div class='content'>
-<p>If you're using the `data` subfolder, we suggest you to execute your code from within the `data` folder by typing <code>../project</code>, so you can refer to input filenames while the program is executing directly as `kitten.ppm`, rather than `data/kitten.ppm`, saving yourself the extra typing while testing.</p>
+<p>If you're using the `data` subfolder, we suggest you execute your code from within the `data` folder by typing <code>../project</code>, so you can refer to input filenames while the program is executing directly as `kitten.ppm`, rather than `data/kitten.ppm`, saving yourself the extra typing while testing.</p>
 </div>
 </div>
 
