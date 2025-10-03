@@ -307,7 +307,6 @@ the materials for that week.
 </table>
 </div>
 
-<!--
 <button type="button" id="week_7_toggle" class="week_control_button">Week 7 (7-Oct to 11-Oct)</button>
 <div id="week_7" class="collapsible">
 <table>
@@ -354,6 +353,7 @@ the materials for that week.
 </table>
 </div>
 
+<!--
 <button type="button" id="week_8_toggle" class="week_control_button">Week 8 (14-Oct to 18-Oct)</button>
 <div id="week_8" class="collapsible">
 <table>
@@ -715,7 +715,7 @@ the materials for that week.
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    var active_week_id = 'week_6';
+    var active_week_id = 'week_7';
 
     var content_divs = document.getElementsByClassName("collapsible");
     for (i = 0; i < content_divs.length; i++) {
