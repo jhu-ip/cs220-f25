@@ -297,7 +297,7 @@ If you crop the `kitten.ppm` image from (top col=200, top row=200) to (bottom co
 
 
 ### Rotate-CCW
-Rotating an image counter-clockwise is relatively straightforward. First you should allocate a new image with reversed dimensions (width and height) of the input image. Then, you use a loop to assign each new pixel value using the corresponding cell in the original image. You should use paper and pencil to figure out the correct relationship between the original and rotated pixels. If you rotate the `kitten.ppm` image, you should see the following result image:
+Rotating an image counter-clockwise is relatively straightforward. First you should allocate a new image with reversed dimensions (width and height) of the input image. Then, you use a loop to assign each new pixel value using the corresponding cell in the original image. Draw a figure for yourself to figure out the correct relationship between the original and rotated pixels. If you rotate the `kitten.ppm` image, you should see the following result image:
 
 |![The rotated kitten image]({{site.baseurl}}/img/midterm/kitten_ccw.png)|
 |:--:|
@@ -305,7 +305,7 @@ Rotating an image counter-clockwise is relatively straightforward. First you sho
 
 ### Pointilism
 
-Pointilism is a painting technique that uses distinct colored dots. You can read about it [here](https://en.wikipedia.org/wiki/Pointillism). In this part, we would like to apply a pointilism-like effect to an input image. In order to accomplish this, we randomly select a small set (3%) of the pixels in the input image and apply the effect to them. To do so, imagine that each randomly selected pixel is at the center of a circle with a random radius of between 1 and 5. Now, applying the pointilism effect comes down to coloring all the pixels that reside in that circle with the same color as the color of the randomly selected pixel which is at the center of the circle. This gives the input image a cool "painting-like" look by creating a set of small filled circles (i.e., dots) across the image, where each dot is uniformly colored with the color of the randomly selected pixel which is located at the center of that dot. Note that if a randomly selected pixel is near or at a boundary, then you do not need to apply the effect to the parts that may extend past the borders of the image.
+Pointilism is a painting technique that uses distinct colored dots. You can read about it on [Wikipedia's entry on Pointilism](https://en.wikipedia.org/wiki/Pointillism). In this part, we would like to apply a pointilism-like effect to an input image. In order to accomplish this, we randomly select a small set (3%) of the pixels in the input image and apply the effect to them. To do so, imagine that each randomly selected pixel is at the center of a circle with a random radius of between 1 and 5. Now, applying the pointilism effect comes down to coloring all the pixels that reside in that circle with the same color as the color of the randomly selected pixel which is at the center of the circle. This gives the input image a cool "painting-like" look by creating a set of small filled circles (i.e., dots) across the image, where each dot is uniformly colored with the color of the randomly selected pixel which is located at the center of that dot. Note that if a randomly selected pixel is near or at a boundary, then you do not need to apply the effect to the parts that may extend past the borders of the image.
 
 For example, if we do:
 
