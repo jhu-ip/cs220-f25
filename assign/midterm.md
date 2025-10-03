@@ -79,15 +79,15 @@ Please note that if you are using emacs while X-tunnelling is enabled, you will 
 </div>
 </div>
 
-If you are using a different platform, you are welcome to use an image viewer of your choice. Mac and Windows come with their built in image viewers that should recognize the ppm format. If you want to install `feh` locally on your linux installation, it is easy to do so using most linux package managers, but there are other open source image viewing programs.
+If you are using a different platform, you are welcome to use an image viewer of your choice. Mac and Windows come with their built-in image viewers that should recognize the ppm format. If you want to install `feh` locally on your linux installation, it is easy to do so using most linux package managers, but there are other open source image viewing programs.
 
 If you are using VS Code, you may view images directly in the editor. You may need to install an appropriate extension to allow this (try searching for "PPM" in the extension market-place.)
 
 ## Program Description
 
-This program will be an image processing program, in the vein of Photoshop. It will have a command-line-based user interface (UI), so there will be no graphical interface, and the range of operations will be limited, but the algorithms you will use are similar to the ones used in programs like Photoshop or GIMP.
+This program will be an image processing program. It will have a command-line-based user interface (UI), so there will be no graphical interface, and the range of operations will be limited, but the algorithms you will use are similar to the ones used in programs like Photoshop or GIMP.
 
-At a basic level, your program will be able to read image files from disk (ie, the file system), perform one of a variety of image processing tasks, and then write the result back to disk as a new image file. Since your program will not have a GUI, you will use external programs to view the images. If you are on ugrad (either locally, or remotely with X-tunnelling), you can use the program `feh`.
+At a basic level, your program will be able to read image files from disk (ie, the file system), perform one of a variety of image processing tasks, and then write the result back to disk as a new image file. Since your program will not have a GUI, you will use external programs to view the images (see the Viewing Images note above.)
 
 While there are many formats for storing image files, your program will **only** need to read and write one, the **PPM** format. This is essentially the simplest and easiest format to read and write, which is why it was chosen; its main drawback is that it does not use any kind of compression, so images stored in this format tend to be on the large side when compared to formats like JPEG, PNG, or GIF. An implementation to read PPM files is provided for you. However, you will need to write the corresponding function to write to a PPM file format. (See `ppm_io.h` and `ppm_io.c` in the starter code.)
 
