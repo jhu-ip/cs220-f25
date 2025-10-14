@@ -23,6 +23,7 @@ This page has links to useful resources for the course.
 * <a href='notes/notes-Cfunctions.html'>C Functions</a> (including make)
 * <a href='notes/notes-storage.html'>Storage Classes</a> (including gdb)
 * <a href='notes/notes-pointers.html'>Pointers & Dynamic Memory Allocation</a> (including valgrind)
+* <a href='notes/notes-Cstructs.html'>C Struct types</a> 
 
 
 ## Code development resources
