@@ -25,6 +25,11 @@ This page has links to useful resources for the course.
 * <a href='notes/notes-pointers.html'>Pointers & Dynamic Memory Allocation</a> (including valgrind)
 * <a href='notes/notes-Cstructs.html'>C Struct types</a> (including enum)
 
+* <a href='notes/notes-CppBasics.html'>C++ Basics</a>
+* <a href='notes/notes-CppIO.html'>C++ Input/Output</a>
+* <a href='notes/notes-CppStrings.html'>C++ string class</a>
+* <a href='notes/notes-CppSTL.html'>C++ Standard Template Library</a>
+
 
 ## Code development resources
 

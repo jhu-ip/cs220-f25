@@ -395,7 +395,9 @@ the materials for that week.
     <tr>
       <td>Additional<br>Resources</td>
       <td></td>
-      <td></td>
+      <td><a href='notes/notes-CppBasics.html'>C++ Basics</a>,
+      <a href='notes/notes-CppIO.html'>I/O in C++</a>,
+      <a href='notes/notes-CppStrings.html'>C++ string class</a></td>
       <td></td>
     </tr>
   </tbody>
