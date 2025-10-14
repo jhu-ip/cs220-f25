@@ -152,3 +152,87 @@ int main()
 </li>
 </ul>
   
+<h3>Binary Files</h3>
+
+  <ul>
+<li>Mostly declared/used the same way as text files
+</li><li>Add a <code>"b"</code> to the end of open mode passed to <code>fopen</code><br>
+-- e.g. <code>FILE fptr = fopen("items.dat","w+b");</code> opens a binary file in <code>"w+"</code> mode.
+</li><li>Replace string read/write (e.g. <code>fscanf/fprintf</code>) with binary data read/write (<code>fread/fwrite</code>)
+</li><li> <code>fread</code> and <code>fwrite</code> can write raw binary data
+    <ul>
+      <li> <code>12</code> as binary is hex <code>0xC</code>
+</li>      <li> <code>12</code> as text is two characters, hex <code>0x3132</code>
+</li>      <li> Note how binary <code>12</code> takes 1/4th the bits to represent
+</li>      <li> Pictures, movies, music formats are generally binary to save space
+</li>    </ul>
+</li><li> <code>fwrite</code> directly writes a C variable contents to a file:<br />
+<code>fwrite (varptr, sizeof(vartype), n, fptr);</code>
+  <ul>
+      <li><code>varptr</code> points to the data to write, <code>vartype</code> is its type, <code>n</code> is how many, <code>fptr</code> is a <code>*FILE</code>
+</li>      <li>Example <code>int i = 5; fwrite(&amp;i,sizeof(int),1,fptr);</code> writes <code>0x00000005</code> to the file <code>fptr</code> points to.
+</li>      <li>When <code>n &gt; 1</code> it writes an array: <code>int a [] = {5,6,7}; fwrite(a,sizeof(int),3,fptr);</code> writes <code>0x000000050000000600000007</code>
+</li>      <li>(Well, it probably actually writes <code>0x050000000600000007000000</code> because your computer is likely using <a href="http://en.wikipedia.org/wiki/Endianness">little endian</a> format. 
+</li></ul>
+<li>On Unix you can use the shell command <code>hexdump -C items.dat</code> to view the file <code>items.dat</code> as binary data.)
+</li>   
+<li> Reading <code>fread(varaddr, sizeof(vartype), n, fptr);</code> is the inverse of writing
+<ul>
+<li>Example <code>int i; fread(&amp;i,sizeof(int),1,fptr);</code>
+    would read the value <code>5</code> (from above) into <code>i</code> if the file was rewound to the beginning
+</li></ul>
+</li>
+</li></ul>
+
+
+<h3>Random access files</h3>
+
+<ul>
+<li>Any <code>FILE* fptr</code> is always pointing to a spot in the file where it is going to next read/write
+</li><li>With random access you are explicitly moving this pointer around
+</li><li><code>fseek(fptr,nbytes, SEEK_SET);</code> sets fptr to position
+    <ul>
+      <li><code>SEEK_SET</code> means basis point we offset from is file start (absolute)
+</li>      <li><code>SEEK_CUR</code> means point to offset from is the current location (relative)	
+</li>      <li><code>nbytes</code> is the # of bytes to offset; <code>(n-1)*sizeof(vartype)</code> is the kind of expression usually put there (like in malloc)
+</li>    </ul>
+<li><code>fseek</code> from the file start (with <code>SEEK_SET</code>) is very similar to how pointer arithmetic does array offsets.  But, pointer arithmetic automatically factors in the <code>sizeof</code> information.
+</li><li> <code>ftell(fptr)</code> return the current file pointer position (# bytes offset from 0 == beginning)
+</li>
+</li>
+</ul>
+
+<!-- formatting issues
+
+Here is a small complete example.
+
+```c
+#include &lt;stdio.h&gt;
+int main(void) {
+    FILE *fptr = fopen("test.dat","w+b");
+    int i = 4, a[] = {5,6,7};
+    fwrite(&i,sizeof(int),1,fptr);
+    fwrite(a,sizeof(int),3,fptr);
+
+    fseek(fptr, 0, SEEK_SET);
+    
+    fread(&i,sizeof(int),1,fptr);
+    printf("i is %d\n",i);
+    
+    fread(a,sizeof(int),3,fptr);
+    printf("a[0 1 2] is %d %d %d\n",a[0],a[1],a[2]);
+    
+    fseek(fptr, 2*sizeof(int), SEEK_SET);
+    fread(&i,sizeof(int),1,fptr);
+    printf("offsetting + 2 from file start gets to 3rd integer written, %d\n",i);
+    
+    fseek(fptr, (-2)*sizeof(int), SEEK_CUR);
+    fread(&i,sizeof(int),1,fptr);
+    printf("backup -2 from here puts us reading 2nd integer, %d\n",i);
+
+    close(fptr);
+
+    return 0;
+}
+```
+-->

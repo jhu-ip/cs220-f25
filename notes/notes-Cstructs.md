@@ -129,3 +129,20 @@ SSN myssn;            // no "struct" needed when declaring, "struct" is part of 
 </li>	  <li>So, <code>sizeof(struct person) == 12</code> or <code>24</code>
 </li>	</ul>
 
+<h3>Enum types</h3>
+
+We can also define a data type to represent a small set of discrete values. Suppose you had a game with playing cards, hearts/clubs/spades/diamonds. <em>Don't</em> just use the strings <code>"Hearts"</code> etc or 1/2/3/4 in the code for these different suits. Instead you can <code>#define</code> them
+
+```c
+#define HEARTS 1
+#define CLUBS 2
+#define SPADES 3
+#define DIAMONDS 4
+```
+<code>Enum</code> version of this is more compact and also defines a data type called <code>suit</code> that can be used to declare variables, parameters, etc.
+
+```c
+enum suit {HEARTS=1,CLUBS,SPADES,DIAMONDS}
+```
+
+Same numerical abbreviation but makes a new type <code>suit</code> for the values (which is really an integer under the covers). The <code>=1</code> makes the encoded numbers start at <code>1</code> not <code>0</code>, which is the default. Each subsequent label gets the next integer value. 

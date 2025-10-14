@@ -252,10 +252,13 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td><a href='notes/notes-pointers.html'>NOTES: Pointers & Dynamic Memory Allocation</a> (including valgrind)</td>
+      <td><a href='notes/notes-pointers.html'>NOTES: Pointers & Dynamic Memory Allocation</a> (includes valgrind)</td>
       <td><a href='notes/notes-storage.html'>NOTES: Storage Classes</a><br />
-      <a href='notes/notes-Cfunctions.html'>NOTES: Functions</a> (including rand())</td>
-      <td></td>
+      <a href='notes/notes-Cstructs.html'>NOTES: Struct Definitions</a><br />
+      <a href='notes/notes-Cfunctions.html'>NOTES: Functions</a> (includes rand())</td>
+      <td><a href='notes/notes-C-IO.html'>NOTES: C I/O</a> (includes binary files)<br />
+      <a href='notes/notes-Cbasics.html'>NOTES: C Basics</a> (includes bitwise ops)
+      </td>
     </tr>
   </tbody>
 </table>
@@ -299,7 +302,7 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td></td>
+      <td><a href='notes/notes-Cbasics.html'>C Basics</a> (includes typecasting)</td>
       <td></td>
       <td></td>
     </tr>
