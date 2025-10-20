@@ -489,9 +489,10 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><a href='notes/notes-CppBasics.html'>C++ Basics</a><br />
+      <a href='notes/notes-CppMemory.html'>C++ Dynamic Memory</a></td>
+      <td><a href='notes/notes-classes.html'>C++ classes</a></td>
+      <td><a href='notes/notes-classes.html'>C++ classes</a></td>
     </tr>
   </tbody>
 </table>

@@ -79,12 +79,12 @@ WARNING: DON'T put <code>using</code> statements in your <code>.h</code> header 
 
 <h4>Pass by Reference</h4>
 <ul>
-  <li> Simple data types are passed by value as in C
+  <li> Simple data types are passed by value in C++, as are object variables!
 </li><li> Pointers (like in C) can be used to pass by reference
 </li><li> <b>NEW in C++: can use & to create a reference to a variable, another pass by reference option</b>
 </li><li> Think of <code>&amp;</code> in type as an 'alias' for a parameter
 </li><li> In method call just use variable name (not address of)
-</li><li> (Compiler implements by actually passing the address, and in effect puts "*" around all uses in body - similar to C pointer passing in behavior)
+</li><li> Compiler implements by actually passing the address, and in effect puts "*" around all uses in body - similar to C pointer passing in behavior
 </li><li>Can also use <code>&amp;</code> in local variable declarations, not just function parameters: <code>int &d = c;</code> creates <code>d</code> as alternate name for variable <code>c</code>
 </li><li>Fails to work in cases where the address-of/pointer approach in C would not work.  <br />
 Example: <code>int &d = 10;</code> fails for the same reason <code>int *d = &10;</code> fails - <code>10</code> has no address.

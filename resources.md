@@ -29,6 +29,8 @@ This page has links to useful resources for the course.
 * <a href='notes/notes-CppIO.html'>C++ Input/Output</a>
 * <a href='notes/notes-CppStrings.html'>C++ string class</a>
 * <a href='notes/notes-CppSTL.html'>C++ Standard Template Library</a>
+* <a href='notes/notes-CppMemory.html'>C++ Dynamic Memory</a>
+* <a href='notes/notes-classes.html'>C++ Class Definitions</a>
 
 
 ## Code development resources

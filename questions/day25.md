@@ -4,7 +4,7 @@ layout: default
 title: Day 25 Recap Questions
 reference solutions:
   1. Create input / output file streams, then extract from / insert into the stream
-  2. No  [NEW: but must flush the buffer for ostreams?]
+  2. No  [NEW? must flush the buffer for ostreams?]
   3. A string-like stream of characters you can extract from / insert into
   4. Using the stream extraction operator. You can get all of the contents in a single string by using the the str() method.
   5. [NEW] Never - you must do it explicitly
@@ -20,6 +20,3 @@ reference solutions:
 6. What does a constructor do?
 7. What does a destructor do?
 
-<!--
-TODO: more iostream/fstream recap questions
--->

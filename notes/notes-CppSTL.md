@@ -193,32 +193,3 @@ sort(hand.begin(), hand.end(), compare);
 </li>    </ul>
 </li></ul>
     
-    
-<h3>Writing Function Templates</h3>
-
-<ul>
-  <li> Can use to define generic function with abstract param types
-</li><li> Use <code>template&lt;class Tname&gt;</code> before prototype and function definition
-</li><li> Use <code>Tname</code> as type in function
-</li><li> Compiler generates the actual functions by substituting types of
-    arguments in the function call
-</li></ul>
-
-
-Example:
-
-<pre>
-template &lt;class T&gt;        // generic class type name T
-T cubeit(T num)           // header using type T
-{
-    return num*num*num;   // assumes * defined for type T
-}
-
-int main(void) {
-  cubeit(3);
-}
-</pre>
-
-
-
-
