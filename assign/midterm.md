@@ -200,6 +200,7 @@ it should tell you how many pair of pixels in `checkerboard1.ppm` and `checkerbo
 
 After you have reviewed `checkerboard.c` and `ppm_io.h`, and completed the `ppm_io.c` file, as an initial test to be sure you're on the right track, try to read in a PPM file and write it out unchanged.  Use the `img_cmp` program to verify the two files are exactly the same (tolerance 0). Once this works well, begin successively working through the operational commands as listed.
 
+When using this utility to check your results against those that we have provided in the results folder of the starter files, you may use a tolerance of 1. This is what the autograder will use for all operations except for pointilism. The latter will be evaluated by visual inspection rather than autograded. 
 
 ### Scaffolding Folder
 The scaffolding (i.e. starter code) folder for this project (available in the public repository) provides you with `ppm_io.c`, `ppm_io.h`, `checkerboard.c`, `project.c`, `img_cmp.c`, and a `Makefile` for the project. It also contains some testing PPM files in a folder named `data` and some expected results in a subfolder named `results`, which is in the PPM format. Lastly, we provide starter files `image_manip.h` and `image_manip.c` which is where your implementations of the various transformation operations should be added.
