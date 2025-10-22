@@ -233,30 +233,30 @@ and calculate the character distributions _by hand_.  For instance, you might us
 ```
 {
     "a": {
-        "b": 2,
-        "a": 1
+        "a": 1,
+        "b": 2
     }, 
     "b": {
-        "c": 2,
-        "a": 1
+        "a": 1,
+        "c": 2
     },
     "c": {
-        "d": 1,
-        "b": 1
+        "b": 1,
+        "d": 1
     },
     "d": {
         "a": 1
     }
 }
 ```
-This shows that, after an `a`, the input text contained two `b`s and one `a`.  After a `b`, the text contained two `c`s and one `a`.  Results for `c` and `d` can be read similarly.
+This shows that, after an `a`, the input text contained two `b`s and one `a`.  After a `b`, the text contained two `c`s and one `a`.  Results for `c` and `d` can be read similarly. [Reminder as mentioned above that the order of the children of each element in this JSON notation will not matter.]
 
 A level-3 analysis of the same text would produce the following distribution:
 ```
 {
     "abc": {
-        "d": 1,
-        "b": 1
+        "b": 1,
+        "d": 1
     },
     "bcd": {
         "a": 1
