@@ -141,9 +141,9 @@ We have provided the implememtation of `read_ppm` (function to read a PPM format
 Your program will be a command line tool, always run with the name of the executable file project followed by (minimally) the name of an input PPM file, the name of a desired output PPM file, and the specific lower-case name of an image processing operation, as listed below. Some operations require additional arguments, which will also be supplied at the command line by the user, at the end of the line. There are no prompts and no input entered by the user interactively.
 
 <div class='admonition info'>
-<div class='title'>First Two Commandline Args</div>
+<div class='title'>Commandline Args</div>
 <div class='content'>
-Regardless of the desired operation, the first two arguments after the executable name project are always interpreted as the input file name followed by the output file name. The next argument is always interpreted as the operation name, and the operation's arguments (if any) come after that.
+There is a README.txt file included in the results folder of the starter files provided for this project. In it, you will find the commands used to generate the result images included in this folder. Please refer to this to file for examples of how to invoke each operation.
 </div>
 </div>
 
