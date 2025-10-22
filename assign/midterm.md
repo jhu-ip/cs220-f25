@@ -270,7 +270,7 @@ Blending two images is straightforward. The idea is, for each pixel, multiply ea
 <li>The dimenstions of the resulting image is always MAX(img1->width, im2->width) and MAX(img1->height, im2->height). e.g., if the first image is <code>400x600</code> and the second image is <code>500x300</code>, the resulting image would be <code>500x600</code>.</li>
 
 <li>For pixels that fall outside the range of one of the input image dimensions, there is no need to apply the 'alpha' factor. E.g., if the first image is <code>400x600</code> and the second image is <code>500x300</code>, alpha factor will NOT be applied to the row pixels of > 400 and column pixels of > 300. For pixels that that fall outside the range of both input dimensions, you should set the color to black (channel values to zero.)</li>
-<li>You may assume alpha is always between 0 and 1 (both inclusive).</li>
+<li>The value of alpha should be between 0 and 1 (both inclusive).</li>
 </ol>
 </div>
 </div>
