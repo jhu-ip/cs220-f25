@@ -4,11 +4,11 @@ layout: default
 title: Day 25 Recap Questions
 reference solutions:
   1. Create input / output file streams, then extract from / insert into the stream
-  2. No  [NEW? must flush the buffer for ostreams?]
+  2. [NEW] No, the objects destructor will take care of it.
   3. A string-like stream of characters you can extract from / insert into
   4. Using the stream extraction operator. You can get all of the contents in a single string by using the the str() method.
-  5. [NEW] Never - you must do it explicitly
-  6. Initializes class objects
+  5. [NEW] Never - you must do it explicitly.
+  6. Initializes class objects.
   7. Performs clean-up (e.g. deallocates heap memory, closes a file, etc.)
 ---
 
