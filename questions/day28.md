@@ -18,15 +18,14 @@ reference solutions:
 
 ```c
 #include <iostream>
-using namespace std;
 
 class Student {
 public:
     Student() {
-        cout << "Default constructor called" << endl;
+        std::cout << "Default constructor called" << std::endl;
     }
     Student(int id) {
-        cout << "Non-default constructor called for ID " << id << endl;
+        std::cout << "Non-default constructor called for ID " << id << std::endl;
     }
 };
 
