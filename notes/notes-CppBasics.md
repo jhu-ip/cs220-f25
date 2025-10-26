@@ -104,7 +104,7 @@ void func(int value, int * pointer, int & alias) {
 
 int main(void) {
     int a = 10, b = 10, c = 10;
-    func(a, &amp;b, c);          // 2nd and 3rd parameters having same effect
+    func(a, &b, c);          // 2nd and 3rd parameters having same effect
     cout << a << ' ' << b << ' ' << c << endl;  // note explicit spaces
     // prints 10 15 20
     int &d = c;	         // d is now an reference to (alias for) c
