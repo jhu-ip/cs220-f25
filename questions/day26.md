@@ -17,7 +17,7 @@ reference solutions:
 
 3. What is the difference between a pointer and a reference?
 
-4. what is the output of the following?
+4. What is the output of the following?
 
 	```c
 	#include <iostream>
