@@ -253,7 +253,7 @@ A level-3 analysis of the same text would produce the following distribution:
 }
 ```
 
-**Note:** these distribution examples above do **not** incorporate the "Special Cases" fix discussed below.
+**Note:** the distribution examples above do **not** incorporate the "Special Cases" fix discussed below. 
 
 <div class='admonition caution'>
 <div class='title'>Important Note</div>
@@ -271,7 +271,7 @@ particular, this situation can arise if your input ends in a `k`-length sequence
 that appears nowhere else in the input.  In this case, if you randomly generate this particular `k`-length sequence, 
 the program will have no probability information to decide what character should follow it.  
 A straightforward fix to this problem is to prepend (i.e., add to the beginning) the final 
-`k`-length sequence of the input to itself before processing.  That way, there will never be a unique `k`-length sequence appearing at the end of the input.
+`k`-length sequence of the input to itself before processing.  That way, there will never be a unique `k`-length sequence appearing at the end of the input. **NOTE: all subsequences starting in the prepended text of length `k` should appear in the JSON distribution output.** In other words, fully process the updated text with the preprended portion. For the example above, the level-3 analysis would also include distributions for "baa", "aaa", and "aab". 
 </div>
 </div>
 
