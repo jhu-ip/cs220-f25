@@ -169,7 +169,7 @@ single input file and uses a constant value of `k`. Once that works, generalize 
 
 Your program must perform a _level-i_ analysis for each `i` between 1 and `k` (inclusive), 
 printing `n` characters of text from each analysis, as shown in the examples 
-above.  For example, running your program as `./wordgen ./text-files/poe.txt 4 75` could produce the following output:
+above.  For example, running your program as `./wordgen text-files/poe.txt 4 75` could produce the following output:
 
 ```
 Level 1: Ond, hengison my  ep he oredre   so  he that Ghe  as  lloristhere Dirr aiey
@@ -190,7 +190,7 @@ with three tilde (`~`) characters between each different level of output text.
 
 
 In addition to generating random text, as described above, your program must also support 
-a `-m` flag, which replaces the `n` value when the program is run (that is, run the program with a command line `./wordgen ./text-files/poe.txt 4 -m`).
+a `-m` flag, which replaces the `n` value when the program is run (that is, run the program with a command line `./wordgen text-files/poe.txt 4 -m`).
 When this flag is used, your program should print out the character distribution map, 
  in JSON format, as shown in the Hints and Suggestions section below.
 It should do so _only_ for the value of `k` provided, rather than all values up to and including `k`.
