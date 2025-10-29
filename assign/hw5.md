@@ -183,11 +183,8 @@ Take the shall me utterely
 Level 4: Once it is, and radiant in there still I scarce was unbroken was napping,
 ```
 
-As you can see from this example, newlines are an expected part of the output 
-(as long as your source text also contains newlines, of course).  Thus, to help make 
-the boundaries between each level analysis clear, your program should print a line 
-with three tilde (`~`) characters between each different level of output text.
-
+Newlines and other space characters are an expected part of the output 
+(as long as your source text also contains them, of course). Thus, to help make the boundaries between each level analysis clear, your program should print a line with three tilde (`~`) characters between each different level of output text.
 
 In addition to generating random text, as described above, your program must also support 
 a `-m` flag, which replaces the `n` value when the program is run (that is, run the program with a command line `./wordgen text-files/poe.txt 4 -m`).
@@ -255,6 +252,8 @@ A level-3 analysis of the same text would produce the following distribution:
     }
 }
 ```
+
+**Note:** these distribution examples above do **not** incorporate the "Special Cases" fix discussed below.
 
 <div class='admonition caution'>
 <div class='title'>Important Note</div>
