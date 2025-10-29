@@ -543,7 +543,7 @@ All programs are free to students.  Please see <https://academicsupport.jhu.edu>
     * A trained student leader acts as captain and facilitates the weekly meetings using various strategies to foster a collaborative learning environment.
     * Contact: Jenna Hoffman <jhoffm71@jhu.edu>
     * Instagram: @jhu_academicsupport
-* Learning Den Tutoring Program - Small Group Tutoring 
+* [Learning Den Tutoring Program](https://academicsupport.jhu.edu/learning-den/) - Small Group Tutoring 
     * Drop-in tutoring services for a variety of courses (check website for schedule)
     * Tutors can assist with but are not limited to:
         - Review and strengthening of subject-specific material knowledge
@@ -551,7 +551,7 @@ All programs are free to students.  Please see <https://academicsupport.jhu.edu>
         - Course-specific study skills and exam preparation
     * Contact: Dr. Joseph Cunningham <jcunni30@jh.edu>
     * Instagram: @jhu_academicsupport
-* The Study Consulting Program
+* [The Study Consulting Program](https://academicsupport.jhu.edu/study-consulting/)
     * Students work one-on-one with a study consultant on a weekly basis to set academic goals and develop customized strategies for success. Areas addressed include but are not limited to:
         - Time management
         - Note taking and test preparation
