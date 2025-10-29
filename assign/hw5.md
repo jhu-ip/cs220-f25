@@ -190,7 +190,7 @@ with three tilde (`~`) characters between each different level of output text.
 
 
 In addition to generating random text, as described above, your program must also support 
-a `-m` flag, which replaces the `n` value when the program is run (that is, run the program with a command line `./wordgen ts.txt 4 -m`).
+a `-m` flag, which replaces the `n` value when the program is run (that is, run the program with a command line `./wordgen ./text-files/poe.txt 4 -m`).
 When this flag is used, your program should print out the character distribution map, 
  in JSON format, as shown in the Hints and Suggestions section below.
 It should do so _only_ for the value of `k` provided, rather than all values up to and including `k`.
