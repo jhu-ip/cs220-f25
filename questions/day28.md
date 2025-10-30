@@ -19,7 +19,7 @@ reference solutions:
 
 4. Trace the output of the following code and explain which constructors are called at each step and why?
 
-	```c
+	```c++
 	#include <iostream>
 	
 	class Student {
