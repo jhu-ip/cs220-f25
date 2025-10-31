@@ -535,7 +535,7 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td></td>
+      <td><a href='notes/notes-overloading.html'>Overloading</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -718,7 +718,7 @@ the materials for that week.
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    var active_week_id = 'week_10';
+    var active_week_id = 'week_11';
 
     var content_divs = document.getElementsByClassName("collapsible");
     for (i = 0; i < content_divs.length; i++) {
