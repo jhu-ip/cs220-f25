@@ -23,3 +23,4 @@ Assignment/Exam | Posted | Due Date
 [Midterm Project](assign/midterm.html) | 10/3 | Fri 10/10 (plan), Wed 10/22 (code), Wed 10/29 (partner eval form) 11pm
 Midterm (C material) | n/a | Monday Oct 13th, in section
 [Homework 5](assign/hw5.html) | 10/20 | Friday Oct 31, 11pm
+[Homework 6](https://www.gradescope.com/courses/1070771/assignments/7035238/) | 10/31 | Friday Nov 7, 11pm
