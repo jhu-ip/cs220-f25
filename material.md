@@ -302,7 +302,7 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td><a href='notes/notes-Cbasics.html'>C Basics</a> (includes typecasting)</td>
+      <td><a href='notes/notes-Cbasics.html'>NOTES: C Basics</a> (includes typecasting)</td>
       <td></td>
       <td></td>
     </tr>
@@ -395,9 +395,9 @@ the materials for that week.
     <tr>
       <td>Additional<br>Resources</td>
       <td></td>
-      <td><a href='notes/notes-CppBasics.html'>C++ Basics</a>,
-      <a href='notes/notes-CppIO.html'>I/O in C++</a>,
-      <a href='notes/notes-CppStrings.html'>C++ string class</a></td>
+      <td><a href='notes/notes-CppBasics.html'>NOTES: C++ Basics</a>,
+      <a href='notes/notes-CppIO.html'>NOTES: I/O in C++</a>,
+      <a href='notes/notes-CppStrings.html'>NOTES: C++ string class</a></td>
       <td></td>
     </tr>
   </tbody>
@@ -442,9 +442,9 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td><a href='notes/notes-CppSTL.html'>STL</a></td>
-      <td><a href='notes/notes-CppSTL.html'>STL</a></td>
-      <td><a href='notes/notes-CppIO.html'>C++ I/O</a>, <a href='notes/notes-CppStrings.html'>string class</a></td>
+      <td><a href='notes/notes-CppSTL.html'>NOTES: STL</a></td>
+      <td><a href='notes/notes-CppSTL.html'>NOTES: STL</a></td>
+      <td><a href='notes/notes-CppIO.html'>NOTES: C++ I/O</a>, <a href='notes/notes-CppStrings.html'>NOTES: string class</a></td>
     </tr>
   </tbody>
 </table>
@@ -488,10 +488,10 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td><a href='notes/notes-CppBasics.html'>C++ Basics</a><br />
-      <a href='notes/notes-CppMemory.html'>C++ Dynamic Memory</a></td>
-      <td><a href='notes/notes-classes.html'>C++ classes</a></td>
-      <td><a href='notes/notes-classes.html'>C++ classes</a></td>
+      <td><a href='notes/notes-CppBasics.html'>NOTES: C++ Basics</a><br />
+      <a href='notes/notes-CppMemory.html'>NOTES: C++ Dynamic Memory</a></td>
+      <td><a href='notes/notes-classes.html'>NOTES: C++ classes</a></td>
+      <td><a href='notes/notes-classes.html'>NOTES: C++ classes</a></td>
     </tr>
   </tbody>
 </table>
@@ -535,7 +535,7 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td><a href='notes/notes-overloading.html'>Overloading</a></td>
+      <td><a href='notes/notes-overloading.html'>NOTES: Overloading</a></td>
       <td></td>
       <td></td>
     </tr>
