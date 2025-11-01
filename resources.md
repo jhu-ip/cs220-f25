@@ -32,6 +32,7 @@ This page has links to useful resources for the course.
 * <a href='notes/notes-CppMemory.html'>C++ Dynamic Memory</a>
 * <a href='notes/notes-classes.html'>C++ Class Definitions</a>
 * <a href='notes/notes-overloading.html'>Overloading</a> in C++
+* <a href='notes/notes-templates.html'>Function & Class Templates</a>
 
 
 ## Code development resources

@@ -187,6 +187,32 @@ Class composition - objects in classes
   if they don't have default constructors
 </li></ul>
 
+<h4>Friend classes</h4>
+
+<ul>
+  <li>  Declare another class B to be a friend of the current class A
+</li>  <li> Friend class B can directly access all members (private and public)
+            of class A
+</li>  <li> Friendship is one-way (anti-symmetric) unless explicitly declared both ways
+</li>  <li> Friendship is not transitive
+</li>  <li> eg for Rectangles/Points:
+</li></ul>
+
+<pre>
+    // in Point.h
+            private x, y;            
+            friend class Rectangle;
+
+    // in Rectangle.cpp
+            Rectangle :: Rectangle (int x1, int y1, int x2, int y2)
+            {
+                  p1.x = x1;   p1.y = y1; // allowed due to friend declaration above
+                  p2.x = x2;   p2.y = y2;
+            }
+</pre>
+
+Remember: Friends violate the principle of data encapsulation - use as little
+      as possible!!
 
 <h4>Misc points about classes</h4>
 
@@ -197,3 +223,86 @@ Operators <code>=</code> and <code>==</code> on objects:
 </li><li>  <code>==</code> equality operator is not provided automatically for
   your class objects, you have to define it explicitly (see <a href='notes-overloading.html'>Overloading</a>)
 </li></ul>
+
+Explicit constructor call creates constant temporary object:
+<ul>
+  <li> Syntax: <code>Classname(params)</code>
+</li>  <li> eg: <code>Rational r2 = 3 + Rational(3,4);</code> - 3/4 never put in variable so temporary object
+</li></ul>
+
+
+<h4>More on storage, lifetimes, scope and references</h4>
+
+If a function returns non-reference value, it is a temporary object. If a function returns reference value, it is a name for something else that must have a lifetime outside the function. This list shows what could and could not be returned through a reference return type, with an example below.
+<ul>
+<li> global variables
+</li><li> static variables
+</li><li> class members w/suitable lifetime
+</li><li> reference function parameters
+</li><li> NOT a local [automatic] function variable
+</li><li> NOT a passed by value function parameter
+</li></ul>
+
+Example:
+      
+<pre>
+#include &lt;iostream&gt;
+int globalint;
+
+int & mult(int & x, int y)
+{
+    int z;
+    static int s;
+    
+    z = x * y;
+    s = z;
+    x = z;
+    y = z;
+    globalint = z;
+    
+    // return z; // bad, would be a reference to (popped) stack element
+    //  return y;  // bad, same reason
+    // return x * y; // bad
+    
+    return x;  // ok, was a reference argument so not popped
+    return s;  // ok, static so not on stack
+    return globalint;  // ok, also not on stack
+}
+
+int main ()
+{
+    int m, x = 3, y = 5;
+    
+    m = mult(x, y);
+    globalint = 0;
+    std::cout << "m=" << m << "  gi=" << globalint << std::endl;
+}
+</pre>
+
+Could have function/method return something by reference but constant
+   so that it can't be changed - particularly useful for classes:
+
+<pre>class Point {
+public:
+    void display() const;
+        void setX(int);
+...
+};
+
+class Rectangle {
+public:
+    const Point & getTL() { return topleft; };
+
+private:
+    Point topleft;
+};
+
+// in main
+
+Rectangle r1(1,1,4,4);
+Point   p1;
+
+r1.getTL().setX(3);  // not allowed
+p1 = r1.getTL();     // ok
+r1.getTl().display();  // ok because display is const
+</pre>

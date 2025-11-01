@@ -537,7 +537,8 @@ the materials for that week.
       <td>Additional<br>Resources</td>
       <td><a href='notes/notes-overloading.html'>NOTES: Overloading</a></td>
       <td></td>
-      <td></td>
+      <td><a href='notes/notes-templates.html'>NOTES: Function & Class Templates</a>
+</td>
     </tr>
   </tbody>
 </table>
