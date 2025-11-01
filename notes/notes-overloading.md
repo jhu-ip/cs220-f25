@@ -22,12 +22,19 @@ e.g. methods named <code>operator*</code>, <code>operator[]</code>, <code>operat
 </li>  <li><code>operator$</code> etc are regular method names; <code>myob.operator$(otherob)</code> is legal (assuming the symbol chosen is allowed)
 </li></ul>
 
+<h4>Rule of Three</h4>
+
+If you have a non-trivial destructor,
+you should also explicitly define a copy constructor and <code>operator=</code>. This is because a non-trivial destructor implies there is dynamic memory allocated for each object. The default copy constructor and operator= implementation will only do a shallow copy, but you likely need a deep copy instead.
+
+Note that <code>operator==</code> is not part of the rule of three because a default version is not provided for your class types - you must always define it explicitly. However, if you have a non-trivial destructor, then probably your equality operator definition needs to be deep, similar to the assignment operator and copy constructor.
+
 <h4>Overloading assignment operator</h4>
 
 Example prototype for overloading assignment, <code>=</code> on a class named <code>Bag</code> - <code>const Bag& Bag::operator=(const Bag & right)</code>. Note the lack of <code>const</code> at the end of the prototype - this operator is expected to change the value of the Bag that appears on the left of the operator in use. 
 
 <ul>
-  <li> Overloading <code>=</code> changes meaning of the default assignment operator - recall default <code>=</code> is same as for C <code>struct</code>s, shallow copy all fields
+  <li> Overloading <code>=</code> changes meaning of the default assignment operator - recall default <code>=</code> is same as for C <code>struct</code>s, shallow copy of all fields
 </li>  <li> <code>const</code> on return type above prevents <code>(s1 = s2) = s3</code>
 </li>  <li> Overloading <code>+</code> and <code>=</code> <em>doesn't</em> provide automatic overloading of <code>+=</code>, it must be done explicitly
 </li>  <li> Overloading can also be done in a friend function, see right column of <a href="http://en.wikipedia.org/wiki/Operators_in_C_and_C%2B%2B">the Wikipedia page</a> - but overloading operators <code>() [] -&gt; =</code> must be with a class member function
@@ -53,8 +60,7 @@ Example prototype for overloading assignment, <code>=</code> on a class named <c
 <ul>
 <li>Conversion constructor member functions convert from single parameter type <strong>to</strong> the class type
 </li>  <li> Cast conversion operator can convert <strong>from</strong> class type to that specified
-    <ul>
-      <li>If defined, will be invoked implicitly by compiler when conversion is needed
+</li>      <li>If defined, will be invoked implicitly by compiler when conversion is needed
 <pre>
 Rational :: operator double() const;    // Rational to double precision floating point
 Fraction :: operator Rational() const;  // Fraction class to Rational class
@@ -62,7 +68,6 @@ Fraction :: operator Rational() const;  // Fraction class to Rational class
 </li>      <li> Must be a non-static member function, not a  friend
 </li>      <li> Casting member functions have <em>no</em> return type specified, the value returned is the type being cast to, so no need to list it twice
 </li>      </ul>
-</li></ul>
 
 
 <h3>Friend Functions</h3>

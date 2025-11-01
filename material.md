@@ -458,7 +458,7 @@ the materials for that week.
       <th></th>
       <th>Day 26 (27-Oct)</th>
       <th>Day 27 (29-Oct)</th>
-      <th>Day 28 (31-Nov)</th>
+      <th>Day 28 (31-Oct)</th>
     </tr>
   </thead>
   <tbody>
@@ -589,9 +589,12 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><a href='notes/notes-polymorphism.html'>NOTES: Inheritance & Polymorphism</a>
+</td>
+      <td><a href='notes/notes-polymorphism.html'>NOTES: Inheritance & Polymorphism</a>
+</td>
+     <td><a href='notes/notes-OOdesign.html'>NOTES: Object Oriented Design</a>
+</td>
     </tr>
   </tbody>
 </table>
