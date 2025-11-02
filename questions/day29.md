@@ -3,10 +3,10 @@ id: day29_questions
 layout: default
 title: Day 29 Recap Questions
 reference solutions:
-  1. When we create two functions with the same name but different arguments
-  2. No
-  3. Almost (operators like `::` and `.` cannot be overloaded)
-  4. A copy constructor initializes a new object by copying information from the argument. It is called when making an explicit call to the copy constructor, sending an object to a function by argument using pass-by-value, and returning a class object from a function by value
+  1. When we create two functions with the same name but different parameters.
+  2. No.
+  3. Almost (operators like `::` and `.` cannot be overloaded.)
+  4. A copy constructor initializes a new object by copying information from the argument. It is called when making an explicit call to the copy constructor, sending an object to a function by argument using pass-by-value, and returning a class object from a function by value.
   5. C++ generates an implicitly-defined (shallow) copy constructor that copies over the individual fields.
   6. Signifies that some other class/function has access to an object's private members. It's used when we would like to define functions (like stream insertion/extraction) that need access to the private data but are not (can't be) members of the class.
 ---
