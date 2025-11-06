@@ -497,15 +497,15 @@ the materials for that week.
 </table>
 </div>
 
-<button type="button" id="week_11_toggle" class="week_control_button">Week 11 (4-Nov to 8-Nov)</button>
+<button type="button" id="week_11_toggle" class="week_control_button">Week 11 (3-Nov to 7-Nov)</button>
 <div id="week_11" class="collapsible">
 <table>
   <thead>
     <tr>
       <th></th>
-      <th>Day 29 (4-Nov)</th>
-      <th>Day 30 (6-Nov)</th>
-      <th>Day 31 (8-Nov)</th>
+      <th>Day 29 (3-Nov)</th>
+      <th>Day 30 (5-Nov)</th>
+      <th>Day 31 (7-Nov)</th>
     </tr>
   </thead>
   <tbody>
