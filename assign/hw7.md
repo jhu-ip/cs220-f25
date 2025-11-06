@@ -75,9 +75,9 @@ Your CTree class has private data to store a character and its children informat
             t      e
 ```
 
-This is known as a [left-child right-sibling](https://en.wikipedia.org/wiki/Left-child_right-sibling_binary_tree) representation. Each node keeps a link to its first child, which then links across to the next sibling in the chain, and also down to its own first child if it has one. The last node in a chain points to `nullptr`.  Each node should also keep a link to its preceding node: that is, the parent if the node is a first child, or its left sibling if the node is not a first child. We are giving you the header file for this class in order to help with setting up the recursive structure properly.
+This is known as a [left-child right-sibling representation](https://en.wikipedia.org/wiki/Left-child_right-sibling_binary_tree). Each node keeps a link to its first child, which then links across to the next sibling in the chain, and also down to its own first child, if it has one. The last node in a chain holds a `nullptr`.  Each node should also keep a link to its preceding node: that is, the parent if the node is a first child, or its left sibling if the node is not a first child. We are giving you the header file for this class in order to help with setting up the recursive structure properly.
 
-Minimally, here are the functions that your CTree must have, keeping in mind that at all times the siblings of any node must be ordered and unique. You should only use the assignment `=`, equals `==`, less than `<` and output `<<` operators on chars to implement these functions. You are welcome to create helper functions and variations as well. 
+Minimally, here are the functions that your CTree must have, keeping in mind that at all times the siblings of any node must be ordered and unique. You are welcome to create helper functions and variations as well. You should only use the assignment `=`, equals `==`, less than `<` and output `<<` operators on chars to implement these functions. 
 
 * A constructor that is passed the character to store in the root node of a new tree.
 
