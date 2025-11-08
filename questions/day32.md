@@ -3,14 +3,41 @@ id: day32_questions
 layout: default
 title: Day 32 Recap Questions
 reference solutions:
-  1. No
-  2. Only member functions of the class and member functions of derived class have access to the field.
-  3. When a call to a member function will cause a different function to be executed depending on the type of object that invokes the function.
-  4. To indicate that the overridden function should use dynamic binding, meaning it will be the run-time class of the object that will determine which version of the method is run.
-  5. Yes
+  1. [EDIT] "Many forms" - blanket term for all types of ways that classes and functions have different versions that can be executed (inheritance, overloading, overriding, etc.).
+  2. [EDIT] Constructors and an explicitly defined assignment operator.
+  3. Only member functions of the class and member functions of derived class have access to the field/function.
+  4. [NEW] Call the base class constructor as the first thing in the derived class initializer list.
+  5. [NEW] When a call to a [overridden] member function will cause a different function to be executed depending on the run-time class of object that invokes the function. Must use `virtual` when declaring the function. [Without virtual, you can override but not get dynamic binding.]
+  6. [NEW] base, child, base, child  
+  7. Yes
 ---
-1.	Do derived classes inherit constructors?
-2.	What does `protected` imply for a class field?
-3.	What is polymorphism?
-4.	What is the purpose of the `virtual` keyword?
-5.	Can a child class have multiple parents?
+1.	What is polymorphism?
+2.	What two types of functions are not inherited by a derived class?
+3.	What does `protected` access imply for a class field or function?
+4.  How do we initialize the private fields that are inherited from a Base class in a constructor of a Derived class?
+5.	What is dynamic binding and how do we enable it?
+6.  What is the output of the below code? 
+
+    ```cpp
+    class BaseClass {
+    public:
+      virtual void compute() { std::cout << "base "; }
+    };
+    class ChildClass {
+    public:
+      virtual void compute() { std::cout << "child "; }
+    };
+
+    int main() {
+       BaseClass b;
+       b.compute();
+       ChildClass c;
+       c.compute();
+       BaseClass *p;
+       p = &b;
+       p->compute();
+       p = (BaseClass *) &c;
+       p->compute();
+    }
+    ```
+7.	Can a child class have multiple parents?

@@ -544,16 +544,15 @@ the materials for that week.
 </table>
 </div>
 
-<!--
 <button type="button" id="week_12_toggle" class="week_control_button">Week 12 (11-Nov to 15-Nov)</button>
 <div id="week_12" class="collapsible">
 <table>
   <thead>
     <tr>
       <th></th>
-      <th>Day 32 (11-Nov)</th>
-      <th>Day 33 (13-Nov)</th>
-      <th>Day 34 (15-Nov)</th>
+      <th>Day 32 (10-Nov)</th>
+      <th>Day 33 (12-Nov)</th>
+      <th>Day 34 (14-Nov)</th>
     </tr>
   </thead>
   <tbody>
@@ -599,15 +598,18 @@ the materials for that week.
   </tbody>
 </table>
 </div>
+
+
+<!--
 <button type="button" id="week_13_toggle" class="week_control_button">Week 13 (18-Nov to 22-Nov)</button>
 <div id="week_13" class="collapsible">
 <table>
   <thead>
     <tr>
       <th></th>
-      <th>Day 35 (18-Nov)</th>
-      <th>Day 36 (20-Nov)</th>
-      <th>Day 37 (22-Nov)</th>
+      <th>Day 35 (17-Nov)</th>
+      <th>Day 36 (19-Nov)</th>
+      <th>Day 37 (21-Nov)</th>
     </tr>
   </thead>
   <tbody>
@@ -651,9 +653,9 @@ the materials for that week.
   <thead>
     <tr>
       <th></th>
-      <th>Day 38 (2-Dec)</th>
-      <th>Day 39 (4-Dec)</th>
-      <th>Day 40 (6-Dec)</th>
+      <th>Day 38 (1-Dec)</th>
+      <th>Day 39 (3-Dec)</th>
+      <th>Day 40 (5-Dec)</th>
     </tr>
   </thead>
   <tbody>
@@ -722,7 +724,7 @@ the materials for that week.
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    var active_week_id = 'week_11';
+    var active_week_id = 'week_12';
 
     var content_divs = document.getElementsByClassName("collapsible");
     for (i = 0; i < content_divs.length; i++) {
