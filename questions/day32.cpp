@@ -2,11 +2,12 @@
 
 class BaseClass {
 public:
-  virtual void compute() { std::cout << "base "; }
+  void compute() { std::cout << "base "; }
 };
-class ChildClass {
+
+class ChildClass : public BaseClass {
 public:
-  virtual void compute() { std::cout << "child "; }
+  void compute() { std::cout << "child "; }
 };
 
 int main() {
@@ -17,7 +18,6 @@ int main() {
    BaseClass *p;
    p = &b;
    p->compute();
-   p = (BaseClass *) &c;
+   p = &c;
    p->compute();
-   //   ChildClass cb = (ChildClass) b;
 }

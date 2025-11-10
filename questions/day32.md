@@ -16,14 +16,14 @@ reference solutions:
 3.	What does `protected` access imply for a class field or function?
 4.  How do we initialize the private fields that are inherited from a Base class in a constructor of a Derived class?
 5.	What is dynamic binding and how do we enable it?
-6.  What is the output of the below code? 
+6.  What is the output of the below code? What if we remove "virtual" from compute() in the BaseClass?
 
     ```cpp
     class BaseClass {
     public:
       virtual void compute() { std::cout << "base "; }
     };
-    class ChildClass {
+    class ChildClass : public BaseClass {
     public:
       virtual void compute() { std::cout << "child "; }
     };
@@ -36,7 +36,7 @@ reference solutions:
        BaseClass *p;
        p = &b;
        p->compute();
-       p = (BaseClass *) &c;
+       p = &c;  // allowed because each ChildClass object "IS-A" BaseClass object
        p->compute();
     }
     ```
