@@ -8,7 +8,7 @@ reference solutions:
   3. Only member functions of the class and member functions of derived class have access to the field/function.
   4. [NEW] Call the base class constructor as the first thing in the derived class initializer list.
   5. [NEW] When a call to a [overridden] member function will cause a different function to be executed depending on the run-time class of object that invokes the function. Must use `virtual` when declaring the function. [Without virtual, you can override but not get dynamic binding.]
-  6. [NEW] base, child, base, child  
+  6. [NEW] base, child, base, child ; without 'virtual' in BaseClass we get base, child, base, base
   7. Yes
 ---
 1.	What is polymorphism?
