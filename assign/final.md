@@ -242,7 +242,7 @@ Sample Runs are linked here with interactive user input shown (in bold) interlea
 
 The format of the game board may look wonky in the sample files above due to the size of the chess pieces relative to empty game spaces, so the following image better illustrates a properly-formatted sample board:
 
-![Chess Board -- one pawn moved](img/chess-game.png)
+![Chess Board -- one pawn moved](img/final/chess-game.png)
 
 
 ### Exception Handling
