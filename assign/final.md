@@ -38,7 +38,7 @@ This project is intended for you to utilize techniques we've learned throughout 
 
 ## Overview
 
-You will work in your three-person team to implement a version of the board game chess in C++.  This is an exercise both in object-oriented design and in the proper application of the programming techniques we’ve learned throughout the course.  A portion of your grade will be based on the merits of your design, including reducing code duplication. Your code must be well documented and tested, with all memory leaks eliminated.
+You will work in your team of two or three people to implement a version of the board game chess in C++.  This is an exercise both in object-oriented design and in the proper application of the programming techniques we’ve learned throughout the course.  A portion of your grade will be based on the merits of your design, including reducing code duplication. Your code must be well documented and tested, with all memory leaks eliminated.
 
 ## Getting started
 
@@ -61,7 +61,7 @@ If you have opted to use <a href="/docs/resources/github-ssh">SSH authentication
 </div>
 </div>
 
-### Get the starter codes from `cs220-f25-public`
+### Get the starter files from `cs220-f25-public`
 
 1. Use `cd` to move into the `cs220-f25-public` on your unix account, type `git status` and confirm you have not modified any files or accidentally committed to the public repo. Ask
 for help, if you need to undo those accidental changes.
@@ -70,18 +70,18 @@ for help, if you need to undo those accidental changes.
 
 3. You should see a new directory, `final`, which contains the starter code and example files.
 
-4. Copy the source files (`.h` and `.cpp`) and text files (`.txt`) in `final` to your final project repo. Assuming both the public repo and your final repo are under your home directory, and you have not changed the directory names, then you can copy the starter codes to your local final repo.
+4. Copy the source files (`.h` and `.cpp`) and text files (`.txt`) in `final` to your final project repo. Assuming both the public repo and your final repo are under your home directory, and you have not changed the directory names, then you can copy the starter files to your local final repo.
 
 5. Use `cd` to move into your final repo, type `git status`, and confirm you see all the starter files.
 
-6. Do your first commit to add the starter codes to the repo and push them to the remote repo. You can run `git add .`, `git commit -m "Initialized with the starter codes"`, and `git push`.
+6. Do your first commit to add the starter files to the repo and push them to the remote repo. You can run `git add .`, `git commit -m "Initialized with the starter files"`, and `git push`.
 
 Your final repo is now ready for development!
 
 <div class='admonition caution'>
 <div class='title'>Reminder</div>
 <div class='content'>
-Only one team member needs to set up the repo when it is the first use. Once it has been set up, the partners can get the starter codes directly by cloning the remote repo or synchronizing their local repositories (`pull`).
+Only one team member needs to set up the repo when it is the first use. Once it has been set up, the partners can get the starter files directly by cloning the remote repo or synchronizing their local repositories (`pull`).
 </div>
 </div>
 
@@ -99,9 +99,8 @@ This is how the file in your local repo looks
 
 To resolve the conflict, you need to decide which version to use or how they should be merged. To minimize the conflicts, you should
 - Communicate with your teammates to avoid editing a file at the same time,
-- Always sync with the remote before you start working (pull), and
-- Commit and push often 
-
+- Always sync with the remote (pull) before you start working, and
+- Commit and push often.
 
 ### Development Plan
 This project is similar to or even somewhat larger than midterm project and having teammates to help means that you can all benefit from your teammates' expertise, but also need to plan more carefully.  Thus, as part of this project, you are expected to create a **development plan** to keep track of tasks that need to be completed.  We suggest the following process:
