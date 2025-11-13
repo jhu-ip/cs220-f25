@@ -13,7 +13,7 @@ title: Final Project
 <ul>
 <li><strong>Development Plan & UML Diagram: Friday, November 21 at 11pm.</strong></li>
 <li><strong>Implementation: Friday, December 5th at 11pm.</strong></li>
-<li><strong>Partner Evaluation Form: Friday, December 5th at 11pm.</strong></li>
+<li><strong>Partner Evaluation Form: Friday, December 5th at 11:59pm.</strong></li>
 </ul>
 <li>This assignment is worth 165 points.</li>
 <li>No late days may be used!</li>
@@ -50,7 +50,7 @@ You will be working in teams of two or three students (strictly). Please use thi
 
 * If you have registered a team on time, you will be invited to a private repo (`2025-fall-final-<JHED1>-<JHED2>-<JHED3>`) under your repositories on GitHub.
 
-* Otherwise, you should receive a private post from us about your assigned partners on Piazza. You should reply to the post to exchange your contact information with your teammates and let us know all members are connected. We will then create and invite you to a team project repo. If you have not received the post, reach out to us as soon as possible.
+* Otherwise, you should receive a private post from us about your assigned partners on Piazza by Tuesday 11/18. You should reply to the post to exchange your contact information with your teammates and let us know all members are connected. We will then create and invite you to a team project repo. If you have not received the post by 11/18, reach out to us right away.
 
 Once you have access to the group repo, you should clone it to your ugrad Unix account (and optionally local machine) the same way you cloned your personal repo in Ex2 Part 4.
 
@@ -301,7 +301,7 @@ Additionally, we have supplied you with several files (`mate_in_two.txt` and `pr
 
 In the public course repository's `final` directory, we have supplied you with the following starter files, at the top of which you must add comments giving the names and JHED IDs of each of your team members, and which you may further modify as needed except where indicated:
 
-* `Piece.h` (do not modify this file) — contains the definition of an abstract class named `Piece` which represents a chess piece. This class is fully implemented in `Piece.h` (so there is no need for a file named `Piece.cpp`). It contains three pure virtual functions which must be implemented in each subclass of `Piece`.
+* `Piece.h` (do not modify this file) — contains the definition of an abstract class named `Piece` which represents a chess piece. This class is fully implemented in `Piece.h` (so there is no need for a file named `Piece.cpp`). It contains three pure virtual functions which must be implemented in each subclass of `Piece` (two provided in various subclasses).
 * `King.h`, `Queen.h`, `Rook.h`, `Knight.h`, `Bishop.h`, `Pawn.h` — contain, respectively, class definitions of subclasses of `Piece` representing various specific chess pieces. You may modify these files as needed, including by changing the stub (incomplete) function definition for `legal_move_shape` in each header into a declaration, overriding `legal_capture_shape` in classes where appropriate, or adding additional member functions, so you can fully implement each function properly in its associated `.cpp` file.  **Important**: You will need to create a `.cpp` file for each subclass of `Piece`.  The provided `Makefile` will not work fully until all of the `.cpp` files have been created.
 * `Board.h` — contains the class definition of a class named `Board` which represents a chess board. Some of the implementations of these member functions are left to you to flesh out in `Board.cpp`.
 * `Board.cpp` — contains the implementation of `Board`'s `<<` operator (do not modify this implementation), which will be used in the autograder. It also contains stubs for many member functions declared in `Board.h`, which you will need to replace with fully functioning code. Note that the `display` member function is a place where you may be creative, including making use of `Terminal.h` as described below.
