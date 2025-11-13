@@ -45,6 +45,7 @@ there. Regrade requests can be made and are processed on Gradescope as
 well. You must join the Gradescope course page through Canvas.
 
 ## News
+* **November 13** — [Final Project](https://jhu-ip.github.io/cs220-f25/assign/final.html) is posted!
 * **November 6** — [Homework 7](https://jhu-ip.github.io/cs220-f25/assign/hw7.html) is posted!
 * **October 31** — [Homework 6](https://www.gradescope.com/courses/1070771/assignments/7035238/) is posted!
 * **October 20** — [Homework 5](assign/hw5.html) is posted.
