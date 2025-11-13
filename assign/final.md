@@ -103,7 +103,8 @@ To resolve the conflict, you need to decide which version to use or how they sho
 - Commit and push often.
 
 ### Development Plan
-This project is similar to or even somewhat larger than midterm project and having teammates to help means that you can all benefit from your teammates' expertise, but also need to plan more carefully.  Thus, as part of this project, you are expected to create a **development plan** to keep track of tasks that need to be completed.  We suggest the following process:
+
+This project is similar to or even somewhat larger than the midterm project and having teammates to help means that you can all benefit from your teammates' expertise, but also need to plan more carefully.  Thus, as part of this project, you are expected to create a **development plan** to keep track of tasks that need to be completed.  We suggest the following process:
 
 * Start by brainstorming the tasks that are required to complete the project successfully.  The sections below detail the functionalities that your project is required to support, and some requirements regarding how you should break these down into individual files.  These functionalities and files are a good starting point -- but, they may need to be broken down into smaller tasks.  Make sure you consider testing as well!  You do **not** want to turn in a project that has not been tested!
 
@@ -113,7 +114,7 @@ This project is similar to or even somewhat larger than midterm project and havi
 
 * Assign owners and deadlines.  Based on the tasks, difficulties, and dependencies you estimated above, figure out a reasonable plan for who is going to get what done, and when.  Try to make sure that each member on your team has approximately the same amount of work.  Prioritize tasks that many other tasks depend on, so that you don't end up with a bottleneck later on where many tasks are all blocked waiting on one to be completed.  Having deadlines helps you and your partner(s) hold yourselves accountable, and makes sure that you don't end up with too much work pushed towards the latter end of the project.
 
-After completing these steps, record your development plan in the README file of your team's repository.  For each task, list the task name, difficulty, dependencies, owner, due date, and status.  We suggest that you use a [Markdown Table](https://www.tablesgenerator.com/markdown_tables) to keep all of the tasks nicely formatted, just like what you did for the midterm project.  You should keep your development plan consistently updated -- after all, a plan that doesn't match reality doesn't do much to help everyone see where the project stands.
+After completing these steps, record your development plan in the README.md file of your team's repository.  For each task, list the task name, difficulty, dependencies, owner, due date, and status.  We suggest that you use a [Markdown Table](https://www.tablesgenerator.com/markdown_tables) to keep all of the tasks nicely formatted, just like what you did for the midterm project.  You should keep your development plan consistently updated -- after all, a plan that doesn't match reality doesn't do much to help everyone see where the project stands.
 
 We expect your development plan to contain _at least 15_ tasks, but you are welcome to add more if it makes sense to you.  Please keep tasks ordered by due date, so it's easier for everyone (and particularly you!) to make sure you're staying on schedule.
 
@@ -372,7 +373,7 @@ You may use any ASCII characters to display your board on standard out, and you 
 
 ## Code Submission (Team)
 
-Create a zip file named `project.zip` containing your source files as well as `chessUML.pdf`, `README`, `Makefile` and `gitlog.txt`. (While we do absolutely expect you to write code that tests your implementation, you are not expected to submit your tests to us for grading.)
+Create a zip file named `project.zip` containing your source files as well as `chessUML.pdf`, `README.md`, `Makefile` and `gitlog.txt`. (While we do absolutely expect you to write code that tests your implementation, you are not expected to submit your tests to us for grading.)
 
 Copy `project.zip` to your local machine and submit it as Final Project (Team) on Gradescope. This will be a group submission, where *you must indicate each team member's name on Gradescope when you (first) submit*. Please make sure that the same team member submits subsequent versions as well.
 
@@ -388,7 +389,7 @@ Two notes regarding automatic checks for programming assignments:
 
 ### Development Plan (Team)
 
-Submit your initial development plan in a plain text file called README (no .txt or other extension) to Gradescope before the deadline. As noted above, you can use Markdown formatting to make this look nice. Remember to include all team member full names and JHED IDs in your submission. Keep this file updated as your development progresses and submit again with your final code submission. 
+Submit your initial development plan in a plain text file called README.md to Gradescope before the deadline. As noted above, you can use Markdown formatting to make this look nice. Remember to include all team member full names and JHED IDs in your submission. Keep this file updated as your development progresses and submit again with your final code submission. 
 
 ### UML Diagram (Team)
 
@@ -410,6 +411,6 @@ Note that the deadline for this individual submission is the same day as (and on
 
 * (13 points) Development Plan
 * (7 points) UML Diagram
-* (15 points) Project Submission & Style (including updated README, UML diagram and gitlog)
+* (15 points) Project Submission & Style (including updated README.md, UML diagram and gitlog)
 * (130 points) Project Code Functionality (including memory usage)
 * (5 point deduction per missing submission) Partner Evaluations
