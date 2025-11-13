@@ -133,9 +133,9 @@ For each class and the methods defined in it, it's important to think about prec
 
 ### UML Diagram (Team)
 
-Create a simplified UML diagram that represents all the classes and their relationships in this final project. Use the format of the examples in the OO Design & UML Diagrams lesson. Here, each class name should appear in a rectangle. Use arrows from each derived class to its base class to indicate an inheritance relationship. Use diamonds at each containing class with a line to the class it contains. You are not expected to include class members in the diagram, but you could if that aids your understanding. 
+Create a simplified UML diagram that represents all the classes and their relationships in this final project. Use the format of the examples in the OO Design & UML Diagrams lesson. Here, each class name should appear in a rectangle. Use arrows from each derived class to its base class to indicate an inheritance relationship. Use diamonds at each containing class with a line to the class it contains. You are not expected to include class members in the diagram, but you may if that aids your understanding. 
 
-You should create the UML diagram *before writing any code* to help yourselves visualize and keep track of this large class hierarchy. You can create your diagram with any common document program such as Microsoft Word, PowerPoint or Google Docs. (Handwritten diagrams are not acceptable.) You must save and submit your UML diagram in pdf form, named `chessUML.pdf`.
+You should create the UML diagram *before writing any code* to help yourselves visualize and keep track of this large class hierarchy. You can create your diagram with any common document program such as Microsoft Word, PowerPoint, or Google Docs. (Hand-drawn diagrams are not acceptable.) You must save and submit your UML diagram in a pdf file named `chessUML.pdf`.
 
 ## The Game
 
@@ -155,7 +155,7 @@ A description of the official rules of chess can be found <a class='external' ta
 
 ### General Movement of Pieces
 
-When it is his or her turn, a player may move exactly ONE of his or her pieces according to the following movement rules, provided that
+When it is their turn, a player may move exactly ONE of his or her pieces according to the following movement rules, provided that
 
 1. the piece does not land on a square already occupied by another piece belonging to that _same_ player, and
 2. the move does not cause the player to enter a _checked_ position (defined below).
@@ -171,9 +171,9 @@ Movement rules:
 
 The rules are also summarized in the following image. Note that the pawn has distinct ways of moving (x's) and capturing (circles):
 
-![chess moves](../img/final/chess.jpg)
+![Chess Moves]({{site.baseurl}}/img/final/chess.jpg)
 
-From: [https://alchetron.com/Tron/CHESS-The-Games-for-the-Brain-576-UW#-](https://alchetron.com/Tron/CHESS-The-Games-for-the-Brain-576-UW#-)
+From: [Alchetron.com, "Chess: The Games for the Brain"](https://alchetron.com/Tron/CHESS-The-Games-for-the-Brain-576-UW#-)
 
 ### Capture
 
@@ -243,7 +243,6 @@ Sample Runs are linked here with interactive user input shown (in bold) interlea
 The format of the game board may look wonky in the sample files above due to the size of the chess pieces relative to empty game spaces, so the following image better illustrates a properly-formatted sample board:
 
 ![Chess Board -- one pawn moved]({{site.baseurl}}/img/final/chess-game.png)
-
 
 ### Exception Handling
 
