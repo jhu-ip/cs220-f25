@@ -155,7 +155,7 @@ A description of the official rules of chess can be found <a class='external' ta
 
 ### General Movement of Pieces
 
-When it is their turn, a player may move exactly ONE of his or her pieces according to the following movement rules, provided that
+When it is their turn, a player may move exactly ONE of their pieces according to the following movement rules, provided that
 
 1. the piece does not land on a square already occupied by another piece belonging to that _same_ player, and
 2. the move does not cause the player to enter a _checked_ position (defined below).
@@ -183,14 +183,14 @@ Pawns have different shapes for normal movement versus for capturing. Pawn _move
 
 ### Special Movement of Pieces
 
-During gameplay, if a pawn ever reaches the last row of the board (the opposite side from its starting position), it immediately becomes a queen.  This is called piece promotion. [See here](https://en.wikipedia.org/wiki/Pawn_(chess)#Promotion). (Actually, in standard chess, the player who owns the pawn gets to select what type of piece he or she wishes to upgrade, but nearly everyone selects queen, so we'll just make that the requirement.)
+During gameplay, if a pawn ever reaches the last row of the board (the opposite side from its starting position), it immediately becomes a queen.  This is called piece promotion. [See here](https://en.wikipedia.org/wiki/Pawn_(chess)#Promotion). (Actually, in standard chess, the player who owns the pawn gets to select to what type of piece they wish to upgrade, but nearly everyone selects queen, so we'll just make that the requirement.)
 
 In standard chess, players are also permitted two special moves named [castling](https://en.wikipedia.org/wiki/Castling) and [en passant](https://en.wikipedia.org/wiki/Pawn_(chess)#Capturing). In this project, these moves are explicitly disallowed. (They are quite complicated to implement.)
 
 ### Checked Positions, Checkmate and End-of-Game Situations
 
-* If a king is ever threatened by any piece of the opposing player in such a way that a single move by the opponent could result in the king’s immediate capture, this is considered a _checked position_. Getting out of a checked position is the highest priority for the player who is checked — while a player is in a checked position, his or her only option is to make a move that gets the king out of danger; no other move is permitted. (This can be done either by moving the king out of check or blocking the check with another piece or capturing the checking piece of the opponent.)
-* No player is permitted to make a move that places himself or herself in a checked position. This includes a player moving his or her king into danger, but also includes moving out of the way a piece which had been sheltering the king, leaving the king unprotected. This rule means that a player can only be checked by a move made by the opposing player.
+* If a king is ever threatened by any piece of the opposing player in such a way that a single move by the opponent could result in the king’s immediate capture, this is considered a _checked position_. Getting out of a checked position is the highest priority for the player who is checked — while a player is in a checked position, their only option is to make a move that gets the king out of danger; no other move is permitted. (This can be done either by moving the king out of check or blocking the check with another piece or capturing the checking piece of the opponent.)
+* No player is permitted to make a move that places himself or herself in a checked position. This includes a player moving their king into danger, but also includes moving out of the way a piece which had been sheltering the king, leaving the king unprotected. This rule means that a player can only be checked by a move made by the opposing player.
 * If a player is checked, and the checked player has no way of removing the check condition, this is called a _checkmate_, and the checking player is declared the winner of the game. The overall goal of a player is thus to checkmate the opposing player.
 * If any player is not in a checked position but has no legal moves available, the game is declared a stalemate. The game ends without a winner.
 
