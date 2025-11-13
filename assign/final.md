@@ -48,9 +48,9 @@ You will be working in teams of two or three students (strictly). Please use thi
 
 ### Set up your final project git repository
 
-* If you have registered your team on time, you will be invited to a private repo (`2025-spring-final-<JHED1>-<JHED2>-<JHED3>`) under your repositories on GitHub.
+* If you have registered a team on time, you will be invited to a private repo (`2025-fall-final-<JHED1>-<JHED2>-<JHED3>`) under your repositories on GitHub.
 
-* Otherwise, you should receive a private post from us about your assigned partners on Piazza. You should reply to the post to exchange your contact information with your teammates and let us know all members are connected. We then create and invite you to a team project repo. If you have not received the post, reach out to us as soon as possible.
+* Otherwise, you should receive a private post from us about your assigned partners on Piazza. You should reply to the post to exchange your contact information with your teammates and let us know all members are connected. We will then create and invite you to a team project repo. If you have not received the post, reach out to us as soon as possible.
 
 Once you have access to the group repo, you should clone it to your ugrad Unix account (and optionally local machine) the same way you cloned your personal repo in Ex2 Part 4.
 
@@ -61,9 +61,9 @@ If you have opted to use <a href="/docs/resources/github-ssh">SSH authentication
 </div>
 </div>
 
-### Get the starter codes from `cs220-sp25-public`
+### Get the starter codes from `cs220-f25-public`
 
-1. Use `cd` to move into the `cs220-sp25-public` on your unix account, type `git status` and confirm you have not modified any files or accidentally committed to the public repo. Ask
+1. Use `cd` to move into the `cs220-f25-public` on your unix account, type `git status` and confirm you have not modified any files or accidentally committed to the public repo. Ask
 for help, if you need to undo those accidental changes.
 
 2. Type `git pull` to synchronize your local repo with the remote repo.
@@ -141,7 +141,7 @@ You should create the UML diagram *before writing any code* to help yourselves v
 
 ### Chess Rules
 
-A description of the official rules of chess can be found [here](https://www.chess.com/learn-how-to-play-chess), but we give the main points of the game below, with some adjustments specific to this project.
+A description of the official rules of chess can be found <a class='external' target='_blank' href='https://www.chess.com/learn-how-to-play-chess'>here</a>, but we give the main points of the game below, with some adjustments specific to this project.
 
 ### Game Setup
 
@@ -171,7 +171,7 @@ Movement rules:
 
 The rules are also summarized in the following image. Note that the pawn has distinct ways of moving (x's) and capturing (circles):
 
-![chess moves](img/chess.jpg)
+![chess moves](../img/final/chess.jpg)
 
 From: [https://alchetron.com/Tron/CHESS-The-Games-for-the-Brain-576-UW#-](https://alchetron.com/Tron/CHESS-The-Games-for-the-Brain-576-UW#-)
 
@@ -302,7 +302,7 @@ Additionally, we have supplied you with several files (`mate_in_two.txt` and `pr
 
 In the public course repository's `final` directory, we have supplied you with the following starter files, at the top of which you must add comments giving the names and JHED IDs of each of your team members, and which you may further modify as needed except where indicated:
 
-* `Piece.h` (do not modify this file) — contains the definition of an abstract class named `Piece` which represents a chess piece. This class is fully implemented in `Piece.h` (so there is no need for a file named `Piece.cpp`). It contains two pure virtual functions which will need to be implemented in each subclass of `Piece`.
+* `Piece.h` (do not modify this file) — contains the definition of an abstract class named `Piece` which represents a chess piece. This class is fully implemented in `Piece.h` (so there is no need for a file named `Piece.cpp`). It contains three pure virtual functions which must be implemented in each subclass of `Piece`.
 * `King.h`, `Queen.h`, `Rook.h`, `Knight.h`, `Bishop.h`, `Pawn.h` — contain, respectively, class definitions of subclasses of `Piece` representing various specific chess pieces. You may modify these files as needed, including by changing the stub (incomplete) function definition for `legal_move_shape` in each header into a declaration, overriding `legal_capture_shape` in classes where appropriate, or adding additional member functions, so you can fully implement each function properly in its associated `.cpp` file.  **Important**: You will need to create a `.cpp` file for each subclass of `Piece`.  The provided `Makefile` will not work fully until all of the `.cpp` files have been created.
 * `Board.h` — contains the class definition of a class named `Board` which represents a chess board. Some of the implementations of these member functions are left to you to flesh out in `Board.cpp`.
 * `Board.cpp` — contains the implementation of `Board`'s `<<` operator (do not modify this implementation), which will be used in the autograder. It also contains stubs for many member functions declared in `Board.h`, which you will need to replace with fully functioning code. Note that the `display` member function is a place where you may be creative, including making use of `Terminal.h` as described below.
