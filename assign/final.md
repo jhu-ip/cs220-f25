@@ -68,9 +68,9 @@ for help, if you need to undo those accidental changes.
 
 2. Type `git pull` to synchronize your local repo with the remote repo.
 
-3. You should see a new directory, `final`, which contains the starter code and example files.
+3. You should see a new directory, `project/final`, which contains the starter code and example files.
 
-4. Copy the source files (`.h` and `.cpp`) and text files (`.txt`) in `final` to your final project repo. Assuming both the public repo and your final repo are under your home directory, and you have not changed the directory names, then you can copy the starter files to your local final repo.
+4. Copy the source files (`.h` and `.cpp`) and text files (`.txt`) in `project/final` to your final project repo. Assuming both the public repo and your final repo are under your home directory, and you have not changed the directory names, then you can copy the starter files to your local final repo.
 
 5. Use `cd` to move into your final repo, type `git status`, and confirm you see all the starter files.
 
@@ -292,14 +292,14 @@ The format of a file specifying a game contains nine lines. The first eight line
 
 In your code, the program may fail to load the game. If it happens, it will be handled by exceptions.  Refer to the [Exception Handling](#exception-handling) section for details.  After successfully loading the game, the `main` function will assert if it is a valid game by calling `is_valid_game()`.
 
-In the public course repository's `final` directory, we have provided several example files (`stalemate.txt`, `checkmate.txt`, `check.txt`) illustrating different important game situations. Your program should be able to load in these files and report the conditions they represent.
+In the public course repository's `project/final` directory, we have provided several example files (`stalemate.txt`, `checkmate.txt`, `check.txt`) illustrating different important game situations. Your program should be able to load in these files and report the conditions they represent.
 
 Additionally, we have supplied you with several files (`mate_in_two.txt` and `promotion_to_mate.txt`) indicating series of moves that a user might enter interactively while running the program. (The additional file `pre_promotion.txt` is utilized if commands in `promotion_to_mate.txt` are executed.) You are encouraged to use `cat` and the Unix pipe operator (`|`) to run these commands from the command line and then to check your program's output. You should also, of course, create and utilize other tests as you are developing your code.
 
 
 ## Implementation Details
 
-In the public course repository's `final` directory, we have supplied you with the following starter files, at the top of which you must add comments giving the names and JHED IDs of each of your team members, and which you may further modify as needed except where indicated:
+In the public course repository's `project/final` directory, we have supplied you with the following starter files, at the top of which you must add comments giving the names and JHED IDs of each of your team members, and which you may further modify as needed except where indicated:
 
 * `Piece.h` (do not modify this file) — contains the definition of an abstract class named `Piece` which represents a chess piece. This class is fully implemented in `Piece.h` (so there is no need for a file named `Piece.cpp`). It contains three pure virtual functions which must be implemented in each subclass of `Piece` (two provided in various subclasses).
 * `King.h`, `Queen.h`, `Rook.h`, `Knight.h`, `Bishop.h`, `Pawn.h` — contain, respectively, class definitions of subclasses of `Piece` representing various specific chess pieces. You may modify these files as needed, including by changing the stub (incomplete) function definition for `legal_move_shape` in each header into a declaration, overriding `legal_capture_shape` in classes where appropriate, or adding additional member functions, so you can fully implement each function properly in its associated `.cpp` file.  **Important**: You will need to create a `.cpp` file for each subclass of `Piece`.  The provided `Makefile` will not work fully until all of the `.cpp` files have been created.
@@ -368,7 +368,7 @@ You may use any ASCII characters to display your board on standard out, and you 
 * In C++ source (`.cpp`) files, you may import individual symbols using statements like "`using std::string`".  But you may <em>not</em> use "`using namespace <id>`", either in headers or in source files.
 * You are expected to make use of <strong>gdb</strong> to debug and also to run <strong>valgrind</strong> to make sure there is no memory leakage or invalid memory usage.
 * Each source file you submit should contain several comment lines at the top giving the names and JHEDs of each member of your project team.
-* You are encouraged to begin submitting your work well before the deadline, keeping in mind that there are no late days available for use with this group assignment.
+* You are encouraged to begin submitting your work well before the deadline, keeping in mind that **there are no late days available for use with this group assignment**.
 
 ## Code Submission (Team)
 
@@ -376,7 +376,7 @@ Create a zip file named `project.zip` containing your source files as well as `c
 
 Copy `project.zip` to your local machine and submit it as Final Project (Team) on Gradescope. This will be a group submission, where *you must indicate each team member's name on Gradescope when you (first) submit*. Please make sure that the same team member submits subsequent versions as well.
 
-As always, when you submit, Gradescope conducts some automatic tests. These do basic checks, e.g. to check that you submitted the right files. If you see error messages (in red), address them and resubmit. You may re-submit any number of times prior to the deadline; only your latest submission will be graded.
+As always, when you submit, Gradescope conducts some basica, automatic tests. If you see error messages (in red), address them and resubmit. You may re-submit any number of times prior to the deadline; only your latest submission will be graded.
 
 Two notes regarding automatic checks for programming assignments:
 
@@ -402,7 +402,7 @@ Each person should be committing their work; it shouldn't be the case that the s
 
 In addition to submitting your project files (see below), each team member must complete the [Final Project Partner Evaluation Form](https://forms.gle/HuZr179krw9ufRQk6) for each of their team members, including themselves, before the provided deadline. This is to say, if you are in a team of three, you will be submitting the form three times: once for each partner and once for your self evaluatoin.
 
-This is an important part of the project and there will be a **5-point penalty** for failing to submit each form. The contents of the form you submit will not affect your partners' grades.
+This is an important part of the project and there will be an individual point penalty for failing to submit each form. The contents of the form you submit will not affect your partners' grades.
 
 Note that the deadline for this individual submission is the same day as (and only one hour after) the project deadline.
 
