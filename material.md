@@ -599,9 +599,7 @@ the materials for that week.
 </table>
 </div>
 
-
-<!--
-<button type="button" id="week_13_toggle" class="week_control_button">Week 13 (18-Nov to 22-Nov)</button>
+<button type="button" id="week_13_toggle" class="week_control_button">Week 13 (17-Nov to 21-Nov)</button>
 <div id="week_13" class="collapsible">
 <table>
   <thead>
@@ -647,7 +645,7 @@ the materials for that week.
 </table>
 </div>
 
-<button type="button" id="week_14_toggle" class="week_control_button">Week 14 (2-Dec to 6-Dec)</button>
+<button type="button" id="week_14_toggle" class="week_control_button">Week 14 (1-Dec to 5-Dec)</button>
 <div id="week_14" class="collapsible">
 <table>
   <thead>
@@ -692,7 +690,6 @@ the materials for that week.
   </tbody>
 </table>
 </div>
-    -->
 
 
 <script type="text/javascript">
