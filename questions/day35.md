@@ -18,5 +18,5 @@ reference solutions:
 5. How do you get the message associated with an exception?
 6. For each statement below, indicate whether it is true or false:<br/>
 a. You can define your own *customized* exception class, derived from `exception`. (T or F)  <br/>
-b. Arrange catch blocks from least to most specific type. (T or F)<br/>
+b. Best practice is to arrange catch blocks from least to most specific type. (T or F)<br/>
 c. C++ passes control to first catch block whose type equals or is a derived class of the thrown exception. (T or F)
