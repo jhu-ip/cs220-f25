@@ -637,7 +637,7 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td></td>
+      <td><a href='notes/notes-exceptions.html'>NOTES: Error & Exception Handling</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -683,7 +683,7 @@ the materials for that week.
     </tr>
     <tr>
       <td>Additional<br>Resources</td>
-      <td></td>
+      <td><a href='notes/notes-lambdas-misc.html'>Lambdas & Miscellany</a></td>
       <td><a href='resources/FinalReview.pdf'>Final Exam Review Questions</a></td>
       <td><a href='resources/FinalReview_SOLUTIONS.pdf'>Final Exam Review Solutions</a></td>
     </tr>

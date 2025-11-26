@@ -35,6 +35,8 @@ This page has links to useful resources for the course.
 * <a href='notes/notes-templates.html'>Function & Class Templates</a>
 * <a href='notes/notes-polymorphism.html'>Inheritance & Polymorphism</a>
 * <a href='notes/notes-OOdesign.html'>Object Oriented Design</a> (& Teamwork)
+* <a href='notes/notes-exceptions.html'>Error & Exception Handling</a>
+* <a href='notes/notes-lambdas-misc.html'>Lambdas & Miscellany</a>
 
 
 ## Code development resources
