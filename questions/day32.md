@@ -1,4 +1,4 @@
- ---
+---
 id: day32_questions
 layout: default
 title: Day 32 Recap Questions
